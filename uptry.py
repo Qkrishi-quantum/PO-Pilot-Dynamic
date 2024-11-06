@@ -313,12 +313,15 @@ if st.button('Next'):
             adj_close_df['Return'] = (adj_close_df['Portfolio Value'] / adj_close_df['Portfolio Value'][0]) * 100
             #benchdata = pd.DataFrame(benchdata)
             #benchdata.columns = benchdata.columns.str.strip()
+            #st.write(benchdata)
+            benchdata.to_csv("TotalBenchmarkValue.csv")
+            benchdata = pd.read_csv("TotalBenchmarkValue.csv")
             benchdata = benchdata.set_index(('Date'))
-            st.write(benchdata)
+            #st.write(benchdata)
             benchdata['Return'] = (benchdata['Adj Close']/benchdata['Adj Close'].iloc[0]) * 100
-            st.write(benchdata)
-            st.write(benchdata.index)
-            st.write(adj_close_df.index)
+            #st.write(benchdata)
+            #st.write(benchdata.index)
+            #st.write(adj_close_df.index)
             fig_compare = go.Figure()
             fig_compare.add_trace(go.Scatter(x= adj_close_df.index, 
                     y=  adj_close_df['Return'],
