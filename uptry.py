@@ -74,7 +74,7 @@ if st.button('Next'):
                 #st.write("Adjusted Closing Prices")
 
                 st.write(adj_close_df)
-         
+          
             if select_benchmark == 'NIFTY 50':
                 csv_file = "NIFTY 50 Stock Weightages.csv"
                 benchdata = yf.download("^NSEI", start = start_date, end = end_date)['Adj Close']
@@ -85,8 +85,15 @@ if st.button('Next'):
                 sectorbenchmark = pd.read_csv('NSE 500 Sector Weightages.csv')
             elif select_benchmark == 'ICICI Prudential Nifty 100 ETF Fund':
                 csv_file = "ICICIBenchmark.csv"
-                benchdata = yf.download("ICICINF100.NS", start = start_date, end = end_date)['Adj Close']
+                #benchdata = yf.download("ICICINF100.NS", start = start_date, end = end_date)['Adj Close']
+                benchdata = pd.read_csv('ICICI_Nifty100ETF.csv')
+                benchdata['Date'] = pd.to_datetime(benchdata['Date'], format='%d-%b-%Y')
+                benchdata = benchdata.sort_values(by='Date', ascending=True).reset_index(drop=True)
+                benchdata = benchdata[(benchdata['Date'] >= start_date) & (benchdata['Date'] <= end_date)]
                 sectorbenchmark = pd.read_csv('ICICIBenchmark.csv')
+                
+            
+            #st.write(benchdata)
 
             class cfg:
                 hpfilter_lamb = 6.25
@@ -113,9 +120,16 @@ if st.button('Next'):
 
             st.plotly_chart(fig_1)
 
+            a = pd.read_csv(csv_file)['Symbol'].to_list()
+            b = yf.download(a, start = start_date, end = end_date)['Adj Close']
+            b.to_csv('BenchmarkStockData.csv')
+
+
+
             for s in adj_close_df.columns:
                 cycle, trend = hpfilter(adj_close_df[s], lamb=cfg.hpfilter_lamb)
                 adj_close_df[s] = trend
+            
 
             log_returns = np.log(stock_prices_for_algo) - np.log(stock_prices_for_algo.shift(1))
             null_indices = np.where((log_returns.isna().sum() > 1).to_numpy())[0]
@@ -128,6 +142,8 @@ if st.button('Next'):
             sigma = log_returns.cov().to_numpy() * 252
 
             cfg.kappa = cfg.num_stocks
+            
+
 
             def objective_mvo_miqp(trial, _mu, _sigma):
                 cpo = ClassicalPO(_mu, _sigma, cfg)
@@ -150,18 +166,47 @@ if st.button('Next'):
             res = cpo.mvo_miqp()
             weights = res['w']
 
+            for s in b.columns:
+                cycle, trend = hpfilter(b[s], lamb=cfg.hpfilter_lamb)
+                b[s] = trend
+
+            log_returns_1 = np.log(b) - np.log(b.shift(1))
+            null_indices_1 = np.where((log_returns_1.isna().sum() > 1).to_numpy())[0]
+            drop_stocks_1 = b.columns[null_indices_1]
+            log_returns_1 = log_returns_1.drop(columns=drop_stocks_1)
+            log_returns_1 = log_returns_1.dropna()
+            tickers_1 = b.columns
+
+            cfg.num_stocks_1 = len(tickers_1)
+            mu_1 = log_returns_1.mean().to_numpy() * 252
+            sigma_1 = log_returns_1.cov().to_numpy() * 252
+            cfg.kappa = cfg.num_stocks_1
+
+            cpo_1 = ClassicalPO(mu_1, sigma_1, cfg)
+            c = pd.read_csv(csv_file)
+            weights_1 = c['Weightage(%)'].to_list()
+            weights_1 = [weight / 100 for weight in weights_1]
+            #st.write(weights_1)
+
+            mvo_miqp_bench = cpo_1.get_metrics(weights_1)
+            #st.write(mvo_miqp_bench)
+
+
             first_row_adj_close = adj_close_df.iloc[0]
             total_budget = (first_row_adj_close * df['QUANTITY'].values).sum()
-            wt_stock = ((first_row_adj_close * df['QUANTITY'].values) / total_budget) * 100
+            #st.write(total_budget)
+            wt_stock = ((first_row_adj_close * df['QUANTITY'].values) / total_budget) 
             #df['Weightage(%)'] = ((first_row_adj_close * df['QUANTITY'].values) / total_budget) * 100
             portfolio_dict = dict(zip(df['yfName'], wt_stock))
             df['Weightage(%)'] = portfolio_dict.values()
             #st.write(df)
             vp_list = list(portfolio_dict.values())
             portfolio_array = np.array(vp_list)
+            #st.write(vp_list)
 
             rows = len(stock_symbols)
-            wt_bench = pd.read_csv(csv_file, nrows=rows).reset_index(drop=True) #nrows should be dynamic
+            wt_bench = pd.read_csv(csv_file).reset_index(drop=True) #nrows should be dynamic
+            #st.write(wt_bench)
             wt_bench_filtered = wt_bench[['Company Name', 'Weightage(%)']]
             benchmark_dict = dict(zip(wt_bench_filtered.iloc[:, 0], wt_bench_filtered.iloc[:, 1]))
             bp_list = list(benchmark_dict.values())
@@ -170,32 +215,51 @@ if st.button('Next'):
             col1, col2 = st.columns(2)
             with col1:
                 st.markdown("**Avg % Wgt Portfolio:**")
-                for stock, value in portfolio_dict.items():
-                    percentage = round(value, 2)  # Multiply by 100 and round off to 2 decimal places
-                    st.text(f"{stock:<45}{percentage:>15}")
+                # for stock, value in portfolio_dict.items():
+                #     percentage = round(value*100, 2)  # Multiply by 100 and round off to 2 decimal places
+                #     st.text(f"{stock:<45}{percentage:>15}")
+                portfolio_df = pd.DataFrame({
+                    'Stock': list(portfolio_dict.keys()),
+                    'Weight (%)': [round(value * 100, 2) for value in portfolio_dict.values()]})
+                st.write(portfolio_df.set_index('Stock'))
     
                 st.markdown("**Returns and Risk of Portfolio:**")
                 mvo_miqp_bench = cpo.get_metrics(portfolio_array)
-                for metric, value in mvo_miqp_bench.items():
-                    if metric in ['returns', 'risk']:
-                        display_value = round(value ,2)
-                    else:
-                        display_value = round(value, 2)
-                    st.text(f"{metric:<45}{display_value:>15}")
+                # for metric, value in mvo_miqp_bench.items():
+                #     if metric in ['returns', 'risk']:
+                #         display_value = round(value*100 ,2)
+                #     else:
+                #         display_value = round(value, 2)
+                #     st.text(f"{metric:<45}{display_value:>15}")
+                metrics_df = pd.DataFrame({
+                    'Metric': list(mvo_miqp_bench.keys()),
+                    'Value': [round(value * 100, 2) if metric in ['returns', 'risk'] else round(value, 2) 
+                        for metric, value in mvo_miqp_bench.items()]})
+                st.write(metrics_df.set_index('Metric'))
+
 
             with col2:
                 st.markdown("**Avg % Wgt Benchmark:**")
-                for stock, value in benchmark_dict.items():
-                    percentage = round(value, 2)
-                    st.text(f"{stock:<35}{percentage:>15}")
+                # for stock, value in benchmark_dict.items():
+                #     percentage = round(value, 2)
+                #     st.text(f"{stock:<35}{percentage:>15}")
+                portfolio_df_1 = pd.DataFrame({
+                    'Stock': list(benchmark_dict.keys()),
+                    'Weight (%)': [round(value, 2) for value in benchmark_dict.values()]})
+                st.write(portfolio_df_1.set_index('Stock'))
                 st.markdown("**Returns and Risk of Benchmark:**")
-                mvo_miqp_bench = cpo.get_metrics(benchmark_array)
-                for metric, value in mvo_miqp_bench.items():
-                    if metric in ['returns', 'risk']:
-                        display_value = round(value ,2)
-                    else:
-                        display_value = round(value, 2)
-                    st.text(f"{metric:<35}{display_value:>15}")
+                mvo_miqp_bench_1 = cpo_1.get_metrics(benchmark_array)
+                # for metric, value in mvo_miqp_bench.items():
+                #     if metric in ['returns', 'risk']:
+                #         display_value = round(value ,2)
+                #     else:
+                #         display_value = round(value, 2)
+                #     st.text(f"{metric:<35}{display_value:>15}")
+                metrics_df_1 = pd.DataFrame({
+                    'Metric': list(mvo_miqp_bench_1.keys()),
+                    'Value': [round(value, 2) if metric in ['returns', 'risk'] else round(value, 2) 
+                        for metric, value in mvo_miqp_bench_1.items()]})
+                st.write(metrics_df_1.set_index('Metric'))
 
             colors = ['gold', 'mediumturquoise', 'darkorange', 'lightgreen', 'DarkOrchid', 'DeepPink', 'Maroon', 'MistyRose', 'Olive', 'Salmon' ]
             fig = go.Figure(data=[go.Pie(labels=list(portfolio_dict.keys()), values=list(portfolio_dict.values()), hole=.3)])
@@ -247,20 +311,27 @@ if st.button('Next'):
                     adj_close_df[symbol] = adj_close_df[symbol] * quantity_dict[symbol]
             adj_close_df['Portfolio Value'] = adj_close_df.iloc[:, 1:].sum(axis=1)
             adj_close_df['Return'] = (adj_close_df['Portfolio Value'] / adj_close_df['Portfolio Value'][0]) * 100
-            benchdata = pd.DataFrame(benchdata)
-            benchdata['Return'] = (benchdata['Adj Close']/benchdata['Adj Close'][0]) * 100
-
+            #benchdata = pd.DataFrame(benchdata)
+            #benchdata.columns = benchdata.columns.str.strip()
+            benchdata = benchdata.set_index(('Date'))
+            st.write(benchdata)
+            benchdata['Return'] = (benchdata['Adj Close']/benchdata['Adj Close'].iloc[0]) * 100
+            st.write(benchdata)
+            st.write(benchdata.index)
+            st.write(adj_close_df.index)
             fig_compare = go.Figure()
             fig_compare.add_trace(go.Scatter(x= adj_close_df.index, 
                     y=  adj_close_df['Return'],
                     mode='lines+markers', 
                     name='Return Portfolio', 
                     line=dict(color='red')))
+            
             fig_compare.add_trace(go.Scatter(x=benchdata.index, 
                     y=benchdata['Return'], 
                     mode='lines+markers', 
                     name='Return Benchmark', 
                     line=dict(color='blue')))
+            
             fig_compare.update_layout(title='Return Over Time',
                     xaxis_title='Date', 
                     yaxis_title='Return',
@@ -488,7 +559,7 @@ if st.button('Next'):
             adj_close_df_beta = pd.DataFrame(historical_data_beta)
             adj_close_df_beta.to_csv('adj_close_df_beta.csv')
 
-            stock_wt = dict(zip(df['SECURITY_ID'], wt_stock))
+            #stock_wt = dict(zip(df['SECURITY_ID'], wt_stock))
             stock_quantities = dict(zip(df['SECURITY_ID'],df['QUANTITY']))
 
             portfolio_values_port = adj_close_df_beta.apply(lambda row: sum(
@@ -670,6 +741,7 @@ if st.button('Rebalancing'):
                 working_days = np.busday_count(start_date.date(), end_date.date())
                 first_row_adj_close = adj_close_df.iloc[0]
                 total_budget = (first_row_adj_close * df['QUANTITY'].values).sum()
+                st.write(total_budget)
 
                 if select_benchmark == 'NIFTY 50':
                     csv_file = "NIFTY 50 Stock Weightages.csv"
@@ -734,6 +806,7 @@ if st.button('Rebalancing'):
                     #total_budget = 537787.2409820557 #Make the budget dynamic
                     global total_budget
                     total_budget = total_budget
+                    print(total_budget)
                     num_months = len(month_end_dates)
                     first_purchase = True 
                     result = {}
@@ -888,6 +961,7 @@ if st.button('Rebalancing'):
                     
                 for column in columns_to_style:
                     updated_dataf[column] = updated_dataf[column].apply(apply_styling)
+                st.write(total_budget)
                 updated_dataf["Value"] = updated_dataf["Value"] * total_budget
                 updated_dataf = updated_dataf.loc[:, (updated_dataf != 0).any(axis=0)] # to remove columns with 0s
                 updated_dataf = updated_dataf.to_html(float_format=lambda x: '{:.2f}'.format(x), escape=False)
@@ -934,7 +1008,7 @@ if st.button('Rebalancing'):
 
                 df2_cleaned = df_fta.dropna(subset=['Date'])  # Drop rows with None in the Date column
                 df2_cleaned = df2_cleaned[df2_cleaned['Value'] != 0]
-
+                
                 #st.write(df2_cleaned)
                 #st.write(filtered_data)
 
@@ -956,6 +1030,12 @@ if st.button('Rebalancing'):
                 maximum_value = max(max_df2_cleaned, max_filtered_data)
 
                 y_range = math.ceil(maximum_value / minimum_value )
+
+                st.text('with rebalancing')
+                st.write(df2_cleaned['Value'])
+                st.text('without rebalancing')
+                st.write(filtered_data['portfolio value'])
+
                 # Plotting
                 fig_rebalancing = go.Figure()
 
