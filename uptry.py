@@ -43,7 +43,7 @@ uploaded_files = st.file_uploader("Choose Excel files", type=["xlsx", "xls"], ac
 file_names = [uploaded_file.name for uploaded_file in uploaded_files]
 selected_file = st.selectbox("Select a file", file_names)
 select_benchmark = st.selectbox("Select the benchmark", options=['NIFTY 50', 'NSE 500', 'ICICI Prudential Nifty 100 ETF Fund'])
-end_date = st.date_input("Select end date", value=datetime(2024, 1, 31))
+end_date = st.date_input("Select end date", value=datetime(2024, 9, 25))
 total_budget = 1
 
 if st.button('Next'):
@@ -57,10 +57,12 @@ if st.button('Next'):
                 end_date = pd.to_datetime(end_date)
                 stock_symbols = df['SECURITY_ID'].tolist()
                 stock_names = []
+                stock_name_n_symbol = {}
                 for symbol in stock_symbols:
                     ticker = yf.Ticker(symbol)
                     stock_name = ticker.info['longName']
                     stock_names.append(stock_name)
+                    stock_name_n_symbol[stock_name] = symbol
                 df['yfName'] = stock_names
                 #num_stocks = df['Quantity']
                 #st.write(num_stocks.reset_index(drop=True))
@@ -72,7 +74,7 @@ if st.button('Next'):
                 adj_close_df = pd.DataFrame(historical_data)
                 adj_close_df.to_csv('adj_close_df.csv')
                 #st.write("Adjusted Closing Prices")
-
+                
                 st.write(adj_close_df)
           
             if select_benchmark == 'NIFTY 50':
@@ -272,11 +274,34 @@ if st.button('Next'):
             
             sector_weights_axis= {}
             sectors = data
+            #st.write(sectors)
+            sectoral_end_date_sum = {}  # Added code
+            sectoral_start_date_sum = {} # Added code
+            for keys in sectors.keys():
+                sectoral_end_date_sum[keys] = 0
+                sectoral_start_date_sum[keys] = 0
+            #st.write(sectoral_end_date_sum)
+            #st.write(portfolio_dict)
+
             for stock, weight in portfolio_dict.items():
                 for sector, stocks_in_sector in sectors.items():
                     if stock in stocks_in_sector:
                         sector_weights_axis.setdefault(sector, 0)
                         sector_weights_axis[sector] += weight
+                        #st.write(sector_weights_axis)
+                        sym = stock_name_n_symbol[stock]
+                        #st.write(sym)
+                        sectoral_end_date_sum[sector] += adj_close_df[sym].iloc[-1]
+                        sectoral_start_date_sum[sector] += adj_close_df[sym].iloc[0]
+
+            #st.write(sectoral_end_date_sum)
+            returns_of_portfolio_sector = {} # Added code
+
+            for sector in sectoral_end_date_sum.keys(): # Added code
+                if sectoral_end_date_sum[sector] != 0:
+                    returns_of_portfolio_sector[sector] = ((sectoral_end_date_sum[sector] - sectoral_start_date_sum[sector])/sectoral_start_date_sum[sector]) * 100
+
+
             keys_axis = sector_weights_axis.keys()
             values_sector_axis = sector_weights_axis.values()
             fig_sector_axis = go.Figure(data=[go.Pie(labels=list(keys_axis),values=list(values_sector_axis), hole=.3)])
@@ -310,6 +335,8 @@ if st.button('Next'):
                 if symbol in quantity_dict:
                     adj_close_df[symbol] = adj_close_df[symbol] * quantity_dict[symbol]
             adj_close_df['Portfolio Value'] = adj_close_df.iloc[:, 1:].sum(axis=1)
+            #st.write('portfolio value:')
+            #st.write(adj_close_df['Portfolio Value'])
             adj_close_df['Return'] = (adj_close_df['Portfolio Value'] / adj_close_df['Portfolio Value'][0]) * 100
             #benchdata = pd.DataFrame(benchdata)
             #benchdata.columns = benchdata.columns.str.strip()
@@ -318,10 +345,15 @@ if st.button('Next'):
             benchdata = pd.read_csv("TotalBenchmarkValue.csv")
             benchdata = benchdata.set_index(('Date'))
             #st.write(benchdata)
+            #st.write('Benchmark value')
+            #st.write(benchdata['Adj Close'])
             benchdata['Return'] = (benchdata['Adj Close']/benchdata['Adj Close'].iloc[0]) * 100
             #st.write(benchdata)
             #st.write(benchdata.index)
             #st.write(adj_close_df.index)
+            #adj_close_df['Scaled Return'] = adj_close_df['Return'] - adj_close_df['Return'].min()
+            #benchdata['Scaled Return'] = benchdata['Return'] - benchdata['Return'].min()
+
             fig_compare = go.Figure()
             fig_compare.add_trace(go.Scatter(x= adj_close_df.index, 
                     y=  adj_close_df['Return'],
@@ -340,12 +372,14 @@ if st.button('Next'):
                     yaxis_title='Return',
                     autosize=False, 
                     width=1000, 
-                    height=600,)
+                    height=600,
+                    #yaxis=dict(range=[115, 145]
+                    )
             st.plotly_chart(fig_compare)
 
             st.markdown('<p style="font-size:20px;"><b>Portfolio Weight vs Benchmark Weight</b></p>', unsafe_allow_html=True)
             all_sectors = set(sector_weights.keys()).union(set(sector_weights_axis.keys()))
-
+            #st.write(all_sectors)
             # Create a DataFrame
             data = {
             "Sector": [],
@@ -354,26 +388,27 @@ if st.button('Next'):
             "Status": [],
             "+/-": []
             }
-
+            sector_weights_axis = {key: value * 100 for key, value in sector_weights_axis.items()}
+            #st.write(sector_weights_axis)
+            #st.write(sector_weights)
             for sector in all_sectors:
                 port_weight = sector_weights_axis.get(sector, 0)
                 bench_weight = sector_weights.get(sector, 0)
                 diff = port_weight - bench_weight
-    
             # Determine the status (Overweight, Underweight)
-            if diff > 0:
-                status = "Overweight"
-            elif diff < 0:
-                status = "Underweight"
-            else:
-                status = "Equal"
+                if diff > 0:
+                    status = "Overweight"
+                elif diff < 0:
+                    status = "Underweight"
+                else:
+                    status = "Equal"
     
             # Add data to the dictionary for each sector
-            data["Sector"].append(sector)
-            data["Portfolio Weight"].append(round(port_weight, 2))
-            data["Benchmark Weight"].append(round(bench_weight, 2))
-            data["Status"].append(status)
-            data["+/-"].append(round(diff, 2))
+                data["Sector"].append(sector)
+                data["Portfolio Weight"].append(round(port_weight, 2))
+                data["Benchmark Weight"].append(round(bench_weight, 2))
+                data["Status"].append(status)
+                data["+/-"].append(round(diff, 2))
 
             # Convert to DataFrame
             df_result = pd.DataFrame(data)
@@ -550,6 +585,60 @@ if st.button('Next'):
             with col6:
                 st.markdown('**Contribution to return - Benchmark, Top 10/Bottom 10**') 
                 st.write(top_contributors.set_index('Company'))
+
+            st.markdown('<p style="font-size:20px;"><b>Allocation Effect</b></p>', unsafe_allow_html=True)
+            #st.latex('''Allocation: (w_i-W_i)(B_i-B)''')
+            #st.latex('w_i:Portfolio weight of the sector')
+            #st.latex('W_i:Benchmark weight of the sector')
+            #st.latex('B_i:Benchmark return of the sector')
+            #st.latex('B:Total Benchmark return')
+            #sector_summary = sector_groups["Weightage(%)"].sum()  for calculating the sector weightages
+            allocation_data = pd.read_csv(csv_file)
+            sector_groups = allocation_data.groupby("sector")
+ 
+            benchmark_sector_dict = {}
+            for sector, group in sector_groups:
+                benchmark_sector_dict[sector] = group["Weightage(%)"].sum()
+
+            price_data = pd.read_csv('BenchmarkStockData.csv')
+            last_day_returns = price_data.iloc[-1]
+            first_day_returns = price_data.iloc[0]
+
+            allocation_data['last_day_returns'] = allocation_data['Symbol'].map(last_day_returns)
+            allocation_data['first_day_returns'] = allocation_data['Symbol'].map(first_day_returns)
+
+            sector_returns = allocation_data.groupby('sector').apply(
+                lambda x: (((x['last_day_returns'].sum() - x['first_day_returns'].sum()) / x['first_day_returns'].sum() )*100 ) #Comment : #* #x['Weightage(%)'].sum()
+                ).reset_index(name='sector_return')
+
+            sector_returns_dict = sector_returns.set_index('sector')['sector_return'].to_dict()
+            B = (benchdata.iloc[-1] - benchdata.iloc[0])/(benchdata.iloc[0]) * 100
+            #st.write(B['Return'])
+            #st.write("sector_weights_axis")
+            #st.write(sector_weights_axis)
+            #st.write("benchmark_sector_dict")
+            #st.write(benchmark_sector_dict)
+            #st.write("sector_returns_dict")
+            #st.write(sector_returns_dict)
+
+            allocation_effect = {}
+            for sector in sector_weights_axis.keys():
+                allocation_effect[sector] = (sector_weights_axis[sector] - benchmark_sector_dict[sector]) * (sector_returns_dict[sector] - B['Return'])
+                allocation_effect[sector] = allocation_effect[sector]/100
+
+            df_allocation_effect = pd.DataFrame(list(allocation_effect.items()), columns=['Sector', 'Allocation Effect(%)'])
+            st.write(df_allocation_effect.set_index('Sector'))
+
+
+            st.markdown('<p style="font-size:20px;"><b>Selection Effect</b></p>', unsafe_allow_html=True)
+            selection_effect = {} # Added code
+
+            for sector in returns_of_portfolio_sector.keys(): # Added code
+                selection_effect[sector] = sector_weights_axis[sector] * (returns_of_portfolio_sector[sector] - sector_returns_dict[sector])
+                selection_effect[sector] = selection_effect[sector] / 100
+            
+            df_selection_effect = pd.DataFrame(list(selection_effect.items()), columns=['Sector', 'Selection Effect(%)'])
+            st.write(df_selection_effect.set_index('Sector'))
 
 
             st.markdown('<p style="font-size:20px;"><b>Beta</b></p>', unsafe_allow_html=True)
@@ -777,6 +866,7 @@ if st.button('Rebalancing'):
                 
                 constituents = pd.read_csv(csv_file)
                 tickers = constituents['Symbol'].to_list()
+                st.write(tickers)
                 use_local = False
                 if use_local is False:
                         #end_date = end_date
@@ -802,6 +892,7 @@ if st.button('Rebalancing'):
                     tickers = constituents['Symbol'].to_list()
                     data = pd.read_csv('benchmark.csv', parse_dates=['Date'])
                     sector_map = constituents.loc[constituents['Symbol'].isin(tickers)]
+                    st.write(sector_map)
                     dates = data["Date"].to_numpy()
                     monthly_df = data.resample('3M', on='Date').last() # resample to every 3 months
                     month_end_dates = monthly_df.index
@@ -923,7 +1014,7 @@ if st.button('Rebalancing'):
                         first_purchase = False
                     return opt_results_df
                 
-                #st.write(optimal_stocks_to_buy)
+                st.write(optimal_stocks_to_buy)
                 #optimal_stocks_to_buy = {'BHARTIARTL.NS': 109.0, 'HDFCBANK.NS': 92.0, 'HINDUNILVR.NS': 92.0, 'ICICIBANK.NS': 104.0, 'INFY.NS': 86.0, 'ITC.NS': 112.0, 'LT.NS': 118.0, 'RELIANCE.NS': 107.0, 'SBIN.NS': 104.0, 'TCS.NS': 95.0, 'BAJFINANCE.NS':100.0, 'MARUTI.NS': 87.0, 'TITAN.NS':60.0}
                 process_portfolio_amar = process_portfolio(optimal_stocks_to_buy)
                 process_portfolio_amar_df = process_portfolio_amar.to_csv('rebalancing_test.csv')
@@ -1032,12 +1123,21 @@ if st.button('Rebalancing'):
 
                 maximum_value = max(max_df2_cleaned, max_filtered_data)
 
-                y_range = math.ceil(maximum_value / minimum_value )
+                #y_range = math.ceil(maximum_value / minimum_value )
+                
 
                 st.text('with rebalancing')
                 st.write(df2_cleaned['Value'])
                 st.text('without rebalancing')
                 st.write(filtered_data['portfolio value'])
+
+                def count_integer_digits(n):
+                    return len(str(int(abs(n))))
+                
+                abs_value = 10 ** (count_integer_digits(minimum_value)-1)
+                y_range = math.ceil(maximum_value / abs_value)
+
+                st.write(abs_value)
 
                 # Plotting
                 fig_rebalancing = go.Figure()
@@ -1045,7 +1145,7 @@ if st.button('Rebalancing'):
                 # Add trace for rebalanced portfolio value (divided by 10^7 to convert to crores)
                 fig_rebalancing.add_trace(go.Scatter(
                     x=df2_cleaned['Date'],
-                    y=df2_cleaned['Value'] / minimum_value,
+                    y=df2_cleaned['Value'],
                     mode='lines+markers',
                     name='Portfolio Value With Rebalancing',
                     line=dict(color='red'),
@@ -1055,7 +1155,7 @@ if st.button('Rebalancing'):
                 # Add trace for original portfolio value (divided by 10^7 to convert to crores)
                 fig_rebalancing.add_trace(go.Scatter(
                     x=filtered_data['Date'],
-                    y=filtered_data['portfolio value'] / minimum_value,
+                    y=filtered_data['portfolio value'],
                     mode='lines+markers',
                     name='Portfolio Value Without Rebalancing',
                     line=dict(color='blue'),
@@ -1071,7 +1171,7 @@ if st.button('Rebalancing'):
                     width=1000, 
                     height=600,
                     #yaxis_range=[0.15, 0.22]  # Adjust this range according to your data
-                    yaxis_range = [0, y_range]
+                    #yaxis_range = [0, y_range]
                     )
 
 # Display the plot in Streamlit
