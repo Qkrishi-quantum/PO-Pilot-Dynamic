@@ -594,6 +594,7 @@ if st.button('Next'):
             #st.latex('B:Total Benchmark return')
             #sector_summary = sector_groups["Weightage(%)"].sum()  for calculating the sector weightages
             allocation_data = pd.read_csv(csv_file)
+            st.write(allocation_data)
             sector_groups = allocation_data.groupby("sector")
  
             benchmark_sector_dict = {}
