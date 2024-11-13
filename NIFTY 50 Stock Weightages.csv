@@ -1,51 +1,51 @@
-Symbol,Stock,Weightage(%),Company Name
-HDFCBANK.NS,HDFC BANK LTD.,11.02,HDFC Bank Limited
-RELIANCE.NS,RELIANCE INFRASTRUCTURE LTD,9.13,Reliance Industries Limited
-ICICIBANK.NS,ICICI BANK LTD.,7.73,ICICI Bank Limited
-INFY.NS,INFOSYS LTD,6.27,Infosys Limited
-ITC.NS,ITC Ltd,4.14,ITC Limited
-TCS.NS,TATA CONSULTANCY SERVICES LTD.,4.12,Tata Consultancy Services Limited
-LT.NS,LARSEN & TOUBRO LIMITED,3.87,Larsen & Toubro Limited
-BHARTIARTL.NS,BHARTI AIRTEL  LTD.,3.8,Bharti Airtel Limited
-AXISBANK.NS,AXIS BANK LTD.,2.99,Axis Bank Limited
-SBIN.NS,"STATE BANK OF INDIA,",2.8,State Bank of India
-M&M.NS,MAHINDRA & MAHINDRA LTD.,2.62,Mahindra & Mahindra Limited
-KOTAKBANK.NS,KOTAK MAHINDRA BANK LTD.,2.5,Kotak Mahindra Bank Limited
-HINDUNILVR.NS,"HINDUSTAN UNILEVER LTD.,",2.08,Hindustan Unilever Limited
-BAJFINANCE.NS,BAJAJ FINANCE LIMITED,1.87,Bajaj Finance Limited
-NTPC.NS,NTPC LIMITED,1.69,NTPC Limited
-TATAMOTORS.NS,TATA MOTORS LTD.,1.64,Tata Motors Limited
-SUNPHARMA.NS,SUN PHARMACEUTICAL INDUSTRIES LTD.,1.55,Sun Pharmaceutical Industries Limited
-MARUTI.NS,MARUTI SUZUKI INDIA  LTD.,1.5,Maruti Suzuki India Limited
-HCLTECH.NS,HCL TECHNOLOGIES LTD,1.46,HCL Technologies Limited
-POWERGRID.NS,POWER GRID CORPORATION OF INDIA LIMITED,1.42,Power Grid Corporation of India Limited
-TATASTEEL.NS,TATA STEEL LIMITED,1.35,Tata Steel Limited
-TITAN.NS,TITAN COMPANY LIMITED,1.34,Titan Company Limited
-ULTRACEMCO.NS,ULTRATECH CEMENT LTD,1.27,UltraTech Cement Limited
-ASIANPAINT.NS,ASIAN PAINTS LTD.,1.24,Asian Paints Limited
-ADANIPORTS.NS,ADANI PORTS AND SPECIAL ECONOMIC ZONE LTD,1.02,Adani Ports and Special Economic Zone Limited
-COALINDIA.NS,COAL INDIA LIMITED,1.02,Coal India Limited
-ONGC.NS,OIL AND NATURAL GAS CORPORATION LTD,1.01,Oil and Natural Gas Corporation Limited
-BAJAJ-AUTO.NS,BAJAJ AUTO LIMITED,1.0,Bajaj Auto Limited
-HINDALCO.NS,HINDALCO INDUSTRIES LTD.,0.95,Hindalco Industries Limited
-GRASIM.NS,Grasim Industries Ltd,0.93,Grasim Industries Limited
-INDUSINDBK.NS,IndusInd Bank Ltd,0.91,IndusInd Bank Limited
-NESTLEIND.NS,Nestle India Ltd,0.86,Nestlé India Limited
-TECHM.NS,Tech Mahindra Ltd,0.86,Tech Mahindra Limited
-JSWSTEEL.NS,JSW Steel Ltd,0.84,JSW Steel Limited
-BAJAJFINSV.NS,Bajaj Finserv Ltd,0.81,Bajaj Finserv Ltd.
-ADANIENT.NS,Adani Enterprises Ltd,0.78,Adani Enterprises Limited
-SHRIRAMFIN.NS,Shriram Finance Ltd,0.76,Shriram Finance Limited
-CIPLA.NS,Cipla Ltd,0.73,Cipla Limited
-DRREDDY.NS,Dr. Reddy's Laboratories Ltd,0.73,Dr. Reddy's Laboratories Limited
-HEROMOTOCO.NS,Hero MotoCorp Ltd,0.68,Hero MotoCorp Limited
-WIPRO.NS,Wipro Ltd,0.68,Wipro Limited
-TATACONSUM.NS,Tata Consumer Products Ltd,0.65,Tata Consumer Products Limited
-SBILIFE.NS,SBI Life Insurance Company Ltd,0.63,SBI Life Insurance Company Limited
-BRITANNIA.NS,Britannia Industries Ltd,0.61,Britannia Industries Limited
-EICHERMOT.NS,Eicher Motors Ltd,0.6,Eicher Motors Limited
-APOLLOHOSP.NS,Apollo Hospitals Enterprise Ltd,0.59,Apollo Hospitals Enterprise Limited
-HDFCLIFE.NS,HDFC Life Insurance Company Ltd,0.59,HDFC Life Insurance Company Limited
-BPCL.NS,Bharat Petroleum Corporation Ltd,0.56,Bharat Petroleum Corporation Limited
-DIVISLAB.NS,Divi's Laboratories Ltd,0.55,Divi's Laboratories Limited
-LTIM.NS,LTIMindtree Ltd,0.47,LTIMindtree Limited
+Symbol,Stock,Weightage(%),Company Name,sector
+HDFCBANK.NS,HDFC BANK LTD.,11.02,HDFC Bank Limited,Banks
+RELIANCE.NS,RELIANCE INFRASTRUCTURE LTD,9.13,Reliance Industries Limited,Oil & gas
+ICICIBANK.NS,ICICI BANK LTD.,7.73,ICICI Bank Limited,Banks
+INFY.NS,INFOSYS LTD,6.27,Infosys Limited,IT
+ITC.NS,ITC Ltd,4.14,ITC Limited,Staples
+TCS.NS,TATA CONSULTANCY SERVICES LTD.,4.12,Tata Consultancy Services Limited,IT
+LT.NS,LARSEN & TOUBRO LIMITED,3.87,Larsen & Toubro Limited,Industrials
+BHARTIARTL.NS,BHARTI AIRTEL  LTD.,3.8,Bharti Airtel Limited,Tele & Media
+AXISBANK.NS,AXIS BANK LTD.,2.99,Axis Bank Limited,Banks
+SBIN.NS,"STATE BANK OF INDIA,",2.8,State Bank of India,Banks
+M&M.NS,MAHINDRA & MAHINDRA LTD.,2.62,Mahindra & Mahindra Limited,Auto & Anc
+KOTAKBANK.NS,KOTAK MAHINDRA BANK LTD.,2.5,Kotak Mahindra Bank Limited,Banks
+HINDUNILVR.NS,"HINDUSTAN UNILEVER LTD.,",2.08,Hindustan Unilever Limited,Staples
+BAJFINANCE.NS,BAJAJ FINANCE LIMITED,1.87,Bajaj Finance Limited,NBFC
+NTPC.NS,NTPC LIMITED,1.69,NTPC Limited,Utilities
+TATAMOTORS.NS,TATA MOTORS LTD.,1.64,Tata Motors Limited,Auto & Anc
+SUNPHARMA.NS,SUN PHARMACEUTICAL INDUSTRIES LTD.,1.55,Sun Pharmaceutical Industries Limited,Healthcare
+MARUTI.NS,MARUTI SUZUKI INDIA  LTD.,1.5,Maruti Suzuki India Limited,Auto & Anc
+HCLTECH.NS,HCL TECHNOLOGIES LTD,1.46,HCL Technologies Limited,IT
+POWERGRID.NS,POWER GRID CORPORATION OF INDIA LIMITED,1.42,Power Grid Corporation of India Limited,Utilities
+TATASTEEL.NS,TATA STEEL LIMITED,1.35,Tata Steel Limited,Metals & min
+TITAN.NS,TITAN COMPANY LIMITED,1.34,Titan Company Limited,Discretionary
+ULTRACEMCO.NS,ULTRATECH CEMENT LTD,1.27,UltraTech Cement Limited,Build Mate
+ASIANPAINT.NS,ASIAN PAINTS LTD.,1.24,Asian Paints Limited,Discretionary
+ADANIPORTS.NS,ADANI PORTS AND SPECIAL ECONOMIC ZONE LTD,1.02,Adani Ports and Special Economic Zone Limited,Industrials
+COALINDIA.NS,COAL INDIA LIMITED,1.02,Coal India Limited,Metals & min
+ONGC.NS,OIL AND NATURAL GAS CORPORATION LTD,1.01,Oil and Natural Gas Corporation Limited,Oil & gas
+BAJAJ-AUTO.NS,BAJAJ AUTO LIMITED,1,Bajaj Auto Limited,Auto & Anc
+HINDALCO.NS,HINDALCO INDUSTRIES LTD.,0.95,Hindalco Industries Limited,Metals & min
+GRASIM.NS,Grasim Industries Ltd,0.93,Grasim Industries Limited,Others
+INDUSINDBK.NS,IndusInd Bank Ltd,0.91,IndusInd Bank Limited,Banks
+NESTLEIND.NS,Nestle India Ltd,0.86,Nestle India Limited,Staples
+TECHM.NS,Tech Mahindra Ltd,0.86,Tech Mahindra Limited,IT
+JSWSTEEL.NS,JSW Steel Ltd,0.84,JSW Steel Limited,Metals & min
+BAJAJFINSV.NS,Bajaj Finserv Ltd,0.81,Bajaj Finserv Ltd.,NBFC
+ADANIENT.NS,Adani Enterprises Ltd,0.78,Adani Enterprises Limited,Others
+SHRIRAMFIN.NS,Shriram Finance Ltd,0.76,Shriram Finance Limited,NBFC
+CIPLA.NS,Cipla Ltd,0.73,Cipla Limited,Healthcare
+DRREDDY.NS,Dr. Reddy's Laboratories Ltd,0.73,Dr. Reddy's Laboratories Limited,Healthcare
+HEROMOTOCO.NS,Hero MotoCorp Ltd,0.68,Hero MotoCorp Limited,Auto & Anc
+WIPRO.NS,Wipro Ltd,0.68,Wipro Limited,IT
+TATACONSUM.NS,Tata Consumer Products Ltd,0.65,Tata Consumer Products Limited,Staples
+SBILIFE.NS,SBI Life Insurance Company Ltd,0.63,SBI Life Insurance Company Limited,NBFC
+BRITANNIA.NS,Britannia Industries Ltd,0.61,Britannia Industries Limited,Staples
+EICHERMOT.NS,Eicher Motors Ltd,0.6,Eicher Motors Limited,Auto & Anc
+APOLLOHOSP.NS,Apollo Hospitals Enterprise Ltd,0.59,Apollo Hospitals Enterprise Limited,Healthcare
+HDFCLIFE.NS,HDFC Life Insurance Company Ltd,0.59,HDFC Life Insurance Company Limited,NBFC
+BPCL.NS,Bharat Petroleum Corporation Ltd,0.56,Bharat Petroleum Corporation Limited,Oil & gas
+DIVISLAB.NS,Divi's Laboratories Ltd,0.55,Divi's Laboratories Limited,Healthcare
+LTIM.NS,LTIMindtree Ltd,0.47,LTIMindtree Limited,IT
