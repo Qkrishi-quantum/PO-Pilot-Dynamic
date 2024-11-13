@@ -1,476 +1,487 @@
-Stock(tickertape),Weightage(%),ySymbol,Symbol,Company Name
-360 One Wam Ltd,0.11,360ONE,360ONE.NS,360 One Wam Limited
-3M India Ltd,0.05,3MINDIA,3MINDIA.NS,3M India Limited
-Aarti Industries Ltd,0.06,AARTIIND,AARTIIND.NS,Aarti Industries Limited
-Aavas Financiers Ltd,0.05,AAVAS,AAVAS.NS,Aavas Financiers Limited
-ABB India Ltd,0.21,ABB,ABB.NS,ABB India Limited
-Abbott India Ltd,0.08,ABBOTINDIA,ABBOTINDIA.NS,Abbott India Limited
-ACC Ltd,0.1,ACC,ACC.NS,ACC Limited
-Action Construction Equipment Ltd,0.03,ACE,ACE.NS,Action Construction Equipment Limited
-Adani Enterprises Ltd,0.36,ADANIENT,ADANIENT.NS,Adani Enterprises Limited
-Adani Green Energy Ltd,0.32,ADANIGREEN,ADANIGREEN.NS,Adani Green Energy Limited
-ADANI PORTS AND SPECIAL ECONOMIC ZONE LTD,0.63,ADANIPORTS,ADANIPORTS.NS,Adani Ports and Special Economic Zone Limited
-Adani Power Ltd,0.38,ADANIPOWER,ADANIPOWER.NS,Adani Power Limited
-Adani Total Gas Ltd,0.09,ATGL,ATGL.NS,Adani Total Gas Limited
-Adani Wilmar Ltd,0.03,AWL,AWL.NS,Adani Wilmar Limited
-Aditya Birla Capital Ltd,0.07,ABCAPITAL,ABCAPITAL.NS,Aditya Birla Capital Limited
-Aditya Birla Fashion and Retail Ltd,0.07,ABFRL,ABFRL.NS,Aditya Birla Fashion and Retail Limited
-Aether Industries Ltd,0.01,AETHER,AETHER.NS,Aether Industries Limited
-Affle (India) Ltd,0.05,AFFLE,AFFLE.NS,Affle (India) Limited
-AIA Engineering Ltd,0.07,AIAENG,AIAENG.NS,AIA Engineering Limited
-Ajanta Pharma Ltd,0.07,AJANTPHARM,AJANTPHARM.NS,Ajanta Pharma Limited
-Alembic Pharmaceuticals Ltd,0.04,APLLTD,APLLTD.NS,Alembic Pharmaceuticals Limited
-Alkem Laboratories Ltd,0.12,ALKEM,ALKEM.NS,Alkem Laboratories Limited
-Alkyl Amines Chemicals Ltd,0.02,ALKYLAMINE,ALKYLAMINE.NS,Alkyl Amines Chemicals Limited
-Allcargo Logistics Ltd,0.01,ALLCARGO,ALLCARGO.NS,Allcargo Logistics Limited
-Alok Industries Ltd,0.02,ALOKINDS,ALOKINDS.NS,Alok Industries Limited
-Amber Enterprises India Ltd,0.04,AMBER,AMBER.NS,Amber Enterprises India Limited
-Ambuja Cements Ltd,0.23,AMBUJACEM,AMBUJACEM.NS,Ambuja Cements Limited
-Anand Rathi Wealth Ltd,0.03,ANANDRATHI,ANANDRATHI.NS,Anand Rathi Wealth Limited
-Angel One Ltd,0.06,ANGELONE,ANGELONE.NS,Angel One Limited
-Anupam Rasayan India Ltd,0.01,ANURAS,ANURAS.NS,Anupam Rasayan India Ltd
-Apar Industries Ltd,0.09,APARINDS,APARINDS.NS,APAR Industries Limited
-APL Apollo Tubes Ltd,0.13,APLAPOLLO,APLAPOLLO.NS,APL Apollo Tubes Limited
-Apollo Hospitals Enterprise Ltd,0.36,APOLLOHOSP,APOLLOHOSP.NS,Apollo Hospitals Enterprise Limited
-Apollo Tyres Ltd,0.08,APOLLOTYRE,APOLLOTYRE.NS,Apollo Tyres Limited
-Aptus Value Housing Finance India Ltd,0.04,APTUS,APTUS.NS,Aptus Value Housing Finance India Limited
-Archean Chemical Industries Ltd,0.02,ACI,ACI.NS,Archean Chemical Industries Limited
-Asahi India Glass Ltd,0.03,ASAHIINDIA,ASAHIINDIA.NS,Asahi India Glass Limited
-Ashok Leyland Ltd,0.21,ASHOKLEY,ASHOKLEY.NS,Ashok Leyland Limited
-ASIAN PAINTS LTD.,0.68,ASIANPAINT,ASIANPAINT.NS,Asian Paints Limited
-Aster DM Healthcare Ltd,0.05,ASTERDM,ASTERDM.NS,Aster DM Healthcare Limited
-Astral Ltd,0.12,ASTRAL,ASTRAL.NS,Astral Limited
-Astrazeneca Pharma India Ltd,0.02,ASTRAZEN,ASTRAZEN.NS,AstraZeneca Pharma India Limited
-Atul Ltd,0.06,ATUL,ATUL.NS,Atul Ltd
-AU Small Finance Bank Ltd,0.16,AUBANK,AUBANK.NS,AU Small Finance Bank Limited
-Aurobindo Pharma Ltd,0.22,AUROPHARMA,AUROPHARMA.NS,Aurobindo Pharma Limited
-Avanti Feeds Ltd,0.01,AVANTIFEED,AVANTIFEED.NS,Avanti Feeds Limited
-Avenue Supermarts Ltd,0.4,DMART,DMART.NS,Avenue Supermarts Limited
-AXIS BANK LTD.,1.95,AXISBANK,AXISBANK.NS,Axis Bank Limited
-BAJAJ AUTO LIMITED,0.71,BAJAJ-AUTO,BAJAJ-AUTO.NS,Bajaj Auto Limited
-BAJAJ FINANCE LIMITED,1.02,BAJAJFINSV,BAJAJFINSV.NS,Bajaj Finserv Ltd.
-Bajaj Finserv Ltd,0.54,BAJAJHLDNG,BAJAJHLDNG.NS,Bajaj Holdings & Investment Limited
-Bajaj Holdings and Investment Ltd,0.22,BAJFINANCE,BAJFINANCE.NS,Bajaj Finance Limited
-Balaji Amines Ltd,0.01,BALAMINES,BALAMINES.NS,Balaji Amines Limited
-Balkrishna Industries Ltd,0.13,BALKRISIND,BALKRISIND.NS,Balkrishna Industries Limited
-Balrampur Chini Mills Ltd,0.03,BALRAMCHIN,BALRAMCHIN.NS,Balrampur Chini Mills Limited
-Bandhan Bank Ltd,0.09,BANDHANBNK,BANDHANBNK.NS,Bandhan Bank Limited
-Bank of Baroda Ltd,0.22,BANKBARODA,BANKBARODA.NS,Bank of Baroda Limited
-Bank of India Ltd,0.07,BANKINDIA,BANKINDIA.NS,Bank of India Limited
-Bank of Maharashtra Ltd,0.03,MAHABANK,MAHABANK.NS,Bank of Maharashtra
-Bata India Ltd,0.05,BATAINDIA,BATAINDIA.NS,Bata India Limited
-Bayer Cropscience Ltd,0.04,BAYERCROP,BAYERCROP.NS,Bayer CropScience Limited
-BEML Ltd,0.04,BEML,BEML.NS,BEML Limited
-Berger Paints India Ltd,0.08,BERGEPAINT,BERGEPAINT.NS,Berger Paints India Limited
-Bharat Dynamics Ltd,0.06,BDL,BDL.NS,Bharat Dynamics Limited
-Bharat Electronics Ltd,0.51,BEL,BEL.NS,Bharat Electronics Limited
-Bharat Forge Ltd,0.2,BHARATFORG,BHARATFORG.NS,Bharat Forge Limited
-Bharat Heavy Electricals Ltd,0.18,BHEL,BHEL.NS,Bharat Heavy Electricals Limited
-Bharat Petroleum Corporation Ltd,0.35,BPCL,BPCL.NS,Bharat Petroleum Corporation Limited
-BHARTI AIRTEL  LTD.,2,BHARTIARTL,BHARTIARTL.NS,Bharti Airtel Limited
-Bikaji Foods International Ltd,0.03,BIKAJI,BIKAJI.NS,Bikaji Foods International Limited
-Biocon Ltd,0.08,BIOCON,BIOCON.NS,Biocon Limited
-Birla Corporation Ltd,0.02,BIRLACORPN,BIRLACORPN.NS,Birla Corporation Limited
-Birlasoft Ltd,0.05,BSOFT,BSOFT.NS,Birlasoft Limited
-Bls International Services Ltd,0.02,BLS,BLS.NS,BLS International Services Limited
-Blue Dart Express Ltd,0.03,BLUEDART,BLUEDART.NS,Blue Dart Express Limited
-Blue Star Ltd,0.13,BLUESTARCO,BLUESTARCO.NS,Blue Star Limited
-Bombay Burmah Trading Corporation Ltd,0.02,BBTC,BBTC.NS,"The Bombay Burmah Trading Corporation, Limited"
-Borosil Renewables Ltd,0.01,BORORENEW,BORORENEW.NS,Borosil Renewables Limited
-Bosch Ltd,0.15,BOSCHLTD,BOSCHLTD.NS,Bosch Limited
-Brigade Enterprises Ltd,0.09,BRIGADE,BRIGADE.NS,Brigade Enterprises Limited
-Britannia Industries Ltd,0.38,BRITANNIA,BRITANNIA.NS,Britannia Industries Limited
-BSE Ltd,0.27,BSE,BSE.NS,BSE Limited
-Campus Activewear Ltd,0.01,CAMPUS,CAMPUS.NS,Campus Activewear Limited
-Can Fin Homes Ltd,0.04,CANFINHOME,CANFINHOME.NS,Can Fin Homes Limited
-Canara Bank Ltd,0.18,CANBK,CANBK.NS,Canara Bank
-Caplin Point Laboratories Ltd,0.02,CAPLIPOINT,CAPLIPOINT.NS,Caplin Point Laboratories Limited
-Capri Global Capital Ltd,0.02,CGCL,CGCL.NS,Capri Global Capital Limited
-Carborundum Universal Ltd,0.09,CARBORUNIV,CARBORUNIV.NS,Carborundum Universal Limited
-Castrol India Ltd,0.06,CASTROLIND,CASTROLIND.NS,Castrol India Limited
-CCL Products (India) Ltd,0.03,CCL,CCL.NS,CCL Products (India) Limited
-CE Info Systems Ltd,0.01,MAPMYINDIA,MAPMYINDIA.NS,C. E. Info Systems Limited
-CEAT Ltd,0.06,CEATLTD,CEATLTD.NS,CEAT Limited
-Central Bank of India Ltd,0.02,CENTRALBK,CENTRALBK.NS,Central Bank of India
-Central Depository Services (India) Ltd,0.16,CDSL,CDSL.NS,Central Depository Services (India) Limited
-Century Plyboards (India) Ltd,0.03,CENTURYPLY,CENTURYPLY.NS,Century Plyboards (India) Limited
-Century Textiles and Industries Ltd,0.07,CENTURYTEX,CENTURYTEX.NS,Aditya Birla Real Estate Limited
-Cera Sanitaryware Ltd,0.02,CERA,CERA.NS,Cera Sanitaryware Limited
-CESC Ltd,0.12,CESC,CESC.NS,CESC Limited
-CG Power and Industrial Solutions Ltd,0.24,CGPOWER,CGPOWER.NS,CG Power and Industrial Solutions Limited
-Chalet Hotels Ltd,0.03,CHALET,CHALET.NS,Chalet Hotels Limited
-Chambal Fertilisers and Chemicals Ltd,0.04,CHAMBLFERT,CHAMBLFERT.NS,Chambal Fertilisers and Chemicals Limited
-Chemplast Sanmar Ltd,0.02,CHEMPLASTS,CHEMPLASTS.NS,Chemplast Sanmar Limited
-Chennai Petroleum Corporation Ltd,0.02,CHENNPETRO,CHENNPETRO.NS,Chennai Petroleum Corporation Limited
-Cholamandalam Financial Holdings Ltd,0.1,CHOLAFIN,CHOLAFIN.NS,Cholamandalam Investment and Finance Company Limited
-Cholamandalam Investment and Finance Company Ltd,0.35,CHOLAHLDNG,CHOLAHLDNG.NS,Cholamandalam Financial Holdings Limited
-CIE Automotive India Ltd,0.04,CIEINDIA,CIEINDIA.NS,CIE Automotive India Limited
-Cipla Ltd,0.47,CIPLA,CIPLA.NS,Cipla Limited
-City Union Bank Ltd,0.06,CUB,CUB.NS,City Union Bank Limited
-Clean Science and Technology Ltd,0.02,CLEAN,CLEAN.NS,Clean Science and Technology Limited
-Coal India Ltd,0.58,COALINDIA,COALINDIA.NS,Coal India Limited
-Cochin Shipyard Ltd,0.06,COCHINSHIP,COCHINSHIP.NS,Cochin Shipyard Limited
-Coforge Ltd,0.24,COFORGE,COFORGE.NS,Coforge Limited
-Colgate-Palmolive (India) Ltd,0.25,COLPAL,COLPAL.NS,Colgate-Palmolive (India) Limited
-Computer Age Management Services Ltd,0.11,CAMS,CAMS.NS,Computer Age Management Services Limited
-Container Corporation of India Ltd,0.13,CONCOR,CONCOR.NS,Container Corporation of India Limited
-Coromandel International Ltd,0.11,COROMANDEL,COROMANDEL.NS,Coromandel International Limited
-Craftsman Automation Ltd,0.04,CRAFTSMAN,CRAFTSMAN.NS,Craftsman Automation Limited
-CreditAccess Grameen Ltd,0.03,CREDITACC,CREDITACC.NS,CreditAccess Grameen Limited
-CRISIL Ltd,0.05,CRISIL,CRISIL.NS,CRISIL Limited
-Crompton Greaves Consumer Electricals Ltd,0.15,CROMPTON,CROMPTON.NS,Crompton Greaves Consumer Electricals Limited
-CSB Bank Ltd,0.01,CSBBANK,CSBBANK.NS,CSB Bank Limited
-Cummins India Ltd,0.27,CUMMINSIND,CUMMINSIND.NS,Cummins India Limited
-Cyient Ltd,0.09,CYIENT,CYIENT.NS,Cyient Limited
-Dabur India Ltd,0.19,DABUR,DABUR.NS,Dabur India Limited
-Dalmia Bharat Ltd,0.07,DALBHARAT,DALBHARAT.NS,Dalmia Bharat Limited
-Data Patterns (India) Ltd,0.03,DATAPATTNS,DATAPATTNS.NS,Data Patterns (India) Limited
-DCM Shriram Ltd,0.02,DCMSHRIRAM,DCMSHRIRAM.NS,DCM Shriram Limited
-Deepak Fertilisers and Petrochemicals Corp Ltd,0.04,DEEPAKFERT,DEEPAKFERT.NS,Deepak Fertilisers And Petrochemicals Corporation Limited
-Deepak Nitrite Ltd,0.1,DEEPAKNTR,DEEPAKNTR.NS,Deepak Nitrite Limited
-Delhivery Ltd,0.11,DELHIVERY,DELHIVERY.NS,Delhivery Limited
-Devyani International Ltd,0.04,DEVYANI,DEVYANI.NS,Devyani International Limited
-Divi's Laboratories Ltd,0.36,DIVISLAB,DIVISLAB.NS,Divi's Laboratories Limited
-Dixon Technologies (India) Ltd,0.24,DIXON,DIXON.NS,Dixon Technologies (India) Limited
-DLF Ltd,0.29,DLF,DLF.NS,DLF Limited
-Dr Reddy's Laboratories Ltd,0.4,DRREDDY,DRREDDY.NS,Dr. Reddy's Laboratories Limited
-Dr. Lal PathLabs Ltd,0.06,LALPATHLAB,LALPATHLAB.NS,Dr. Lal PathLabs Limited
-E I D-Parry (India) Ltd,0.04,EIDPARRY,EIDPARRY.NS,E.I.D.- Parry (India) Limited
-Easy Trip Planners Ltd,0.01,EASEMYTRIP,EASEMYTRIP.NS,Easy Trip Planners Limited
-eClerx Services Limited,0.03,ECLERX,ECLERX.NS,eClerx Services Limited
-Eicher Motors Ltd,0.34,EICHERMOT,EICHERMOT.NS,Eicher Motors Limited
-EIH Ltd,0.04,EIHOTEL,EIHOTEL.NS,EIH Limited
-Elecon Engineering Company Ltd,0.03,ELECON,ELECON.NS,Elecon Engineering Company Limited
-Elgi Equipments Ltd,0.06,ELGIEQUIP,ELGIEQUIP.NS,Elgi Equipments Limited
-Emami Ltd,0.07,EMAMILTD,EMAMILTD.NS,Emami Limited
-Endurance Technologies Ltd,0.04,ENDURANCE,ENDURANCE.NS,Endurance Technologies Limited
-Engineers India Ltd,0.03,ENGINERSIN,ENGINERSIN.NS,Engineers India Limited
-EPL Ltd,0.02,EPL,EPL.NS,EPL Limited
-Equitas Small Finance Bank Ltd,0.04,EQUITASBNK,EQUITASBNK.NS,Equitas Small Finance Bank Limited
-Eris Lifesciences Ltd,0.03,ERIS,ERIS.NS,Eris Lifesciences Limited
-Escorts Kubota Ltd,0.05,ESCORTS,ESCORTS.NS,Escorts Kubota Limited
-Exide Industries Ltd,0.1,EXIDEIND,EXIDEIND.NS,Exide Industries Limited
-F D C Ltd,0.01,FDC,FDC.NS,FDC Limited
-Federal Bank Ltd,0.21,FEDERALBNK,FEDERALBNK.NS,The Federal Bank Limited
-Fertilisers And Chemicals Travancore Ltd,0.34,FACT,FACT.NS,The Fertilisers and Chemicals Travancore Limited
-Fine Organic Industries Ltd,0.02,FINEORG,FINEORG.NS,Fine Organic Industries Limited
-Finolex Cables Ltd,0.05,FINCABLES,FINCABLES.NS,Finolex Cables Limited
-Finolex Industries Ltd,0.04,FINPIPE,FINPIPE.NS,Finolex Industries Limited
-Firstsource Solutions Ltd,0.05,FSL,FSL.NS,Firstsource Solutions Limited
-Five-Star Business Finance Ltd,0.08,FIVESTAR,FIVESTAR.NS,Five-Star Business Finance Limited
-Fortis Healthcare Ltd,0.15,FORTIS,FORTIS.NS,Fortis Healthcare Limited
-Fsn E-Commerce Ventures Ltd,0.11,NYKAA,NYKAA.NS,FSN E-Commerce Ventures Limited
-Gail (India) Ltd,0.31,GAIL,GAIL.NS,GAIL (India) Limited
-Garden Reach Shipbuilders & Engineers Ltd,0.03,GRSE,GRSE.NS,Garden Reach Shipbuilders & Engineers Limited
-General Insurance Corporation of India,0.06,GICRE,GICRE.NS,General Insurance Corporation of India
-GILLETTE INDIA LTD.,0.03,GILLETTE,GILLETTE.NS,Gillette India Limited
-Gland Pharma Ltd,0.07,GLAND,GLAND.NS,Gland Pharma Limited
-GlaxoSmithKline Pharmaceuticals Ltd,0.06,GLAXO,GLAXO.NS,GlaxoSmithKline Pharmaceuticals Limited
-Glenmark Life Sciences Ltd,0.02,GLENMARK,GLENMARK.NS,Glenmark Pharmaceuticals Limited
-Glenmark Pharmaceuticals Ltd,0.12,GLS,GLS.NS,Glenmark Life Sciences Limited
-Global Health Ltd,0.05,MEDANTA,MEDANTA.NS,Global Health Limited
-GMM Pfaudler Ltd,0.02,GMMPFAUDLR,GMMPFAUDLR.NS,GMM Pfaudler Limited
-GMR Airports Ltd,0.27,GMRINFRA,GMRINFRA.NS,GMR Airports Limited
-Godawari Power and Ispat Ltd,0.02,GPIL,GPIL.NS,Godawari Power & Ispat Limited
-Godfrey Phillips India Ltd,0.05,GODFRYPHLP,GODFRYPHLP.NS,Godfrey Phillips India Limited
-Godrej Consumer Products Ltd,0.27,GODREJCP,GODREJCP.NS,Godrej Consumer Products Limited
-Godrej Industries Ltd,0.04,GODREJIND,GODREJIND.NS,Godrej Industries Limited
-Godrej Properties Ltd,0.15,GODREJPROP,GODREJPROP.NS,Godrej Properties Limited
-Granules India Ltd,0.04,GRANULES,GRANULES.NS,Granules India Limited
-Graphite India Ltd,0.02,GRAPHITE,GRAPHITE.NS,Graphite India Limited
-Grasim Industries Ltd,0.42,GRASIM,GRASIM.NS,Grasim Industries Limited
-Great Eastern Shipping Company Ltd,0.06,GESHIP,GESHIP.NS,The Great Eastern Shipping Company Limited
-Grindwell Norton Ltd,0.06,GRINDWELL,GRINDWELL.NS,Grindwell Norton Limited
-Gujarat Ambuja Exports Ltd,0.01,GAEL,GAEL.NS,Gujarat Ambuja Exports Limited
-Gujarat Fluorochemicals Ltd,0.08,FLUOROCHEM,FLUOROCHEM.NS,Gujarat Fluorochemicals Limited
-Gujarat Gas Ltd,0.06,GUJGASLTD,GUJGASLTD.NS,Gujarat Gas Limited
-Gujarat Narmada Valley Fertilizers & Chemicals Ltd,0.03,GNFC,GNFC.NS,Gujarat Narmada Valley Fertilizers & Chemicals Limited
-Gujarat Mineral Development Corporation Ltd,0.02,GMDCLTD,GMDCLTD.NS,Gujarat Mineral Development Corporation Limited
-Gujarat Pipavav Port Ltd,0.03,GPPL,GPPL.NS,Gujarat Pipavav Port Limited
-Gujarat State Fertilizers & Chemicals Ltd,0.03,GSFC,GSFC.NS,Gujarat State Fertilizers & Chemicals Limited
-Gujarat State Petronet Ltd,0.06,GSPL,GSPL.NS,Gujarat State Petronet Limited
-Happiest Minds Technologies Ltd,0.03,HAPPSTMNDS,HAPPSTMNDS.NS,Happiest Minds Technologies Limited
-Havells India Ltd,0.23,HAVELLS,HAVELLS.NS,Havells India Limited
-HBL Power Systems Ltd,0.08,HBLPOWER,HBLPOWER.NS,HBL Power Systems Limited
-HCL TECHNOLOGIES LTD,0.96,HCLTECH,HCLTECH.NS,HCL Technologies Limited
-HDFC Asset Management Company Ltd,0.22,HDFCAMC,HDFCAMC.NS,HDFC Asset Management Company Limited
-HDFC BANK LTD.,6.61,HDFCBANK,HDFCBANK.NS,HDFC Bank Limited
-HDFC Life Insurance Company Ltd,0.34,HDFCLIFE,HDFCLIFE.NS,HDFC Life Insurance Company Limited
-HEG Ltd,0.02,HEG,HEG.NS,HEG Limited
-Hero MotoCorp Ltd,0.39,HEROMOTOCO,HEROMOTOCO.NS,Hero MotoCorp Limited
-HFCL Ltd,0.07,HFCL,HFCL.NS,HFCL Limited
-Himadri Speciality Chemical Ltd,0.07,HSCL,HSCL.NS,Himadri Speciality Chemical Limited
-Hindalco Industries Ltd,0.5,HINDALCO,HINDALCO.NS,Hindalco Industries Limited
-Hindustan Aeronautics Ltd,0.44,HAL,HAL.NS,Hindustan Aeronautics Limited
-Hindustan Copper Ltd,0.05,HINDCOPPER,HINDCOPPER.NS,Hindustan Copper Limited
-Hindustan Petroleum Corp Ltd,0.2,HINDPETRO,HINDPETRO.NS,Hindustan Petroleum Corporation Limited
-"HINDUSTAN UNILEVER LTD.,",1.33,HINDUNILVR,HINDUNILVR.NS,Hindustan Unilever Limited
-Hindustan Zinc Ltd,0.06,HINDZINC,HINDZINC.NS,Hindustan Zinc Limited
-Hitachi Energy India Ltd,0.07,POWERINDIA,POWERINDIA.NS,Hitachi Energy India Limited
-Home First Finance Company India Ltd,0.03,HOMEFIRST,HOMEFIRST.NS,Home First Finance Company India Limited
-Honeywell Automation India Ltd,0.06,HONAUT,HONAUT.NS,Honeywell Automation India Limited
-Housing and Urban Development Corporation Ltd,0.03,HUDCO,HUDCO.NS,Housing and Urban Development Corporation Limited
-ICICI BANK LTD.,4.62,ICICIBANK,ICICIBANK.NS,ICICI Bank Limited
-ICICI Lombard General Insurance Company Ltd,0.25,ICICIGI,ICICIGI.NS,ICICI Lombard General Insurance Company Limited
-ICICI Prudential Life Insurance Company Ltd,0.14,ICICIPRULI,ICICIPRULI.NS,ICICI Prudential Life Insurance Company Limited
-ICICI Securities Ltd,0.04,ISEC,ISEC.NS,ICICI Securities Limited
-IDBI Bank Ltd,0.27,IDBI,IDBI.NS,IDBI Bank Limited
-IIFL Finance Ltd,0.06,IIFL,IIFL.NS,IIFL Finance Limited
-India Cements Ltd,0.03,INDIACEM,INDIACEM.NS,The India Cements Limited
-Indiamart Intermesh Ltd,0.04,INDIAMART,INDIAMART.NS,IndiaMART InterMESH Limited
-Indian Bank,0.09,INDIANB,INDIANB.NS,Indian Bank
-Indian Energy Exchange Ltd,0.09,IEX,IEX.NS,Indian Energy Exchange Limited
-Indian Hotels Company Ltd,0.3,INDHOTEL,INDHOTEL.NS,The Indian Hotels Company Limited
-Indian Oil Corporation Ltd,0.33,IOC,IOC.NS,Indian Oil Corporation Limited
-Indian Overseas Bank,0.02,IOB,IOB.NS,Indian Overseas Bank
-Indian Railway Catering and Tourism Corporation Ltd,0.14,IRCTC,IRCTC.NS,Indian Railway Catering & Tourism Corporation Limited
-Indian Railway Finance Corp Ltd,0.15,IRFC,IRFC.NS,Indian Railway Finance Corporation Limited
-Indigo Paints Ltd,0.02,INDIGOPNTS,INDIGOPNTS.NS,Indigo Paints Limited
-Indraprastha Gas Ltd,0.1,IGL,IGL.NS,Indraprastha Gas Limited
-Indus Towers Ltd,0.28,INDUSTOWER,INDUSTOWER.NS,Indus Towers Limited
-Indusind Bank Ltd,0.47,INDUSINDBK,INDUSINDBK.NS,IndusInd Bank Limited
-Info Edge (India) Ltd,0.28,NAUKRI,NAUKRI.NS,Info Edge (India) Limited
-INFOSYS LTD,3.44,INFY,INFY.NS,Infosys Limited
-Inox Wind Ltd,0.07,INOXWIND,INOXWIND.NS,Inox Wind Limited
-Intellect Design Arena Ltd,0.04,INTELLECT,INTELLECT.NS,Intellect Design Arena Limited
-Interglobe Aviation Ltd,0.48,INDIGO,INDIGO.NS,InterGlobe Aviation Limited
-IPCA Laboratories Ltd,0.1,IPCALAB,IPCALAB.NS,Ipca Laboratories Limited
-IRB Infrastructure Developers Ltd,0.06,IRB,IRB.NS,IRB Infrastructure Developers Limited
-Ircon International Ltd,0.04,IRCON,IRCON.NS,Ircon International Limited
-ITC LTD,2.37,ITC,ITC.NS,ITC Limited
-ITI Ltd,0,ITI,ITI.NS,ITI Limited
-J B Chemicals and Pharmaceuticals Ltd,0.07,JBCHEPHARM,JBCHEPHARM.NS,J. B. Chemicals & Pharmaceuticals Limited
-J K Papers Ltd,0.02,JKPAPER,JKPAPER.NS,JK Paper Limited
-J K Cement Ltd,0.08,JKCEMENT,JKCEMENT.NS,J.K. Cement Limited
-Jai Balaji Industries Ltd,0.02,JAIBALAJI,JAIBALAJI.NS,Jai Balaji Industries Limited
-Jammu and Kashmir Bank Ltd,0.02,J&KBANK,J&KBANK.NS,The Jammu and Kashmir Bank Limited
-JBM Auto Ltd,0.02,JBMA,JBMA.NS,JBM Auto Limited
-Jindal SAW Ltd,0.04,JINDALSAW,JINDALSAW.NS,Jindal Saw Limited
-Jindal Stainless Ltd,0.12,JSL,JSL.NS,Jindal Stainless Limited
-Jindal Steel And Power Ltd,0.2,JINDALSTEL,JINDALSTEL.NS,Jindal Steel & Power Limited
-JK Lakshmi Cement Ltd,0.02,JKLAKSHMI,JKLAKSHMI.NS,JK Lakshmi Cement Limited
-JM Financial Ltd,0.05,JMFINANCIL,JMFINANCIL.NS,JM Financial Limited
-JSW Energy Ltd,0.21,JSWENERGY,JSWENERGY.NS,JSW Energy Limited
-JSW Steel Ltd,0.43,JSWSTEEL,JSWSTEEL.NS,JSW Steel Limited
-Jubilant Foodworks Ltd,0.13,JUBLFOOD,JUBLFOOD.NS,Jubilant FoodWorks Limited
-Jubilant Ingrevia Ltd,0.03,JUBLINGREA,JUBLINGREA.NS,Jubilant Ingrevia Limited
-Jubilant Pharmova Ltd,0.03,JUBLPHARMA,JUBLPHARMA.NS,Jubilant Pharmova Limited
-Jupiter Wagons Ltd,0.03,JWL,JWL.NS,Jupiter Wagons Limited
-Just Dial Ltd,0.01,JUSTDIAL,JUSTDIAL.NS,Just Dial Limited
-Jyothy Labs Ltd,0.03,JYOTHYLAB,JYOTHYLAB.NS,Jyothy Labs Limited
-Kajaria Ceramics Ltd,0.06,KAJARIACER,KAJARIACER.NS,Kajaria Ceramics Limited
-Kalyan Jewellers India Ltd,0.11,KALYANKJIL,KALYANKJIL.NS,Kalyan Jewellers India Limited
-Kansai Nerolac Paints Ltd,0.03,KANSAINER,KANSAINER.NS,Kansai Nerolac Paints Limited
-Karur Vysya Bank Ltd,0.09,KARURVYSYA,KARURVYSYA.NS,The Karur Vysya Bank Limited
-Kaynes Technology India Ltd,0.07,KAYNES,KAYNES.NS,Kaynes Technology India Limited
-KEC International Ltd,0.13,KEC,KEC.NS,KEC International Limited
-KEI Industries Ltd,0.13,KEI,KEI.NS,KEI Industries Limited
-Kfin Technologies Ltd,0.05,KFINTECH,KFINTECH.NS,KFin Technologies Limited
-KNR Constructions Ltd,0.02,KNRCON,KNRCON.NS,KNR Constructions Limited
-KOTAK MAHINDRA BANK LTD.,1.35,KOTAKBANK,KOTAKBANK.NS,Kotak Mahindra Bank Limited
-KPIT Technologies Ltd,0.13,KPITTECH,KPITTECH.NS,KPIT Technologies Limited
-KPR Mill Ltd,0.04,KPRMILL,KPRMILL.NS,K.P.R. Mill Limited
-KRBL Ltd,0.01,KRBL,KRBL.NS,KRBL Limited
-Krishna Institute of Medical Sciences Ltd,0.06,KIMS,KIMS.NS,Krishna Institute of Medical Sciences Limited
-KSB Ltd,0.02,KSB,KSB.NS,KSB Limited
-L&T Finance Ltd,0.07,LTF,LTF.NS,L&T Finance Limited
-L&T Technology Services Ltd,0.08,LTTS,LTTS.NS,L&T Technology Services Limited
-LARSEN & TOUBRO LIMITED,2.23,LT,LT.NS,Larsen & Toubro Limited
-Latent View Analytics Ltd,0.01,LATENTVIEW,LATENTVIEW.NS,Latent View Analytics Limited
-Laurus Labs Ltd,0.09,LAURUSLABS,LAURUSLABS.NS,Laurus Labs Limited
-Laxmi Organic Industries Ltd,0.01,LXCHEM,LXCHEM.NS,Laxmi Organic Industries Limited
-Lemon Tree Hotels Ltd,0.03,LEMONTREE,LEMONTREE.NS,Lemon Tree Hotels Limited
-LIC Housing Finance Ltd,0.19,LICHSGFIN,LICHSGFIN.NS,LIC Housing Finance Limited
-Life Insurance Corporation Of India,0.12,LICI,LICI.NS,Life Insurance Corporation of India
-Linde India Ltd,0.08,LINDEINDIA,LINDEINDIA.NS,Linde India Limited
-LTIMindtree Ltd,0.31,LTIM,LTIM.NS,LTIMindtree Limited
-Lupin Ltd,0.28,LUPIN,LUPIN.NS,Lupin Limited
-Macrotech Developers Ltd,0.19,LODHA,LODHA.NS,Macrotech Developers Limited
-Mahanagar Gas Ltd,0.06,MGL,MGL.NS,Mahanagar Gas Limited
-Maharashtra Seamless Ltd,0.01,MAHSEAMLES,MAHSEAMLES.NS,Maharashtra Seamless Limited
-MAHINDRA & MAHINDRA LTD.,1.35,M&M,M&M.NS,Mahindra & Mahindra Limited
-Mahindra and Mahindra Financial Services Ltd,0.1,M&MFIN,M&MFIN.NS,Mahindra & Mahindra Financial Services Limited
-Mahindra Holidays and Resorts India Ltd,0.01,MHRIL,MHRIL.NS,Mahindra Holidays & Resorts India Limited
-Mahindra Lifespace Developers Ltd,0.02,MAHLIFE,MAHLIFE.NS,Mahindra Lifespace Developers Limited
-Manappuram Finance Ltd,0.06,MANAPPURAM,MANAPPURAM.NS,Manappuram Finance Limited
-Mangalore Refinery and Petrochemicals Ltd,0.02,MRPL,MRPL.NS,Mangalore Refinery and Petrochemicals Limited
-Marico Ltd,0.19,MARICO,MARICO.NS,Marico Limited
-MARUTI SUZUKI INDIA  LTD.,0.84,MARUTI,MARUTI.NS,Maruti Suzuki India Limited
-Mastek Ltd,0.02,MASTEK,MASTEK.NS,Mastek Limited
-Max Financial Services Ltd,0.2,MFSL,MFSL.NS,Max Financial Services Limited
-Max Healthcare Institute Ltd,0.37,MAXHEALTH,MAXHEALTH.NS,Max Healthcare Institute Limited
-Mazagon Dock Shipbuilders Ltd,0.07,MAZDOCK,MAZDOCK.NS,Mazagon Dock Shipbuilders Limited
-MedPlus Health Services Ltd,0.02,MEDPLUS,MEDPLUS.NS,MedPlus Health Services Limited
-Metro Brands Ltd,0.02,METROBRAND,METROBRAND.NS,Metro Brands Limited
-Metropolis Healthcare Ltd,0.03,METROPOLIS,METROPOLIS.NS,Metropolis Healthcare Limited
-Minda Corporation Ltd,0.02,MINDACORP,MINDACORP.NS,Minda Corporation Limited
-MMTC Ltd,0.01,MMTC,MMTC.NS,MMTC Limited
-Motherson Sumi Wiring India Ltd,0.06,MSUMI,MSUMI.NS,Motherson Sumi Wiring India Limited
-Motilal Oswal Financial Services Ltd,0.11,MOTILALOFS,MOTILALOFS.NS,Motilal Oswal Financial Services Limited
-Mphasis Ltd,0.17,MPHASIS,MPHASIS.NS,Mphasis Limited
-MRF Ltd,0.15,MRF,MRF.NS,MRF Limited
-MTAR Technologies Ltd,0.02,MTARTECH,MTARTECH.NS,MTAR Technologies Limited
-Multi Commodity Exchange of India Ltd,0.13,MCX,MCX.NS,Multi Commodity Exchange of India Limited
-Muthoot Finance Ltd,0.11,MUTHOOTFIN,MUTHOOTFIN.NS,Muthoot Finance Limited
-Narayana Hrudayalaya Ltd,0.05,NH,NH.NS,Narayana Hrudayalaya Limited
-Natco Pharma Ltd,0.07,NATCOPHARM,NATCOPHARM.NS,NATCO Pharma Limited
-National Aluminium Co Ltd,0.09,NATIONALUM,NATIONALUM.NS,National Aluminium Company Limited
-Navin Fluorine International Ltd,0.06,NAVINFLUOR,NAVINFLUOR.NS,Navin Fluorine International Limited
-NBCC (India) Ltd,0.06,NBCC,NBCC.NS,NBCC (India) Limited
-NCC Ltd,0.07,NCC,NCC.NS,NCC Limited
-Nestle India Ltd,0.48,NESTLEIND,NESTLEIND.NS,Nestl? India Limited
-Network18 Media & Investments Ltd,0.01,NETWORK18,NETWORK18.NS,Network18 Media & Investments Limited
-New India Assurance Company Ltd,0.03,NIACL,NIACL.NS,The New India Assurance Company Limited
-NHPC Ltd,0.15,NHPC,NHPC.NS,NHPC Limited
-Nippon Life India Asset Management Ltd,0.06,NAM-INDIA,NAM-INDIA.NS,Nippon Life India Asset Management Limited
-NLC India Ltd,0.05,NLCINDIA,NLCINDIA.NS,NLC India Limited
-NMDC Ltd,0.13,NMDC,NMDC.NS,NMDC Limited
-NTPC LIMITED,0.99,NTPC,NTPC.NS,NTPC Limited
-Nuvoco Vistas Corporation Ltd,0.02,NUVOCO,NUVOCO.NS,Nuvoco Vistas Corporation Limited
-Oberoi Realty Ltd,0.11,OBEROIRLTY,OBEROIRLTY.NS,Oberoi Realty Limited
-OIL AND NATURAL GAS CORPORATION LTD,0.59,ONGC,ONGC.NS,Oil and Natural Gas Corporation Limited
-Oil India Ltd,0.17,OIL,OIL.NS,Oil India Limited
-Olectra Greentech Ltd,0.04,OLECTRA,OLECTRA.NS,Olectra Greentech Limited
-One 97 Communications Ltd,0.1,PAYTM,PAYTM.NS,One97 Communications Limited
-Oracle Financial Services Software Ltd,0.14,OFSS,OFSS.NS,Oracle Financial Services Software Limited
-Page Industries Ltd,0.12,PAGEIND,PAGEIND.NS,Page Industries Limited
-Patanjali Foods Ltd,0.09,PATANJALI,PATANJALI.NS,Patanjali Foods Limited
-PB Fintech Ltd,0.29,POLICYBZR,POLICYBZR.NS,PB Fintech Limited
-PCBL Ltd,0.05,PCBL,PCBL.NS,PCBL Limited
-Persistent Systems Ltd,0.28,PERSISTENT,PERSISTENT.NS,Persistent Systems Limited
-Petronet LNG Ltd,0.13,PETRONET,PETRONET.NS,Petronet LNG Limited
-Phoenix Mills Ltd,0.17,PHOENIXLTD,PHOENIXLTD.NS,The Phoenix Mills Limited
-PI Industries Ltd,0.2,PIIND,PIIND.NS,PI Industries Limited
-Pidilite Industries Ltd,0.24,PIDILITIND,PIDILITIND.NS,Pidilite Industries Limited
-Piramal Enterprises Ltd,0.06,PEL,PEL.NS,Piramal Enterprises Limited
-Piramal Pharma Ltd,0.07,PPLPHARMA,PPLPHARMA.NS,Piramal Pharma Limited
-PNB Housing Finance Ltd,0.02,PNBHOUSING,PNBHOUSING.NS,PNB Housing Finance Limited
-PNC Infratech Ltd,0.03,PNCINFRA,PNCINFRA.NS,PNC Infratech Limited
-Poly Medicure Ltd,0.04,POLYMED,POLYMED.NS,Poly Medicure Limited
-Polycab India Ltd,0.16,POLYCAB,POLYCAB.NS,Polycab India Limited
-Poonawalla Fincorp Ltd,0.05,POONAWALLA,POONAWALLA.NS,Poonawalla Fincorp Limited
-Power Finance Corporation Ltd,0.37,PFC,PFC.NS,Power Finance Corporation Limited
-POWER GRID CORPORATION OF INDIA LIMITED,0.79,POWERGRID,POWERGRID.NS,Power Grid Corporation of India Limited
-Praj Industries Ltd,0.05,PRAJIND,PRAJIND.NS,Praj Industries Limited
-Prestige Estates Projects Ltd,0.15,PRESTIGE,PRESTIGE.NS,Prestige Estates Projects Limited
-Prince Pipes and Fittings Ltd,0.01,PRINCEPIPE,PRINCEPIPE.NS,Prince Pipes and Fittings Limited
-Prism Johnson Ltd,0.01,PRSMJOHNSN,PRSMJOHNSN.NS,Prism Johnson Limited
-Procter & Gamble Hygiene and Health Care Ltd,0.08,PGHH,PGHH.NS,Procter & Gamble Hygiene and Health Care Limited
-Punjab National Bank,0.17,PNB,PNB.NS,Punjab National Bank
-Quess Corp Ltd,0.02,QUESS,QUESS.NS,Quess Corp Limited
-Radico Khaitan Ltd,0.08,RADICO,RADICO.NS,Radico Khaitan Limited
-Rail Vikas Nigam Ltd,0.16,RVNL,RVNL.NS,Rail Vikas Nigam Limited
-Railtel Corporation of India Ltd,0.02,RAILTEL,RAILTEL.NS,RailTel Corporation of India Limited
-Rainbow Children's Medicare Ltd,0.03,RAINBOW,RAINBOW.NS,Rainbow Children's Medicare Limited
-Rajesh Exports Ltd,0.01,RAJESHEXPO,RAJESHEXPO.NS,Rajesh Exports Limited
-Ramco Cements Limited,0.05,RAMCOCEM,RAMCOCEM.NS,The Ramco Cements Limited
-Ramkrishna Forgings Ltd,0.04,RKFORGE,RKFORGE.NS,Ramkrishna Forgings Limited
-Rashtriya Chemicals and Fertilizers Ltd,0.01,RCF,RCF.NS,Rashtriya Chemicals and Fertilizers Limited
-Ratnamani Metals and Tubes Ltd,0.04,RATNAMANI,RATNAMANI.NS,Ratnamani Metals & Tubes Limited
-Rattanindia Enterprises Ltd,0.01,RTNINDIA,RTNINDIA.NS,RattanIndia Enterprises Limited
-Raymond Ltd,0.03,RAYMOND,RAYMOND.NS,Raymond Limited
-RBL Bank Ltd,0.05,RBLBANK,RBLBANK.NS,RBL Bank Limited
-REC Limited,0.35,RECLTD,RECLTD.NS,REC Limited
-Redington Ltd,0.06,REDINGTON,REDINGTON.NS,Redington Limited
-RELIANCE INFRASTRUCTURE LTD,5.19,RELIANCE,RELIANCE.NS,Reliance Industries Limited
-Restaurant Brands Asia Ltd,0.02,RBA,RBA.NS,Restaurant Brands Asia Limited
-RHI Magnesita India Ltd,0.02,RHIM,RHIM.NS,RHI Magnesita India Limited
-RITES Ltd,0.02,RITES,RITES.NS,RITES Limited
-Route Mobile Ltd,0.01,ROUTE,ROUTE.NS,Route Mobile Limited
-Safari Industries (India) Ltd,0.03,SAFARI,SAFARI.NS,Safari Industries (India) Limited
-Sammaan Capital Ltd,0.05,SAMMAANCAP,SAMMAANCAP.NS,Sammaan Capital Limited
-Samvardhana Motherson International Ltd,0.29,MOTHERSON,MOTHERSON.NS,Samvardhana Motherson International Limited
-Sanofi India Ltd,0.03,SANOFI,SANOFI.NS,Sanofi India Limited
-Sapphire Foods India Ltd,0.04,SAPPHIRE,SAPPHIRE.NS,Sapphire Foods India Limited
-Saregama India Ltd,0.02,SAREGAMA,SAREGAMA.NS,Saregama India Limited
-SBI Cards and Payment Services Ltd,0.12,SBICARD,SBICARD.NS,SBI Cards and Payment Services Limited
-SBI Life Insurance Company Ltd,0.4,SBILIFE,SBILIFE.NS,SBI Life Insurance Company Limited
-Schaeffler India Ltd,0.08,SCHAEFFLER,SCHAEFFLER.NS,Schaeffler India Limited
-Schneider Electric Infrastructure Ltd,0.02,SCHNEIDER,SCHNEIDER.NS,Schneider Electric Infrastructure Limited
-Shree Cement Ltd,0.13,SHREECEM,SHREECEM.NS,Shree Cement Limited
-Shree Renuka Sugars Ltd,0.02,RENUKA,RENUKA.NS,Shree Renuka Sugars Limited
-Shriram Finance Ltd,0.46,SHRIRAMFIN,SHRIRAMFIN.NS,Shriram Finance Limited
-Shyam Metalics and Energy Ltd,0.03,SHYAMMETL,SHYAMMETL.NS,Shyam Metalics and Energy Limited
-Siemens Ltd,0.31,SIEMENS,SIEMENS.NS,Siemens Limited
-SJVN Ltd,0.05,SJVN,SJVN.NS,SJVN Limited
-SKF India Ltd,0.07,SKFINDIA,SKFINDIA.NS,SKF India Limited
-Sobha Ltd,0.04,SOBHA,SOBHA.NS,Sobha Limited
-Solar Industries India Ltd,0.14,SOLARINDS,SOLARINDS.NS,Solar Industries India Limited
-Sona BLW Precision Forgings Ltd,0.17,SONACOMS,SONACOMS.NS,Sona BLW Precision Forgings Limited
-Sonata Software Ltd,0.06,SONATSOFTW,SONATSOFTW.NS,Sonata Software Limited
-SRF Ltd,0.18,SRF,SRF.NS,SRF Limited
-Star Health and Allied Insurance Company Ltd,0.07,STARHEALTH,STARHEALTH.NS,Star Health and Allied Insurance Company Limited
-"STATE BANK OF INDIA,",1.54,SBIN,SBIN.NS,State Bank of India
-Steel Authority of India Ltd,0.1,SAIL,SAIL.NS,Steel Authority of India Limited
-Sterling and Wilson Renewable Energy Ltd,0.04,SWSOLAR,SWSOLAR.NS,Sterling and Wilson Renewable Energy Limited
-Sterlite Technologies Ltd,0.02,STLTECH,STLTECH.NS,Sterlite Technologies Limited
-Sumitomo Chemical India Ltd,0.04,SUMICHEM,SUMICHEM.NS,Sumitomo Chemical India Limited
-Sun Pharma Advanced Research Co Ltd,0.01,SPARC,SPARC.NS,Sun Pharma Advanced Research Company Limited
-SUN PHARMACEUTICAL INDUSTRIES LTD.,1.02,SUNPHARMA,SUNPHARMA.NS,Sun Pharmaceutical Industries Limited
-Sunteck Realty Ltd,0.02,SUNTECK,SUNTECK.NS,Sunteck Realty Limited
-Sun Tv Network Ltd,0.04,SUNTV,SUNTV.NS,Sun TV Network Limited
-Sundaram Finance Ltd,0.28,SUNDARMFIN,SUNDARMFIN.NS,Sundaram Finance Limited
-Sundram Fasteners Ltd,0.08,SUNDRMFAST,SUNDRMFAST.NS,Sundram Fasteners Limited
-Supreme Industries Ltd,0.16,SUPREMEIND,SUPREMEIND.NS,The Supreme Industries Limited
-Suven Pharmaceuticals Ltd,0.06,SUVENPHAR,SUVENPHAR.NS,Suven Pharmaceuticals Limited
-Suzlon Energy Ltd,0.43,SUZLON,SUZLON.NS,Suzlon Energy Limited
-Swan Energy Ltd,0.04,SWANENERGY,SWANENERGY.NS,Swan Energy Limited
-Syngene International Ltd,0.08,SYNGENE,SYNGENE.NS,Syngene International Limited
-Syrma SGS Technology Ltd,0.01,SYRMA,SYRMA.NS,Syrma SGS Technology Limited
-Tamilnad Mercantile Bank Ltd,0.03,TMB,TMB.NS,Tamilnad Mercantile Bank Limited
-Tanla Platforms Ltd,0.03,TANLA,TANLA.NS,Tanla Platforms Limited
-Tata Chemicals Ltd,0.08,TATACHEM,TATACHEM.NS,Tata Chemicals Limited
-Tata Communications Ltd,0.11,TATACOMM,TATACOMM.NS,Tata Communications Limited
-TATA CONSULTANCY SERVICES LTD.,2.31,TCS,TCS.NS,Tata Consultancy Services Limited
-Tata Consumer Products Ltd,0.42,TATACONSUM,TATACONSUM.NS,Tata Consumer Products Limited
-Tata Elxsi Ltd,0.14,TATAELXSI,TATAELXSI.NS,Tata Elxsi Limited
-Tata Investment Corporation Ltd,0.05,TATAINVEST,TATAINVEST.NS,Tata Investment Corporation Limited
-TATA MOTORS LTD.,1.05,TATAMOTORS,TATAMOTORS.NS,Tata Motors Limited
-Tata Power Company Ltd,0.39,TATAPOWER,TATAPOWER.NS,The Tata Power Company Limited
-TATA STEEL LIMITED,0.64,TATASTEEL,TATASTEEL.NS,Tata Steel Limited
-Tata Teleservices (Maharashtra) Ltd,0.02,TTML,TTML.NS,Tata Teleservices (Maharashtra) Limited
-Tech Mahindra Ltd,0.52,TECHM,TECHM.NS,Tech Mahindra Limited
-Tejas Networks Ltd,0.05,TEJASNET,TEJASNET.NS,Tejas Networks Limited
-Thermax Limited,0.08,THERMAX,THERMAX.NS,Thermax Limited
-Timken India Ltd,0.07,TIMKEN,TIMKEN.NS,Timken India Limited
-Titagarh Rail Systems Ltd,0.05,TITAGARH,TITAGARH.NS,Titagarh Rail Systems Limited
-TITAN COMPANY LIMITED,0.71,TITAN,TITAN.NS,Titan Company Limited
-Torrent Pharmaceuticals Ltd,0.17,TORNTPHARM,TORNTPHARM.NS,Torrent Pharmaceuticals Limited
-Torrent Power Ltd,0.17,TORNTPOWER,TORNTPOWER.NS,Torrent Power Limited
-TRENT LTD [LAKME LTD],0.77,TRENT,TRENT.NS,Trent Limited
-Trident Ltd,0.02,TRIDENT,TRIDENT.NS,Trident Limited
-Triveni Engineering and Industries Ltd,0.02,TRITURBINE,TRITURBINE.NS,Triveni Turbine Limited
-Triveni Turbine Ltd,0.04,TRIVENI,TRIVENI.NS,Triveni Engineering & Industries Limited
-Tube Investments of India Ltd,0.22,TIINDIA,TIINDIA.NS,Tube Investments of India Limited
-TVS Motor Company Ltd,0.34,TVSMOTOR,TVSMOTOR.NS,TVS Motor Company Limited
-UCO Bank,0.01,UCOBANK,UCOBANK.NS,UCO Bank
-Ujjivan Small Finance Bank Ltd,0.04,UJJIVANSFB,UJJIVANSFB.NS,Ujjivan Small Finance Bank Limited
-ULTRATECH CEMENT LTD,0.67,ULTRACEMCO,ULTRACEMCO.NS,UltraTech Cement Limited
-Union Bank of India Ltd,0.12,UNIONBANK,UNIONBANK.NS,Union Bank of India
-United Breweries Ltd,0.07,UBL,UBL.NS,United Breweries Limited
-UNO Minda Ltd,0.1,UNOMINDA,UNOMINDA.NS,Uno Minda Limited
-UPL Ltd,0.16,UPL,UPL.NS,UPL Limited
-Usha Martin Ltd,0.04,USHAMART,USHAMART.NS,Usha Martin Limited
-UTI Asset Management Company Ltd,0.06,UTIAMC,UTIAMC.NS,UTI Asset Management Company Limited
-V Guard Industries Ltd,0.04,VGUARD,VGUARD.NS,V-Guard Industries Limited
-V I P Industries Ltd,0.03,VIPIND,VIPIND.NS,V.I.P. Industries Limited
-Vaibhav Global Ltd,0.01,VAIBHAVGBL,VAIBHAVGBL.NS,Vaibhav Global Limited
-Vardhman Textiles Ltd,0.03,VTL,VTL.NS,Vardhman Textiles Limited
-Varroc Engineering Ltd,0.01,VARROC,VARROC.NS,Varroc Engineering Limited
-Varun Beverages Ltd,0.41,VBL,VBL.NS,Varun Beverages Limited
-Vedant Fashions Ltd,0.04,MANYAVAR,MANYAVAR.NS,Vedant Fashions Limited
-Vedanta Ltd,0.38,VEDL,VEDL.NS,Vedanta Limited
-Vijaya Diagnostic Centre Ltd,0.02,VIJAYA,VIJAYA.NS,Vijaya Diagnostic Centre Limited
-Vodafone Idea Ltd,0.17,IDEA,IDEA.NS,Vodafone Idea Limited
-Voltas Ltd,0.22,VOLTAS,VOLTAS.NS,Voltas Limited
-Welspun Corp Ltd,0.04,WELCORP,WELCORP.NS,Welspun Corp Limited
-Welspun Living Ltd,0.02,WELSPUNLIV,WELSPUNLIV.NS,Welspun Living Limited
-Westlife Foodworld Ltd,0.02,WESTLIFE,WESTLIFE.NS,Westlife Foodworld Limited
-Whirlpool of India Ltd,0.07,WHIRLPOOL,WHIRLPOOL.NS,Whirlpool of India Limited
-Wipro Ltd,0.4,WIPRO,WIPRO.NS,Wipro Limited
-Yes Bank Ltd,0.22,YESBANK,YESBANK.NS,Yes Bank Limited
-Zee Entertainment Enterprises Ltd,0.06,ZEEL,ZEEL.NS,Zee Entertainment Enterprises Limited
-Zensar Technologies Ltd,0.08,ZENSARTECH,ZENSARTECH.NS,Zensar Technologies Limited
-ZF Commercial Vehicle Control Systems India Ltd,0.05,ZFCVINDIA,ZFCVINDIA.NS,ZF Commercial Vehicle Control Systems India Limited
-ZOMATO LIMITED,0.91,ZOMATO,ZOMATO.NS,Zomato Limited
-Zydus Lifesciences Ltd,0.14,ZYDUSLIFE,ZYDUSLIFE.NS,Zydus Lifesciences Limited
+Stock(tickertape),Weightage(%),ySymbol,Symbol,Company Name,sector
+360 One Wam Ltd,0.11,360ONE,360ONE.NS,360 One Wam Limited,NBFC
+3M India Ltd,0.05,3MINDIA,3MINDIA.NS,3M India Limited,IT
+Aarti Industries Ltd,0.06,AARTIIND,AARTIIND.NS,Aarti Industries Limited,Agri & Chem
+Aavas Financiers Ltd,0.05,AAVAS,AAVAS.NS,Aavas Financiers Limited,NBFC
+ABB India Ltd,0.21,ABB,ABB.NS,ABB India Limited,Industrials
+Abbott India Ltd,0.08,ABBOTINDIA,ABBOTINDIA.NS,Abbott India Limited,Healthcare
+ACC Ltd,0.1,ACC,ACC.NS,ACC Limited,Build Mate
+Action Construction Equipment Ltd,0.03,ACE,ACE.NS,Action Construction Equipment Limited,Industrials
+Adani Enterprises Ltd,0.36,ADANIENT,ADANIENT.NS,Adani Enterprises Limited,Others
+Adani Green Energy Ltd,0.32,ADANIGREEN,ADANIGREEN.NS,Adani Green Energy Limited,Utilities
+ADANI PORTS AND SPECIAL ECONOMIC ZONE LTD,0.63,ADANIPORTS,ADANIPORTS.NS,Adani Ports and Special Economic Zone Limited,Industrials
+Adani Power Ltd,0.38,ADANIPOWER,ADANIPOWER.NS,Adani Power Limited,Utilities
+Adani Total Gas Ltd,0.09,ATGL,ATGL.NS,Adani Total Gas Limited,Oil & gas
+Adani Wilmar Ltd,0.03,AWL,AWL.NS,Adani Wilmar Limited,Staples
+Aditya Birla Capital Ltd,0.07,ABCAPITAL,ABCAPITAL.NS,Aditya Birla Capital Limited,NBFC
+Aditya Birla Fashion and Retail Ltd,0.07,ABFRL,ABFRL.NS,Aditya Birla Fashion and Retail Limited,Discretionary
+Aether Industries Ltd,0.01,AETHER,AETHER.NS,Aether Industries Limited,Agri & Chem
+Affle (India) Ltd,0.05,AFFLE,AFFLE.NS,Affle (India) Limited,IT
+AIA Engineering Ltd,0.07,AIAENG,AIAENG.NS,AIA Engineering Limited,Auto & Anc
+Ajanta Pharma Ltd,0.07,AJANTPHARM,AJANTPHARM.NS,Ajanta Pharma Limited,Healthcare
+Alembic Pharmaceuticals Ltd,0.04,APLLTD,APLLTD.NS,Alembic Pharmaceuticals Limited,Healthcare
+Alkem Laboratories Ltd,0.12,ALKEM,ALKEM.NS,Alkem Laboratories Limited,Healthcare
+Alkyl Amines Chemicals Ltd,0.02,ALKYLAMINE,ALKYLAMINE.NS,Alkyl Amines Chemicals Limited,Agri & Chem
+Allcargo Logistics Ltd,0.01,ALLCARGO,ALLCARGO.NS,Allcargo Logistics Limited,Transport
+Alok Industries Ltd,0.02,ALOKINDS,ALOKINDS.NS,Alok Industries Limited,Others
+Amber Enterprises India Ltd,0.04,AMBER,AMBER.NS,Amber Enterprises India Limited,Discretionary
+Ambuja Cements Ltd,0.23,AMBUJACEM,AMBUJACEM.NS,Ambuja Cements Limited,Build Mate
+Anand Rathi Wealth Ltd,0.03,ANANDRATHI,ANANDRATHI.NS,Anand Rathi Wealth Limited,NBFC
+Angel One Ltd,0.06,ANGELONE,ANGELONE.NS,Angel One Limited,NBFC
+Anupam Rasayan India Ltd,0.01,ANURAS,ANURAS.NS,Anupam Rasayan India Ltd,Agri & Chem
+Apar Industries Ltd,0.09,APARINDS,APARINDS.NS,APAR Industries Limited,Industrials
+APL Apollo Tubes Ltd,0.13,APLAPOLLO,APLAPOLLO.NS,APL Apollo Tubes Limited,Metals & min
+Apollo Hospitals Enterprise Ltd,0.36,APOLLOHOSP,APOLLOHOSP.NS,Apollo Hospitals Enterprise Limited,Healthcare
+Apollo Tyres Ltd,0.08,APOLLOTYRE,APOLLOTYRE.NS,Apollo Tyres Limited,Auto & Anc
+Aptus Value Housing Finance India Ltd,0.04,APTUS,APTUS.NS,Aptus Value Housing Finance India Limited,NBFC
+Archean Chemical Industries Ltd,0.02,ACI,ACI.NS,Archean Chemical Industries Limited,Agri & Chem
+Asahi India Glass Ltd,0.03,ASAHIINDIA,ASAHIINDIA.NS,Asahi India Glass Limited,Others
+Ashok Leyland Ltd,0.21,ASHOKLEY,ASHOKLEY.NS,Ashok Leyland Limited,Auto & Anc
+ASIAN PAINTS LTD.,0.68,ASIANPAINT,ASIANPAINT.NS,Asian Paints Limited,Discretionary
+Aster DM Healthcare Ltd,0.05,ASTERDM,ASTERDM.NS,Aster DM Healthcare Limited,Healthcare
+Astral Ltd,0.12,ASTRAL,ASTRAL.NS,Astral Limited,Others
+Astrazeneca Pharma India Ltd,0.02,ASTRAZEN,ASTRAZEN.NS,AstraZeneca Pharma India Limited,Healthcare
+Atul Ltd,0.06,ATUL,ATUL.NS,Atul Ltd,Agri & Chem
+AU Small Finance Bank Ltd,0.16,AUBANK,AUBANK.NS,AU Small Finance Bank Limited,Banks
+Aurobindo Pharma Ltd,0.22,AUROPHARMA,AUROPHARMA.NS,Aurobindo Pharma Limited,Healthcare
+Avanti Feeds Ltd,0.01,AVANTIFEED,AVANTIFEED.NS,Avanti Feeds Limited,Others
+Avenue Supermarts Ltd,0.4,DMART,DMART.NS,Avenue Supermarts Limited,Discretionary
+AXIS BANK LTD.,1.95,AXISBANK,AXISBANK.NS,Axis Bank Limited,Banks
+BAJAJ AUTO LIMITED,0.71,BAJAJ-AUTO,BAJAJ-AUTO.NS,Bajaj Auto Limited,Auto & Anc
+BAJAJ FINANCE LIMITED,1.02,BAJAJFINSV,BAJAJFINSV.NS,Bajaj Finserv Ltd.,NBFC
+Bajaj Finserv Ltd,0.54,BAJAJHLDNG,BAJAJHLDNG.NS,Bajaj Holdings & Investment Limited,NBFC
+Bajaj Holdings and Investment Ltd,0.22,BAJFINANCE,BAJFINANCE.NS,Bajaj Finance Limited,NBFC
+Balaji Amines Ltd,0.01,BALAMINES,BALAMINES.NS,Balaji Amines Limited,Agri & Chem
+Balkrishna Industries Ltd,0.13,BALKRISIND,BALKRISIND.NS,Balkrishna Industries Limited,Auto & Anc
+Balrampur Chini Mills Ltd,0.03,BALRAMCHIN,BALRAMCHIN.NS,Balrampur Chini Mills Limited,Staples
+Bandhan Bank Ltd,0.09,BANDHANBNK,BANDHANBNK.NS,Bandhan Bank Limited,Banks
+Bank of Baroda Ltd,0.22,BANKBARODA,BANKBARODA.NS,Bank of Baroda Limited,Banks
+Bank of India Ltd,0.07,BANKINDIA,BANKINDIA.NS,Bank of India Limited,Banks
+Bank of Maharashtra Ltd,0.03,MAHABANK,MAHABANK.NS,Bank of Maharashtra,Banks
+Bata India Ltd,0.05,BATAINDIA,BATAINDIA.NS,Bata India Limited,Discretionary
+Bayer Cropscience Ltd,0.04,BAYERCROP,BAYERCROP.NS,Bayer CropScience Limited,Agri & Chem
+BEML Ltd,0.04,BEML,BEML.NS,BEML Limited,Industrials
+Berger Paints India Ltd,0.08,BERGEPAINT,BERGEPAINT.NS,Berger Paints India Limited,Discretionary
+Bharat Dynamics Ltd,0.06,BDL,BDL.NS,Bharat Dynamics Limited,Industrials
+Bharat Electronics Ltd,0.51,BEL,BEL.NS,Bharat Electronics Limited,Discretionary
+Bharat Forge Ltd,0.2,BHARATFORG,BHARATFORG.NS,Bharat Forge Limited,Auto & Anc
+Bharat Heavy Electricals Ltd,0.18,BHEL,BHEL.NS,Bharat Heavy Electricals Limited,Industrials
+Bharat Petroleum Corporation Ltd,0.35,BPCL,BPCL.NS,Bharat Petroleum Corporation Limited,Oil & gas
+BHARTI AIRTEL  LTD.,2,BHARTIARTL,BHARTIARTL.NS,Bharti Airtel Limited,Tele & Media
+Bikaji Foods International Ltd,0.03,BIKAJI,BIKAJI.NS,Bikaji Foods International Limited,Staples
+Biocon Ltd,0.08,BIOCON,BIOCON.NS,Biocon Limited,Healthcare
+Birla Corporation Ltd,0.02,BIRLACORPN,BIRLACORPN.NS,Birla Corporation Limited,Build Mate
+Birlasoft Ltd,0.05,BSOFT,BSOFT.NS,Birlasoft Limited,IT
+Bls International Services Ltd,0.02,BLS,BLS.NS,BLS International Services Limited,IT
+Blue Dart Express Ltd,0.03,BLUEDART,BLUEDART.NS,Blue Dart Express Limited,Transport
+Blue Star Ltd,0.13,BLUESTARCO,BLUESTARCO.NS,Blue Star Limited,Discretionary
+Bombay Burmah Trading Corporation Ltd,0.02,BBTC,BBTC.NS,"The Bombay Burmah Trading Corporation, Limited",IT
+Borosil Renewables Ltd,0.01,BORORENEW,BORORENEW.NS,Borosil Renewables Limited,Others
+Bosch Ltd,0.15,BOSCHLTD,BOSCHLTD.NS,Bosch Limited,Auto & Anc
+Brigade Enterprises Ltd,0.09,BRIGADE,BRIGADE.NS,Brigade Enterprises Limited,Build Mate
+Britannia Industries Ltd,0.38,BRITANNIA,BRITANNIA.NS,Britannia Industries Limited,Staples
+BSE Ltd,0.27,BSE,BSE.NS,BSE Limited,Others
+Campus Activewear Ltd,0.01,CAMPUS,CAMPUS.NS,Campus Activewear Limited,Discretionary
+Can Fin Homes Ltd,0.04,CANFINHOME,CANFINHOME.NS,Can Fin Homes Limited,NBFC
+Canara Bank Ltd,0.18,CANBK,CANBK.NS,Canara Bank,Banks
+Caplin Point Laboratories Ltd,0.02,CAPLIPOINT,CAPLIPOINT.NS,Caplin Point Laboratories Limited,Healthcare
+Capri Global Capital Ltd,0.02,CGCL,CGCL.NS,Capri Global Capital Limited,NBFC
+Carborundum Universal Ltd,0.09,CARBORUNIV,CARBORUNIV.NS,Carborundum Universal Limited,Industrials
+Castrol India Ltd,0.06,CASTROLIND,CASTROLIND.NS,Castrol India Limited,Agri & Chem
+CCL Products (India) Ltd,0.03,CCL,CCL.NS,CCL Products (India) Limited,Staples
+CE Info Systems Ltd,0.01,MAPMYINDIA,MAPMYINDIA.NS,C. E. Info Systems Limited,IT
+CEAT Ltd,0.06,CEATLTD,CEATLTD.NS,CEAT Limited,Auto & Anc
+Central Bank of India Ltd,0.02,CENTRALBK,CENTRALBK.NS,Central Bank of India,Banks
+Central Depository Services (India) Ltd,0.16,CDSL,CDSL.NS,Central Depository Services (India) Limited,Others
+Century Plyboards (India) Ltd,0.03,CENTURYPLY,CENTURYPLY.NS,Century Plyboards (India) Limited,Others
+Century Textiles and Industries Ltd,0.07,CENTURYTEX,CENTURYTEX.NS,Aditya Birla Real Estate Limited,Others
+Cera Sanitaryware Ltd,0.02,CERA,CERA.NS,Cera Sanitaryware Limited,Build Mate
+CESC Ltd,0.12,CESC,CESC.NS,CESC Limited,Utilities
+CG Power and Industrial Solutions Ltd,0.24,CGPOWER,CGPOWER.NS,CG Power and Industrial Solutions Limited,Industrials
+Chalet Hotels Ltd,0.03,CHALET,CHALET.NS,Chalet Hotels Limited,Discretionary
+Chambal Fertilisers and Chemicals Ltd,0.04,CHAMBLFERT,CHAMBLFERT.NS,Chambal Fertilisers and Chemicals Limited,Agri & Chem
+Chemplast Sanmar Ltd,0.02,CHEMPLASTS,CHEMPLASTS.NS,Chemplast Sanmar Limited,Agri & Chem
+Chennai Petroleum Corporation Ltd,0.02,CHENNPETRO,CHENNPETRO.NS,Chennai Petroleum Corporation Limited,Oil & gas
+Cholamandalam Financial Holdings Ltd,0.1,CHOLAFIN,CHOLAFIN.NS,Cholamandalam Investment and Finance Company Limited,NBFC
+Cholamandalam Investment and Finance Company Ltd,0.35,CHOLAHLDNG,CHOLAHLDNG.NS,Cholamandalam Financial Holdings Limited,NBFC
+CIE Automotive India Ltd,0.04,CIEINDIA,CIEINDIA.NS,CIE Automotive India Limited,Auto & Anc
+Cipla Ltd,0.47,CIPLA,CIPLA.NS,Cipla Limited,Healthcare
+City Union Bank Ltd,0.06,CUB,CUB.NS,City Union Bank Limited,Banks
+Clean Science and Technology Ltd,0.02,CLEAN,CLEAN.NS,Clean Science and Technology Limited,Agri & Chem
+Coal India Ltd,0.58,COALINDIA,COALINDIA.NS,Coal India Limited,Metals & min
+Cochin Shipyard Ltd,0.06,COCHINSHIP,COCHINSHIP.NS,Cochin Shipyard Limited,Industrials
+Coforge Ltd,0.24,COFORGE,COFORGE.NS,Coforge Limited,IT
+Colgate-Palmolive (India) Ltd,0.25,COLPAL,COLPAL.NS,Colgate-Palmolive (India) Limited,Staples
+Computer Age Management Services Ltd,0.11,CAMS,CAMS.NS,Computer Age Management Services Limited,Others
+Container Corporation of India Ltd,0.13,CONCOR,CONCOR.NS,Container Corporation of India Limited,Transport
+Coromandel International Ltd,0.11,COROMANDEL,COROMANDEL.NS,Coromandel International Limited,Agri & Chem
+Craftsman Automation Ltd,0.04,CRAFTSMAN,CRAFTSMAN.NS,Craftsman Automation Limited,Auto & Anc
+CreditAccess Grameen Ltd,0.03,CREDITACC,CREDITACC.NS,CreditAccess Grameen Limited,NBFC
+CRISIL Ltd,0.05,CRISIL,CRISIL.NS,CRISIL Limited,NBFC
+Crompton Greaves Consumer Electricals Ltd,0.15,CROMPTON,CROMPTON.NS,Crompton Greaves Consumer Electricals Limited,Industrials
+CSB Bank Ltd,0.01,CSBBANK,CSBBANK.NS,CSB Bank Limited,Banks
+Cummins India Ltd,0.27,CUMMINSIND,CUMMINSIND.NS,Cummins India Limited,Industrials
+Cyient Ltd,0.09,CYIENT,CYIENT.NS,Cyient Limited,IT
+Dabur India Ltd,0.19,DABUR,DABUR.NS,Dabur India Limited,Staples
+Dalmia Bharat Ltd,0.07,DALBHARAT,DALBHARAT.NS,Dalmia Bharat Limited,Build Mate
+Data Patterns (India) Ltd,0.03,DATAPATTNS,DATAPATTNS.NS,Data Patterns (India) Limited,Discretionary
+DCM Shriram Ltd,0.02,DCMSHRIRAM,DCMSHRIRAM.NS,DCM Shriram Limited,Discretionary
+Deepak Fertilisers and Petrochemicals Corp Ltd,0.04,DEEPAKFERT,DEEPAKFERT.NS,Deepak Fertilisers And Petrochemicals Corporation Limited,Agri & Chem
+Deepak Nitrite Ltd,0.1,DEEPAKNTR,DEEPAKNTR.NS,Deepak Nitrite Limited,Agri & Chem
+Delhivery Ltd,0.11,DELHIVERY,DELHIVERY.NS,Delhivery Limited,Transport
+Devyani International Ltd,0.04,DEVYANI,DEVYANI.NS,Devyani International Limited,Discretionary
+Divi's Laboratories Ltd,0.36,DIVISLAB,DIVISLAB.NS,Divi's Laboratories Limited,Healthcare
+Dixon Technologies (India) Ltd,0.24,DIXON,DIXON.NS,Dixon Technologies (India) Limited,Discretionary
+DLF Ltd,0.29,DLF,DLF.NS,DLF Limited,Build Mate
+Dr Reddy's Laboratories Ltd,0.4,DRREDDY,DRREDDY.NS,Dr. Reddy's Laboratories Limited,Healthcare
+Dr. Lal PathLabs Ltd,0.06,LALPATHLAB,LALPATHLAB.NS,Dr. Lal PathLabs Limited,Healthcare
+E I D-Parry (India) Ltd,0.04,EIDPARRY,EIDPARRY.NS,E.I.D.- Parry (India) Limited,Staples
+Easy Trip Planners Ltd,0.01,EASEMYTRIP,EASEMYTRIP.NS,Easy Trip Planners Limited,Others
+eClerx Services Limited,0.03,ECLERX,ECLERX.NS,eClerx Services Limited,IT
+Eicher Motors Ltd,0.34,EICHERMOT,EICHERMOT.NS,Eicher Motors Limited,Auto & Anc
+EIH Ltd,0.04,EIHOTEL,EIHOTEL.NS,EIH Limited,Discretionary
+Elecon Engineering Company Ltd,0.03,ELECON,ELECON.NS,Elecon Engineering Company Limited,Industrials
+Elgi Equipments Ltd,0.06,ELGIEQUIP,ELGIEQUIP.NS,Elgi Equipments Limited,Industrials
+Emami Ltd,0.07,EMAMILTD,EMAMILTD.NS,Emami Limited,Staples
+Endurance Technologies Ltd,0.04,ENDURANCE,ENDURANCE.NS,Endurance Technologies Limited,Auto & Anc
+Engineers India Ltd,0.03,ENGINERSIN,ENGINERSIN.NS,Engineers India Limited,Industrials
+EPL Ltd,0.02,EPL,EPL.NS,EPL Limited,Discretionary
+Equitas Small Finance Bank Ltd,0.04,EQUITASBNK,EQUITASBNK.NS,Equitas Small Finance Bank Limited,Banks
+Eris Lifesciences Ltd,0.03,ERIS,ERIS.NS,Eris Lifesciences Limited,Healthcare
+Escorts Kubota Ltd,0.05,ESCORTS,ESCORTS.NS,Escorts Kubota Limited,Auto & Anc
+Exide Industries Ltd,0.1,EXIDEIND,EXIDEIND.NS,Exide Industries Limited,Auto & Anc
+F D C Ltd,0.01,FDC,FDC.NS,FDC Limited,Healthcare
+Federal Bank Ltd,0.21,FEDERALBNK,FEDERALBNK.NS,The Federal Bank Limited,Banks
+Fertilisers And Chemicals Travancore Ltd,0.34,FACT,FACT.NS,The Fertilisers and Chemicals Travancore Limited,Agri & Chem
+Fine Organic Industries Ltd,0.02,FINEORG,FINEORG.NS,Fine Organic Industries Limited,Agri & Chem
+Finolex Cables Ltd,0.05,FINCABLES,FINCABLES.NS,Finolex Cables Limited,Discretionary
+Finolex Industries Ltd,0.04,FINPIPE,FINPIPE.NS,Finolex Industries Limited,Others
+Firstsource Solutions Ltd,0.05,FSL,FSL.NS,Firstsource Solutions Limited,IT
+Five-Star Business Finance Ltd,0.08,FIVESTAR,FIVESTAR.NS,Five-Star Business Finance Limited,NBFC
+Fortis Healthcare Ltd,0.15,FORTIS,FORTIS.NS,Fortis Healthcare Limited,Healthcare
+Fsn E-Commerce Ventures Ltd,0.11,NYKAA,NYKAA.NS,FSN E-Commerce Ventures Limited,Others
+Gail (India) Ltd,0.31,GAIL,GAIL.NS,GAIL (India) Limited,Oil & gas
+Garden Reach Shipbuilders & Engineers Ltd,0.03,GRSE,GRSE.NS,Garden Reach Shipbuilders & Engineers Limited,Industrials
+General Insurance Corporation of India,0.06,GICRE,GICRE.NS,General Insurance Corporation of India,NBFC
+GILLETTE INDIA LTD.,0.03,GILLETTE,GILLETTE.NS,Gillette India Limited,Staples
+Gland Pharma Ltd,0.07,GLAND,GLAND.NS,Gland Pharma Limited,Healthcare
+GlaxoSmithKline Pharmaceuticals Ltd,0.06,GLAXO,GLAXO.NS,GlaxoSmithKline Pharmaceuticals Limited,Healthcare
+Glenmark Life Sciences Ltd,0.02,GLENMARK,GLENMARK.NS,Glenmark Pharmaceuticals Limited,Healthcare
+Glenmark Pharmaceuticals Ltd,0.12,GLS,GLS.NS,Glenmark Life Sciences Limited,Healthcare
+Global Health Ltd,0.05,MEDANTA,MEDANTA.NS,Global Health Limited,Healthcare
+GMM Pfaudler Ltd,0.02,GMMPFAUDLR,GMMPFAUDLR.NS,GMM Pfaudler Limited,Industrials
+GMR Airports Ltd,0.27,GMRINFRA,GMRINFRA.NS,GMR Airports Limited,Industrials
+Godawari Power and Ispat Ltd,0.02,GPIL,GPIL.NS,Godawari Power & Ispat Limited,Metals & min
+Godfrey Phillips India Ltd,0.05,GODFRYPHLP,GODFRYPHLP.NS,Godfrey Phillips India Limited,Staples
+Godrej Consumer Products Ltd,0.27,GODREJCP,GODREJCP.NS,Godrej Consumer Products Limited,Staples
+Godrej Industries Ltd,0.04,GODREJIND,GODREJIND.NS,Godrej Industries Limited,Agri & Chem
+Godrej Properties Ltd,0.15,GODREJPROP,GODREJPROP.NS,Godrej Properties Limited,Build Mate
+Granules India Ltd,0.04,GRANULES,GRANULES.NS,Granules India Limited,Healthcare
+Graphite India Ltd,0.02,GRAPHITE,GRAPHITE.NS,Graphite India Limited,Industrials
+Grasim Industries Ltd,0.42,GRASIM,GRASIM.NS,Grasim Industries Limited,Others
+Great Eastern Shipping Company Ltd,0.06,GESHIP,GESHIP.NS,The Great Eastern Shipping Company Limited,Transport
+Grindwell Norton Ltd,0.06,GRINDWELL,GRINDWELL.NS,Grindwell Norton Limited,Industrials
+Gujarat Ambuja Exports Ltd,0.01,GAEL,GAEL.NS,Gujarat Ambuja Exports Limited,Staples
+Gujarat Fluorochemicals Ltd,0.08,FLUOROCHEM,FLUOROCHEM.NS,Gujarat Fluorochemicals Limited,Agri & Chem
+Gujarat Gas Ltd,0.06,GUJGASLTD,GUJGASLTD.NS,Gujarat Gas Limited,Oil & gas
+Gujarat Narmada Valley Fertilizers & Chemicals Ltd,0.03,GNFC,GNFC.NS,Gujarat Narmada Valley Fertilizers & Chemicals Limited,Agri & Chem
+Gujarat Mineral Development Corporation Ltd,0.02,GMDCLTD,GMDCLTD.NS,Gujarat Mineral Development Corporation Limited,Metals & min
+Gujarat Pipavav Port Ltd,0.03,GPPL,GPPL.NS,Gujarat Pipavav Port Limited,Others
+Gujarat State Fertilizers & Chemicals Ltd,0.03,GSFC,GSFC.NS,Gujarat State Fertilizers & Chemicals Limited,Agri & Chem
+Gujarat State Petronet Ltd,0.06,GSPL,GSPL.NS,Gujarat State Petronet Limited,Oil & gas
+Happiest Minds Technologies Ltd,0.03,HAPPSTMNDS,HAPPSTMNDS.NS,Happiest Minds Technologies Limited,IT
+Havells India Ltd,0.23,HAVELLS,HAVELLS.NS,Havells India Limited,Industrials
+HBL Power Systems Ltd,0.08,HBLPOWER,HBLPOWER.NS,HBL Power Systems Limited,Others
+HCL TECHNOLOGIES LTD,0.96,HCLTECH,HCLTECH.NS,HCL Technologies Limited,IT
+HDFC Asset Management Company Ltd,0.22,HDFCAMC,HDFCAMC.NS,HDFC Asset Management Company Limited,NBFC
+HDFC BANK LTD.,6.61,HDFCBANK,HDFCBANK.NS,HDFC Bank Limited,Banks
+HDFC Life Insurance Company Ltd,0.34,HDFCLIFE,HDFCLIFE.NS,HDFC Life Insurance Company Limited,NBFC
+HEG Ltd,0.02,HEG,HEG.NS,HEG Limited,Industrials
+Hero MotoCorp Ltd,0.39,HEROMOTOCO,HEROMOTOCO.NS,Hero MotoCorp Limited,Auto & Anc
+HFCL Ltd,0.07,HFCL,HFCL.NS,HFCL Limited,Industrials
+Himadri Speciality Chemical Ltd,0.07,HSCL,HSCL.NS,Himadri Speciality Chemical Limited,Agri & Chem
+Hindalco Industries Ltd,0.5,HINDALCO,HINDALCO.NS,Hindalco Industries Limited,Metals & min
+Hindustan Aeronautics Ltd,0.44,HAL,HAL.NS,Hindustan Aeronautics Limited,Industrials
+Hindustan Copper Ltd,0.05,HINDCOPPER,HINDCOPPER.NS,Hindustan Copper Limited,Metals & min
+Hindustan Petroleum Corp Ltd,0.2,HINDPETRO,HINDPETRO.NS,Hindustan Petroleum Corporation Limited,Oil & gas
+"HINDUSTAN UNILEVER LTD.,",1.33,HINDUNILVR,HINDUNILVR.NS,Hindustan Unilever Limited,Staples
+Hindustan Zinc Ltd,0.06,HINDZINC,HINDZINC.NS,Hindustan Zinc Limited,Metals & min
+Hitachi Energy India Ltd,0.07,POWERINDIA,POWERINDIA.NS,Hitachi Energy India Limited,Industrials
+Home First Finance Company India Ltd,0.03,HOMEFIRST,HOMEFIRST.NS,Home First Finance Company India Limited,NBFC
+Honeywell Automation India Ltd,0.06,HONAUT,HONAUT.NS,Honeywell Automation India Limited,Discretionary
+Housing and Urban Development Corporation Ltd,0.03,HUDCO,HUDCO.NS,Housing and Urban Development Corporation Limited,NBFC
+ICICI BANK LTD.,4.62,ICICIBANK,ICICIBANK.NS,ICICI Bank Limited,Banks
+ICICI Lombard General Insurance Company Ltd,0.25,ICICIGI,ICICIGI.NS,ICICI Lombard General Insurance Company Limited,NBFC
+ICICI Prudential Life Insurance Company Ltd,0.14,ICICIPRULI,ICICIPRULI.NS,ICICI Prudential Life Insurance Company Limited,NBFC
+ICICI Securities Ltd,0.04,ISEC,ISEC.NS,ICICI Securities Limited,NBFC
+IDBI Bank Ltd,0.27,IDBI,IDBI.NS,IDBI Bank Limited,Banks
+IIFL Finance Ltd,0.06,IIFL,IIFL.NS,IIFL Finance Limited,NBFC
+India Cements Ltd,0.03,INDIACEM,INDIACEM.NS,The India Cements Limited,Build Mate
+Indiamart Intermesh Ltd,0.04,INDIAMART,INDIAMART.NS,IndiaMART InterMESH Limited,Others
+Indian Bank,0.09,INDIANB,INDIANB.NS,Indian Bank,Banks
+Indian Energy Exchange Ltd,0.09,IEX,IEX.NS,Indian Energy Exchange Limited,Others
+Indian Hotels Company Ltd,0.3,INDHOTEL,INDHOTEL.NS,The Indian Hotels Company Limited,Discretionary
+Indian Oil Corporation Ltd,0.33,IOC,IOC.NS,Indian Oil Corporation Limited,Oil & gas
+Indian Overseas Bank,0.02,IOB,IOB.NS,Indian Overseas Bank,Banks
+Indian Railway Catering and Tourism Corporation Ltd,0.14,IRCTC,IRCTC.NS,Indian Railway Catering & Tourism Corporation Limited,Transport
+Indian Railway Finance Corp Ltd,0.15,IRFC,IRFC.NS,Indian Railway Finance Corporation Limited,NBFC
+Indigo Paints Ltd,0.02,INDIGOPNTS,INDIGOPNTS.NS,Indigo Paints Limited,Discretionary
+Indraprastha Gas Ltd,0.1,IGL,IGL.NS,Indraprastha Gas Limited,Oil & gas
+Indus Towers Ltd,0.28,INDUSTOWER,INDUSTOWER.NS,Indus Towers Limited,Tele & Media
+Indusind Bank Ltd,0.47,INDUSINDBK,INDUSINDBK.NS,IndusInd Bank Limited,Banks
+Info Edge (India) Ltd,0.28,NAUKRI,NAUKRI.NS,Info Edge (India) Limited,Others
+INFOSYS LTD,3.44,INFY,INFY.NS,Infosys Limited,IT
+Inox Wind Ltd,0.07,INOXWIND,INOXWIND.NS,Inox Wind Limited,Industrials
+Intellect Design Arena Ltd,0.04,INTELLECT,INTELLECT.NS,Intellect Design Arena Limited,IT
+Interglobe Aviation Ltd,0.48,INDIGO,INDIGO.NS,InterGlobe Aviation Limited,Transport
+IPCA Laboratories Ltd,0.1,IPCALAB,IPCALAB.NS,Ipca Laboratories Limited,Healthcare
+IRB Infrastructure Developers Ltd,0.06,IRB,IRB.NS,IRB Infrastructure Developers Limited,Build Mate
+Ircon International Ltd,0.04,IRCON,IRCON.NS,Ircon International Limited,Build Mate
+ITC LTD,2.37,ITC,ITC.NS,ITC Limited,Staples
+ITI Ltd,0,ITI,ITI.NS,ITI Limited,Tele & Media
+J B Chemicals and Pharmaceuticals Ltd,0.07,JBCHEPHARM,JBCHEPHARM.NS,J. B. Chemicals & Pharmaceuticals Limited,Healthcare
+J K Papers Ltd,0.02,JKPAPER,JKPAPER.NS,JK Paper Limited,Others
+J K Cement Ltd,0.08,JKCEMENT,JKCEMENT.NS,J.K. Cement Limited,Build Mate
+Jai Balaji Industries Ltd,0.02,JAIBALAJI,JAIBALAJI.NS,Jai Balaji Industries Limited,Metals & min
+Jammu and Kashmir Bank Ltd,0.02,J&KBANK,J&KBANK.NS,The Jammu and Kashmir Bank Limited,Banks
+JBM Auto Ltd,0.02,JBMA,JBMA.NS,JBM Auto Limited,Auto & Anc
+Jindal SAW Ltd,0.04,JINDALSAW,JINDALSAW.NS,Jindal Saw Limited,Metals & min
+Jindal Stainless Ltd,0.12,JSL,JSL.NS,Jindal Stainless Limited,Metals & min
+Jindal Steel And Power Ltd,0.2,JINDALSTEL,JINDALSTEL.NS,Jindal Steel & Power Limited,Metals & min
+JK Lakshmi Cement Ltd,0.02,JKLAKSHMI,JKLAKSHMI.NS,JK Lakshmi Cement Limited,Build Mate
+JM Financial Ltd,0.05,JMFINANCIL,JMFINANCIL.NS,JM Financial Limited,NBFC
+JSW Energy Ltd,0.21,JSWENERGY,JSWENERGY.NS,JSW Energy Limited,Utilities
+JSW Steel Ltd,0.43,JSWSTEEL,JSWSTEEL.NS,JSW Steel Limited,Metals & min
+Jubilant Foodworks Ltd,0.13,JUBLFOOD,JUBLFOOD.NS,Jubilant FoodWorks Limited,Discretionary
+Jubilant Ingrevia Ltd,0.03,JUBLINGREA,JUBLINGREA.NS,Jubilant Ingrevia Limited,Agri & Chem
+Jubilant Pharmova Ltd,0.03,JUBLPHARMA,JUBLPHARMA.NS,Jubilant Pharmova Limited,Healthcare
+Jupiter Wagons Ltd,0.03,JWL,JWL.NS,Jupiter Wagons Limited,Auto & Anc
+Just Dial Ltd,0.01,JUSTDIAL,JUSTDIAL.NS,Just Dial Limited,Others
+Jyothy Labs Ltd,0.03,JYOTHYLAB,JYOTHYLAB.NS,Jyothy Labs Limited,Staples
+Kajaria Ceramics Ltd,0.06,KAJARIACER,KAJARIACER.NS,Kajaria Ceramics Limited,Build Mate
+Kalyan Jewellers India Ltd,0.11,KALYANKJIL,KALYANKJIL.NS,Kalyan Jewellers India Limited,Discretionary
+Kansai Nerolac Paints Ltd,0.03,KANSAINER,KANSAINER.NS,Kansai Nerolac Paints Limited,Discretionary
+Karur Vysya Bank Ltd,0.09,KARURVYSYA,KARURVYSYA.NS,The Karur Vysya Bank Limited,Banks
+Kaynes Technology India Ltd,0.07,KAYNES,KAYNES.NS,Kaynes Technology India Limited,Industrials
+KEC International Ltd,0.13,KEC,KEC.NS,KEC International Limited,Industrials
+KEI Industries Ltd,0.13,KEI,KEI.NS,KEI Industries Limited,Discretionary
+Kfin Technologies Ltd,0.05,KFINTECH,KFINTECH.NS,KFin Technologies Limited,Others
+KNR Constructions Ltd,0.02,KNRCON,KNRCON.NS,KNR Constructions Limited,Build Mate
+KOTAK MAHINDRA BANK LTD.,1.35,KOTAKBANK,KOTAKBANK.NS,Kotak Mahindra Bank Limited,Banks
+KPIT Technologies Ltd,0.13,KPITTECH,KPITTECH.NS,KPIT Technologies Limited,IT
+KPR Mill Ltd,0.04,KPRMILL,KPRMILL.NS,K.P.R. Mill Limited,Discretionary
+KRBL Ltd,0.01,KRBL,KRBL.NS,KRBL Limited,Staples
+Krishna Institute of Medical Sciences Ltd,0.06,KIMS,KIMS.NS,Krishna Institute of Medical Sciences Limited,Healthcare
+KSB Ltd,0.02,KSB,KSB.NS,KSB Limited,Industrials
+L&T Finance Ltd,0.07,LTF,LTF.NS,L&T Finance Limited,
+L&T Technology Services Ltd,0.08,LTTS,LTTS.NS,L&T Technology Services Limited,IT
+LARSEN & TOUBRO LIMITED,2.23,LT,LT.NS,Larsen & Toubro Limited,Industrials
+Latent View Analytics Ltd,0.01,LATENTVIEW,LATENTVIEW.NS,Latent View Analytics Limited,IT
+Laurus Labs Ltd,0.09,LAURUSLABS,LAURUSLABS.NS,Laurus Labs Limited,Healthcare
+Laxmi Organic Industries Ltd,0.01,LXCHEM,LXCHEM.NS,Laxmi Organic Industries Limited,Agri & Chem
+Lemon Tree Hotels Ltd,0.03,LEMONTREE,LEMONTREE.NS,Lemon Tree Hotels Limited,Discretionary
+LIC Housing Finance Ltd,0.19,LICHSGFIN,LICHSGFIN.NS,LIC Housing Finance Limited,NBFC
+Life Insurance Corporation Of India,0.12,LICI,LICI.NS,Life Insurance Corporation of India,NBFC
+Linde India Ltd,0.08,LINDEINDIA,LINDEINDIA.NS,Linde India Limited,Agri & Chem
+LTIMindtree Ltd,0.31,LTIM,LTIM.NS,LTIMindtree Limited,IT
+Lupin Ltd,0.28,LUPIN,LUPIN.NS,Lupin Limited,Healthcare
+Macrotech Developers Ltd,0.19,LODHA,LODHA.NS,Macrotech Developers Limited,Build Mate
+Mahanagar Gas Ltd,0.06,MGL,MGL.NS,Mahanagar Gas Limited,Oil & gas
+Maharashtra Seamless Ltd,0.01,MAHSEAMLES,MAHSEAMLES.NS,Maharashtra Seamless Limited,Metals & min
+MAHINDRA & MAHINDRA LTD.,1.35,M&M,M&M.NS,Mahindra & Mahindra Limited,Auto & Anc
+Mahindra and Mahindra Financial Services Ltd,0.1,M&MFIN,M&MFIN.NS,Mahindra & Mahindra Financial Services Limited,NBFC
+Mahindra Holidays and Resorts India Ltd,0.01,MHRIL,MHRIL.NS,Mahindra Holidays & Resorts India Limited,Discretionary
+Mahindra Lifespace Developers Ltd,0.02,MAHLIFE,MAHLIFE.NS,Mahindra Lifespace Developers Limited,Build Mate
+Manappuram Finance Ltd,0.06,MANAPPURAM,MANAPPURAM.NS,Manappuram Finance Limited,NBFC
+Mangalore Refinery and Petrochemicals Ltd,0.02,MRPL,MRPL.NS,Mangalore Refinery and Petrochemicals Limited,Oil & gas
+Marico Ltd,0.19,MARICO,MARICO.NS,Marico Limited,Staples
+MARUTI SUZUKI INDIA  LTD.,0.84,MARUTI,MARUTI.NS,Maruti Suzuki India Limited,Auto & Anc
+Mastek Ltd,0.02,MASTEK,MASTEK.NS,Mastek Limited,IT
+Max Financial Services Ltd,0.2,MFSL,MFSL.NS,Max Financial Services Limited,NBFC
+Max Healthcare Institute Ltd,0.37,MAXHEALTH,MAXHEALTH.NS,Max Healthcare Institute Limited,Healthcare
+Mazagon Dock Shipbuilders Ltd,0.07,MAZDOCK,MAZDOCK.NS,Mazagon Dock Shipbuilders Limited,Industrials
+MedPlus Health Services Ltd,0.02,MEDPLUS,MEDPLUS.NS,MedPlus Health Services Limited,Discretionary
+Metro Brands Ltd,0.02,METROBRAND,METROBRAND.NS,Metro Brands Limited,Discretionary
+Metropolis Healthcare Ltd,0.03,METROPOLIS,METROPOLIS.NS,Metropolis Healthcare Limited,Healthcare
+Minda Corporation Ltd,0.02,MINDACORP,MINDACORP.NS,Minda Corporation Limited,Auto & Anc
+MMTC Ltd,0.01,MMTC,MMTC.NS,MMTC Limited,Others
+Motherson Sumi Wiring India Ltd,0.06,MSUMI,MSUMI.NS,Motherson Sumi Wiring India Limited,Auto & Anc
+Motilal Oswal Financial Services Ltd,0.11,MOTILALOFS,MOTILALOFS.NS,Motilal Oswal Financial Services Limited,NBFC
+Mphasis Ltd,0.17,MPHASIS,MPHASIS.NS,Mphasis Limited,IT
+MRF Ltd,0.15,MRF,MRF.NS,MRF Limited,Auto & Anc
+MTAR Technologies Ltd,0.02,MTARTECH,MTARTECH.NS,MTAR Technologies Limited,Industrials
+Multi Commodity Exchange of India Ltd,0.13,MCX,MCX.NS,Multi Commodity Exchange of India Limited,Others
+Muthoot Finance Ltd,0.11,MUTHOOTFIN,MUTHOOTFIN.NS,Muthoot Finance Limited,NBFC
+Narayana Hrudayalaya Ltd,0.05,NH,NH.NS,Narayana Hrudayalaya Limited,Healthcare
+Natco Pharma Ltd,0.07,NATCOPHARM,NATCOPHARM.NS,NATCO Pharma Limited,Healthcare
+National Aluminium Co Ltd,0.09,NATIONALUM,NATIONALUM.NS,National Aluminium Company Limited,Metals & min
+Navin Fluorine International Ltd,0.06,NAVINFLUOR,NAVINFLUOR.NS,Navin Fluorine International Limited,Agri & Chem
+NBCC (India) Ltd,0.06,NBCC,NBCC.NS,NBCC (India) Limited,Build Mate
+NCC Ltd,0.07,NCC,NCC.NS,NCC Limited,Build Mate
+Nestle India Ltd,0.48,NESTLEIND,NESTLEIND.NS,Nestl? India Limited,Staples
+Network18 Media & Investments Ltd,0.01,NETWORK18,NETWORK18.NS,Network18 Media & Investments Limited,Others
+New India Assurance Company Ltd,0.03,NIACL,NIACL.NS,The New India Assurance Company Limited,NBFC
+NHPC Ltd,0.15,NHPC,NHPC.NS,NHPC Limited,Utilities
+Nippon Life India Asset Management Ltd,0.06,NAM-INDIA,NAM-INDIA.NS,Nippon Life India Asset Management Limited,NBFC
+NLC India Ltd,0.05,NLCINDIA,NLCINDIA.NS,NLC India Limited,Utilities
+NMDC Ltd,0.13,NMDC,NMDC.NS,NMDC Limited,Metals & min
+NTPC LIMITED,0.99,NTPC,NTPC.NS,NTPC Limited,Utilities
+Nuvoco Vistas Corporation Ltd,0.02,NUVOCO,NUVOCO.NS,Nuvoco Vistas Corporation Limited,Build Mate
+Oberoi Realty Ltd,0.11,OBEROIRLTY,OBEROIRLTY.NS,Oberoi Realty Limited,Build Mate
+OIL AND NATURAL GAS CORPORATION LTD,0.59,ONGC,ONGC.NS,Oil and Natural Gas Corporation Limited,Oil & gas
+Oil India Ltd,0.17,OIL,OIL.NS,Oil India Limited,Oil & gas
+Olectra Greentech Ltd,0.04,OLECTRA,OLECTRA.NS,Olectra Greentech Limited,Auto & Anc
+One 97 Communications Ltd,0.1,PAYTM,PAYTM.NS,One97 Communications Limited,Others
+Oracle Financial Services Software Ltd,0.14,OFSS,OFSS.NS,Oracle Financial Services Software Limited,IT
+Page Industries Ltd,0.12,PAGEIND,PAGEIND.NS,Page Industries Limited,Discretionary
+Patanjali Foods Ltd,0.09,PATANJALI,PATANJALI.NS,Patanjali Foods Limited,Staples
+PB Fintech Ltd,0.29,POLICYBZR,POLICYBZR.NS,PB Fintech Limited,Others
+PCBL Ltd,0.05,PCBL,PCBL.NS,PCBL Limited,Agri & Chem
+Persistent Systems Ltd,0.28,PERSISTENT,PERSISTENT.NS,Persistent Systems Limited,IT
+Petronet LNG Ltd,0.13,PETRONET,PETRONET.NS,Petronet LNG Limited,Oil & gas
+Phoenix Mills Ltd,0.17,PHOENIXLTD,PHOENIXLTD.NS,The Phoenix Mills Limited,Build Mate
+PI Industries Ltd,0.2,PIIND,PIIND.NS,PI Industries Limited,Agri & Chem
+Pidilite Industries Ltd,0.24,PIDILITIND,PIDILITIND.NS,Pidilite Industries Limited,Agri & Chem
+Piramal Enterprises Ltd,0.06,PEL,PEL.NS,Piramal Enterprises Limited,NBFC
+Piramal Pharma Ltd,0.07,PPLPHARMA,PPLPHARMA.NS,Piramal Pharma Limited,Healthcare
+PNB Housing Finance Ltd,0.02,PNBHOUSING,PNBHOUSING.NS,PNB Housing Finance Limited,NBFC
+PNC Infratech Ltd,0.03,PNCINFRA,PNCINFRA.NS,PNC Infratech Limited,Build Mate
+Poly Medicure Ltd,0.04,POLYMED,POLYMED.NS,Poly Medicure Limited,Healthcare
+Polycab India Ltd,0.16,POLYCAB,POLYCAB.NS,Polycab India Limited,Discretionary
+Poonawalla Fincorp Ltd,0.05,POONAWALLA,POONAWALLA.NS,Poonawalla Fincorp Limited,NBFC
+Power Finance Corporation Ltd,0.37,PFC,PFC.NS,Power Finance Corporation Limited,NBFC
+POWER GRID CORPORATION OF INDIA LIMITED,0.79,POWERGRID,POWERGRID.NS,Power Grid Corporation of India Limited,Utilities
+Praj Industries Ltd,0.05,PRAJIND,PRAJIND.NS,Praj Industries Limited,Industrials
+Prestige Estates Projects Ltd,0.15,PRESTIGE,PRESTIGE.NS,Prestige Estates Projects Limited,Build Mate
+Prince Pipes and Fittings Ltd,0.01,PRINCEPIPE,PRINCEPIPE.NS,Prince Pipes and Fittings Limited,Others
+Prism Johnson Ltd,0.01,PRSMJOHNSN,PRSMJOHNSN.NS,Prism Johnson Limited,Build Mate
+Procter & Gamble Hygiene and Health Care Ltd,0.08,PGHH,PGHH.NS,Procter & Gamble Hygiene and Health Care Limited,Staples
+Punjab National Bank,0.17,PNB,PNB.NS,Punjab National Bank,Banks
+Quess Corp Ltd,0.02,QUESS,QUESS.NS,Quess Corp Limited,IT
+Radico Khaitan Ltd,0.08,RADICO,RADICO.NS,Radico Khaitan Limited,Discretionary
+Rail Vikas Nigam Ltd,0.16,RVNL,RVNL.NS,Rail Vikas Nigam Limited,Build Mate
+Railtel Corporation of India Ltd,0.02,RAILTEL,RAILTEL.NS,RailTel Corporation of India Limited,Tele & Media
+Rainbow Children's Medicare Ltd,0.03,RAINBOW,RAINBOW.NS,Rainbow Children's Medicare Limited,Healthcare
+Rajesh Exports Ltd,0.01,RAJESHEXPO,RAJESHEXPO.NS,Rajesh Exports Limited,Discretionary
+Ramco Cements Limited,0.05,RAMCOCEM,RAMCOCEM.NS,The Ramco Cements Limited,Build Mate
+Ramkrishna Forgings Ltd,0.04,RKFORGE,RKFORGE.NS,Ramkrishna Forgings Limited,Auto & Anc
+Rashtriya Chemicals and Fertilizers Ltd,0.01,RCF,RCF.NS,Rashtriya Chemicals and Fertilizers Limited,Agri & Chem
+Ratnamani Metals and Tubes Ltd,0.04,RATNAMANI,RATNAMANI.NS,Ratnamani Metals & Tubes Limited,Metals & min
+Rattanindia Enterprises Ltd,0.01,RTNINDIA,RTNINDIA.NS,RattanIndia Enterprises Limited,Utilities
+Raymond Ltd,0.03,RAYMOND,RAYMOND.NS,Raymond Limited,Others
+RBL Bank Ltd,0.05,RBLBANK,RBLBANK.NS,RBL Bank Limited,Banks
+REC Limited,0.35,RECLTD,RECLTD.NS,REC Limited,NBFC
+Redington Ltd,0.06,REDINGTON,REDINGTON.NS,Redington Limited,Others
+RELIANCE INFRASTRUCTURE LTD,5.19,RELIANCE,RELIANCE.NS,Reliance Industries Limited,Oil & gas
+Restaurant Brands Asia Ltd,0.02,RBA,RBA.NS,Restaurant Brands Asia Limited,Discretionary
+RHI Magnesita India Ltd,0.02,RHIM,RHIM.NS,RHI Magnesita India Limited,Build Mate
+RITES Ltd,0.02,RITES,RITES.NS,RITES Limited,Industrials
+Route Mobile Ltd,0.01,ROUTE,ROUTE.NS,Route Mobile Limited,IT
+Safari Industries (India) Ltd,0.03,SAFARI,SAFARI.NS,Safari Industries (India) Limited,Others
+Sammaan Capital Ltd,0.05,SAMMAANCAP,SAMMAANCAP.NS,Sammaan Capital Limited,Others
+Samvardhana Motherson International Ltd,0.29,MOTHERSON,MOTHERSON.NS,Samvardhana Motherson International Limited,Auto & Anc
+Sanofi India Ltd,0.03,SANOFI,SANOFI.NS,Sanofi India Limited,Healthcare
+Sapphire Foods India Ltd,0.04,SAPPHIRE,SAPPHIRE.NS,Sapphire Foods India Limited,Discretionary
+Saregama India Ltd,0.02,SAREGAMA,SAREGAMA.NS,Saregama India Limited,Tele & Media
+SBI Cards and Payment Services Ltd,0.12,SBICARD,SBICARD.NS,SBI Cards and Payment Services Limited,NBFC
+SBI Life Insurance Company Ltd,0.4,SBILIFE,SBILIFE.NS,SBI Life Insurance Company Limited,NBFC
+Schaeffler India Ltd,0.08,SCHAEFFLER,SCHAEFFLER.NS,Schaeffler India Limited,Auto & Anc
+Schneider Electric Infrastructure Ltd,0.02,SCHNEIDER,SCHNEIDER.NS,Schneider Electric Infrastructure Limited,Industrials
+Shree Cement Ltd,0.13,SHREECEM,SHREECEM.NS,Shree Cement Limited,Build Mate
+Shree Renuka Sugars Ltd,0.02,RENUKA,RENUKA.NS,Shree Renuka Sugars Limited,Staples
+Shriram Finance Ltd,0.46,SHRIRAMFIN,SHRIRAMFIN.NS,Shriram Finance Limited,NBFC
+Shyam Metalics and Energy Ltd,0.03,SHYAMMETL,SHYAMMETL.NS,Shyam Metalics and Energy Limited,Metals & min
+Siemens Ltd,0.31,SIEMENS,SIEMENS.NS,Siemens Limited,Industrials
+SJVN Ltd,0.05,SJVN,SJVN.NS,SJVN Limited,Utilities
+SKF India Ltd,0.07,SKFINDIA,SKFINDIA.NS,SKF India Limited,Auto & Anc
+Sobha Ltd,0.04,SOBHA,SOBHA.NS,Sobha Limited,Build Mate
+Solar Industries India Ltd,0.14,SOLARINDS,SOLARINDS.NS,Solar Industries India Limited,Agri & Chem
+Sona BLW Precision Forgings Ltd,0.17,SONACOMS,SONACOMS.NS,Sona BLW Precision Forgings Limited,Auto & Anc
+Sonata Software Ltd,0.06,SONATSOFTW,SONATSOFTW.NS,Sonata Software Limited,IT
+SRF Ltd,0.18,SRF,SRF.NS,SRF Limited,Agri & Chem
+Star Health and Allied Insurance Company Ltd,0.07,STARHEALTH,STARHEALTH.NS,Star Health and Allied Insurance Company Limited,NBFC
+"STATE BANK OF INDIA,",1.54,SBIN,SBIN.NS,State Bank of India,Banks
+Steel Authority of India Ltd,0.1,SAIL,SAIL.NS,Steel Authority of India Limited,Metals & min
+Sterling and Wilson Renewable Energy Ltd,0.04,SWSOLAR,SWSOLAR.NS,Sterling and Wilson Renewable Energy Limited,Industrials
+Sterlite Technologies Ltd,0.02,STLTECH,STLTECH.NS,Sterlite Technologies Limited,Discretionary
+Sumitomo Chemical India Ltd,0.04,SUMICHEM,SUMICHEM.NS,Sumitomo Chemical India Limited,Agri & Chem
+Sun Pharma Advanced Research Co Ltd,0.01,SPARC,SPARC.NS,Sun Pharma Advanced Research Company Limited,Others
+SUN PHARMACEUTICAL INDUSTRIES LTD.,1.02,SUNPHARMA,SUNPHARMA.NS,Sun Pharmaceutical Industries Limited,Healthcare
+Sunteck Realty Ltd,0.02,SUNTECK,SUNTECK.NS,Sunteck Realty Limited,Build Mate
+Sun Tv Network Ltd,0.04,SUNTV,SUNTV.NS,Sun TV Network Limited,Tele & Media
+Sundaram Finance Ltd,0.28,SUNDARMFIN,SUNDARMFIN.NS,Sundaram Finance Limited,NBFC
+Sundram Fasteners Ltd,0.08,SUNDRMFAST,SUNDRMFAST.NS,Sundram Fasteners Limited,Auto & Anc
+Supreme Industries Ltd,0.16,SUPREMEIND,SUPREMEIND.NS,The Supreme Industries Limited,Others
+Suven Pharmaceuticals Ltd,0.06,SUVENPHAR,SUVENPHAR.NS,Suven Pharmaceuticals Limited,Healthcare
+Suzlon Energy Ltd,0.43,SUZLON,SUZLON.NS,Suzlon Energy Limited,Industrials
+Swan Energy Ltd,0.04,SWANENERGY,SWANENERGY.NS,Swan Energy Limited,Others
+Syngene International Ltd,0.08,SYNGENE,SYNGENE.NS,Syngene International Limited,Healthcare
+Syrma SGS Technology Ltd,0.01,SYRMA,SYRMA.NS,Syrma SGS Technology Limited,Industrials
+Tamilnad Mercantile Bank Ltd,0.03,TMB,TMB.NS,Tamilnad Mercantile Bank Limited,Banks
+Tanla Platforms Ltd,0.03,TANLA,TANLA.NS,Tanla Platforms Limited,IT
+Tata Chemicals Ltd,0.08,TATACHEM,TATACHEM.NS,Tata Chemicals Limited,Agri & Chem
+Tata Communications Ltd,0.11,TATACOMM,TATACOMM.NS,Tata Communications Limited,Tele & Media
+TATA CONSULTANCY SERVICES LTD.,2.31,TCS,TCS.NS,Tata Consultancy Services Limited,IT
+Tata Consumer Products Ltd,0.42,TATACONSUM,TATACONSUM.NS,Tata Consumer Products Limited,Staples
+Tata Elxsi Ltd,0.14,TATAELXSI,TATAELXSI.NS,Tata Elxsi Limited,IT
+Tata Investment Corporation Ltd,0.05,TATAINVEST,TATAINVEST.NS,Tata Investment Corporation Limited,NBFC
+TATA MOTORS LTD.,1.05,TATAMOTORS,TATAMOTORS.NS,Tata Motors Limited,Auto & Anc
+Tata Power Company Ltd,0.39,TATAPOWER,TATAPOWER.NS,The Tata Power Company Limited,Utilities
+TATA STEEL LIMITED,0.64,TATASTEEL,TATASTEEL.NS,Tata Steel Limited,Metals & min
+Tata Teleservices (Maharashtra) Ltd,0.02,TTML,TTML.NS,Tata Teleservices (Maharashtra) Limited,Tele & Media
+Tech Mahindra Ltd,0.52,TECHM,TECHM.NS,Tech Mahindra Limited,IT
+Tejas Networks Ltd,0.05,TEJASNET,TEJASNET.NS,Tejas Networks Limited,Tele & Media
+Thermax Limited,0.08,THERMAX,THERMAX.NS,Thermax Limited,Industrials
+Timken India Ltd,0.07,TIMKEN,TIMKEN.NS,Timken India Limited,Auto & Anc
+Titagarh Rail Systems Ltd,0.05,TITAGARH,TITAGARH.NS,Titagarh Rail Systems Limited,Industrials
+TITAN COMPANY LIMITED,0.71,TITAN,TITAN.NS,Titan Company Limited,Discretionary
+Torrent Pharmaceuticals Ltd,0.17,TORNTPHARM,TORNTPHARM.NS,Torrent Pharmaceuticals Limited,Healthcare
+Torrent Power Ltd,0.17,TORNTPOWER,TORNTPOWER.NS,Torrent Power Limited,Utilities
+TRENT LTD [LAKME LTD],0.77,TRENT,TRENT.NS,Trent Limited,Discretionary
+Trident Ltd,0.02,TRIDENT,TRIDENT.NS,Trident Limited,Others
+Triveni Engineering and Industries Ltd,0.02,TRITURBINE,TRITURBINE.NS,Triveni Turbine Limited,Industrials
+Triveni Turbine Ltd,0.04,TRIVENI,TRIVENI.NS,Triveni Engineering & Industries Limited,Staples
+Tube Investments of India Ltd,0.22,TIINDIA,TIINDIA.NS,Tube Investments of India Limited,Others
+TVS Motor Company Ltd,0.34,TVSMOTOR,TVSMOTOR.NS,TVS Motor Company Limited,Auto & Anc
+UCO Bank,0.01,UCOBANK,UCOBANK.NS,UCO Bank,Banks
+Ujjivan Small Finance Bank Ltd,0.04,UJJIVANSFB,UJJIVANSFB.NS,Ujjivan Small Finance Bank Limited,Banks
+ULTRATECH CEMENT LTD,0.67,ULTRACEMCO,ULTRACEMCO.NS,UltraTech Cement Limited,Build Mate
+Union Bank of India Ltd,0.12,UNIONBANK,UNIONBANK.NS,Union Bank of India,Banks
+United Breweries Ltd,0.07,UBL,UBL.NS,United Breweries Limited,Discretionary
+UNO Minda Ltd,0.1,UNOMINDA,UNOMINDA.NS,Uno Minda Limited,Auto & Anc
+UPL Ltd,0.16,UPL,UPL.NS,UPL Limited,Agri & Chem
+Usha Martin Ltd,0.04,USHAMART,USHAMART.NS,Usha Martin Limited,Metals & min
+UTI Asset Management Company Ltd,0.06,UTIAMC,UTIAMC.NS,UTI Asset Management Company Limited,NBFC
+V Guard Industries Ltd,0.04,VGUARD,VGUARD.NS,V-Guard Industries Limited,Industrials
+V I P Industries Ltd,0.03,VIPIND,VIPIND.NS,V.I.P. Industries Limited,Others
+Vaibhav Global Ltd,0.01,VAIBHAVGBL,VAIBHAVGBL.NS,Vaibhav Global Limited,Discretionary
+Vardhman Textiles Ltd,0.03,VTL,VTL.NS,Vardhman Textiles Limited,Others
+Varroc Engineering Ltd,0.01,VARROC,VARROC.NS,Varroc Engineering Limited,Auto & Anc
+Varun Beverages Ltd,0.41,VBL,VBL.NS,Varun Beverages Limited,Staples
+Vedant Fashions Ltd,0.04,MANYAVAR,MANYAVAR.NS,Vedant Fashions Limited,Discretionary
+Vedanta Ltd,0.38,VEDL,VEDL.NS,Vedanta Limited,Metals & min
+Vijaya Diagnostic Centre Ltd,0.02,VIJAYA,VIJAYA.NS,Vijaya Diagnostic Centre Limited,Healthcare
+Vodafone Idea Ltd,0.17,IDEA,IDEA.NS,Vodafone Idea Limited,Tele & Media
+Voltas Ltd,0.22,VOLTAS,VOLTAS.NS,Voltas Limited,Discretionary
+Welspun Corp Ltd,0.04,WELCORP,WELCORP.NS,Welspun Corp Limited,Metals & min
+Welspun Living Ltd,0.02,WELSPUNLIV,WELSPUNLIV.NS,Welspun Living Limited,Others
+Westlife Foodworld Ltd,0.02,WESTLIFE,WESTLIFE.NS,Westlife Foodworld Limited,Discretionary
+Whirlpool of India Ltd,0.07,WHIRLPOOL,WHIRLPOOL.NS,Whirlpool of India Limited,Discretionary
+Wipro Ltd,0.4,WIPRO,WIPRO.NS,Wipro Limited,IT
+Yes Bank Ltd,0.22,YESBANK,YESBANK.NS,Yes Bank Limited,Banks
+Zee Entertainment Enterprises Ltd,0.06,ZEEL,ZEEL.NS,Zee Entertainment Enterprises Limited,Tele & Media
+Zensar Technologies Ltd,0.08,ZENSARTECH,ZENSARTECH.NS,Zensar Technologies Limited,IT
+ZF Commercial Vehicle Control Systems India Ltd,0.05,ZFCVINDIA,ZFCVINDIA.NS,ZF Commercial Vehicle Control Systems India Limited,Auto & Anc
+ZOMATO LIMITED,0.91,ZOMATO,ZOMATO.NS,Zomato Limited,Others
+Zydus Lifesciences Ltd,0.14,ZYDUSLIFE,ZYDUSLIFE.NS,Zydus Lifesciences Limited,Healthcare
+GODREJ AGROVET LTD,0.04,GODREJAGRO,GODREJAGRO.NS,Godrej Agrovet Limited,Others
+BAJAJ ELECTRICALS LTD,0.03,BAJAJELEC,BAJAJELEC.NS,Bajaj Electricals Limited,Discretionary
+BOROSIL LTD,0.01,BOROLTD,BOROLTD.NS,Borosil Limited,Others
+LUX INDUSTRIES LTD,0.01,LUXIND,LUXIND.NS,Lux Industries Limited,Others
+VINDHYA TELELINKS LTD,0.01,VINDHYATEL,VINDHYATEL.NS,Vindhya Telelinks Limited,Discretionary
+GHCL LTD,0.01,GHCL,GHCL.NS,GHCL Limited,Agri & Chem
+ROSSARI BIOTECH LTD,0.01,ROSSARI,ROSSARI.NS,Rossari Biotech Limited,Agri & Chem
+GALAXY SURFACTANTS LTD,0.09,GALAXYSURF,GALAXYSURF.NS,Galaxy Surfactants Limited,Staples
+UNICHEM LABORATORIES LTD,0.02,UNICHEMLAB,UNICHEMLAB.NS,Unichem Laboratories Limited,Healthcare
+PUNJAB & SIND BANK,0.3,PSB,PSB.NS,Punjab & Sind Bank,Banks
+MOIL LTD,0.02,MOIL,MOIL.NS,MOIL Limited,Metals & min
