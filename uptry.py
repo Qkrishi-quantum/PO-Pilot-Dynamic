@@ -594,7 +594,7 @@ if st.button('Next'):
             #st.latex('B:Total Benchmark return')
             #sector_summary = sector_groups["Weightage(%)"].sum()  for calculating the sector weightages
             allocation_data = pd.read_csv(csv_file)
-            st.write(allocation_data)
+            #st.write(allocation_data)
             sector_groups = allocation_data.groupby("sector")
  
             benchmark_sector_dict = {}
@@ -834,7 +834,7 @@ if st.button('Rebalancing'):
                 working_days = np.busday_count(start_date.date(), end_date.date())
                 first_row_adj_close = adj_close_df.iloc[0]
                 total_budget = (first_row_adj_close * df['QUANTITY'].values).sum()
-                st.write(total_budget)
+                #st.write(total_budget)
 
                 if select_benchmark == 'NIFTY 50':
                     csv_file = "NIFTY 50 Stock Weightages.csv"
@@ -867,7 +867,7 @@ if st.button('Rebalancing'):
                 
                 constituents = pd.read_csv(csv_file)
                 tickers = constituents['Symbol'].to_list()
-                st.write(tickers)
+                #st.write(tickers)
                 use_local = False
                 if use_local is False:
                         #end_date = end_date
@@ -893,7 +893,7 @@ if st.button('Rebalancing'):
                     tickers = constituents['Symbol'].to_list()
                     data = pd.read_csv('benchmark.csv', parse_dates=['Date'])
                     sector_map = constituents.loc[constituents['Symbol'].isin(tickers)]
-                    st.write(sector_map)
+                    #st.write(sector_map)
                     dates = data["Date"].to_numpy()
                     monthly_df = data.resample('3M', on='Date').last() # resample to every 3 months
                     month_end_dates = monthly_df.index
@@ -901,7 +901,7 @@ if st.button('Rebalancing'):
                     #total_budget = 537787.2409820557 #Make the budget dynamic
                     global total_budget
                     total_budget = total_budget
-                    print(total_budget)
+                    #print(total_budget)
                     num_months = len(month_end_dates)
                     first_purchase = True 
                     result = {}
@@ -1015,7 +1015,7 @@ if st.button('Rebalancing'):
                         first_purchase = False
                     return opt_results_df
                 
-                st.write(optimal_stocks_to_buy)
+                #st.write(optimal_stocks_to_buy)
                 #optimal_stocks_to_buy = {'BHARTIARTL.NS': 109.0, 'HDFCBANK.NS': 92.0, 'HINDUNILVR.NS': 92.0, 'ICICIBANK.NS': 104.0, 'INFY.NS': 86.0, 'ITC.NS': 112.0, 'LT.NS': 118.0, 'RELIANCE.NS': 107.0, 'SBIN.NS': 104.0, 'TCS.NS': 95.0, 'BAJFINANCE.NS':100.0, 'MARUTI.NS': 87.0, 'TITAN.NS':60.0}
                 process_portfolio_amar = process_portfolio(optimal_stocks_to_buy)
                 process_portfolio_amar_df = process_portfolio_amar.to_csv('rebalancing_test.csv')
