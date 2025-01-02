@@ -21,7 +21,7 @@ colorama==0.4.6
 colorlog==6.8.2
 contextlib2==21.6.0
 contourpy==1.1.1
-cplex==22.1.0.0
+cplex==22.1.2.0
 cryptography==42.0.5
 cycler==0.12.1
 dill==0.3.8
