@@ -1925,10 +1925,41 @@ if st.button('Rebalancing'):
                     csv_file = "./benchmarks/nifty50Benchmark.csv"
                     benchdata = yf.download("^NSEI", start = start_date, end = end_date)['Adj Close']
                     sectorbenchmark = pd.read_csv('./benchmarks/nifty50SectorWeightages.csv')
-                if select_benchmark == 'NSE 500':
+
+                if select_benchmark == 'NIFTY 500':
                     csv_file = "./benchmarks/nifty500Benchmark.csv"
                     benchdata = yf.download("^CRSLDX", start = start_date, end = end_date)['Adj Close']
                     sectorbenchmark = pd.read_csv('./benchmarks/nifty500SectorWeightages.csv')
+
+
+                if select_benchmark == 'NIFTY 100':
+                
+                    csv_file = "./benchmarks/nifty100Benchmark.csv"
+                    benchdata = yf.download("^CNX100", start = start_date, end = end_date)['Adj Close']
+                    sectorbenchmark = pd.read_csv('./benchmarks/nifty100SectorWeightages.csv')
+                    #name = 'NIFTY 100'
+
+                
+                # if select_benchmark == 'SENSEX 50':
+                
+                #     csv_file = "./benchmarks/sensex50Benchmark.csv"
+                #     benchdata = yf.download("SNSX50.BO", start = start_date, end = end_date)['Adj Close']
+                #     sectorbenchmark = pd.read_csv('./benchmarks/sensex50SectorWeightages.csv')
+                #     name = 'SENSEX 50'
+
+                if select_benchmark == 'BSE 100':
+                
+                    csv_file = "./benchmarks/bse100Benchmark.csv"
+                    benchdata = yf.download("BSE-100.BO", start = start_date, end = end_date)['Adj Close']
+                    sectorbenchmark = pd.read_csv('./benchmarks/bse100SectorWeightages.csv')
+                    #name = 'BSE 100'
+
+                if select_benchmark == 'BSE 500':
+                
+                    csv_file = "./benchmarks/bse500Benchmark.csv"
+                    benchdata = yf.download("BSE-500.BO", start = start_date, end = end_date)['Adj Close']
+                    sectorbenchmark = pd.read_csv('./benchmarks/bse500SectorWeightages.csv')
+                    #name = 'BSE 500'
                 # if select_benchmark == 'BSE 100':
                 #     csv_file = "./benchmarks/nifty500Benchmark.csv"
                 #     benchdata = yf.download("^CRSLDX", start = start_date, end = end_date)['Adj Close']
@@ -2014,7 +2045,7 @@ if st.button('Rebalancing'):
                     tickers = constituents['SECURITY_ID'].to_list()
                     data = pd.read_csv('benchmark.csv', parse_dates=['Date'])
                     sector_map = constituents.loc[constituents['SECURITY_ID'].isin(tickers)]
-                    st.write(sector_map)
+                    #st.write(sector_map)
                     dates = data["Date"].to_numpy()
                     monthly_df = data.resample('3M', on='Date').last() # resample to every 3 months
                     month_end_dates = monthly_df.index
@@ -2136,7 +2167,7 @@ if st.button('Rebalancing'):
                         first_purchase = False
                     return opt_results_df
                 
-                st.write(optimal_stocks_to_buy)
+                #st.write(optimal_stocks_to_buy)
                 #optimal_stocks_to_buy = {'BHARTIARTL.NS': 109.0, 'HDFCBANK.NS': 92.0, 'HINDUNILVR.NS': 92.0, 'ICICIBANK.NS': 104.0, 'INFY.NS': 86.0, 'ITC.NS': 112.0, 'LT.NS': 118.0, 'RELIANCE.NS': 107.0, 'SBIN.NS': 104.0, 'TCS.NS': 95.0, 'BAJFINANCE.NS':100.0, 'MARUTI.NS': 87.0, 'TITAN.NS':60.0}
                 process_portfolio_amar = process_portfolio(optimal_stocks_to_buy)
                 process_portfolio_amar_df = process_portfolio_amar.to_csv('rebalancing_test.csv')
