@@ -1621,7 +1621,7 @@ def next_button():
             output = io.BytesIO()
             workbook = xlsxwriter.Workbook(output, {'in_memory': True})
 ## Worksheet (Attribution Summary) code - Begin
-            # worksheet = workbook.add_worksheet('Attribution Summary')
+            worksheet = workbook.add_worksheet('Attribution Summary')
 
             # # Formatting objects
             bold_format = workbook.add_format({'bold': True, 'bg_color': '#D9EAD3'})
@@ -1633,46 +1633,46 @@ def next_button():
             ## Added decimal format of 2 decimal places
             decimal_format = workbook.add_format({'num_format': '0.00'})
 
-            # # Write Summary section
-            # # worksheet.write(0, 0, "Summary", bold_format)
-            # # row = 1
-            # # for key, value in summary_data:
-            # #     worksheet.write(row, 0, key, bold_format)
-            # #     worksheet.write(row, 1, value)
-            # #     row += 1
-
+            # Write Summary section
             # worksheet.write(0, 0, "Summary", bold_format)
             # row = 1
             # for key, value in summary_data:
             #     worksheet.write(row, 0, key, bold_format)
-            # # Check if the value is a datetime object and apply date formatting
-            #     if isinstance(value, datetime):
-            #         worksheet.write_datetime(row, 1, value, date_format)
-            #     else:
-            #         #worksheet.write(row, 1, value)
-            #         worksheet.write(row, 1, value, decimal_format)
+            #     worksheet.write(row, 1, value)
             #     row += 1
 
-            # # Write table header
-            # row += 1
-            # worksheet.write(row, 0, "Attribution Summary (Grid)", bold_format)
-            # row += 1
-            # worksheet.write_row(row, 0, table_df.columns, header_format)
+            worksheet.write(0, 0, "Summary", bold_format)
+            row = 1
+            for key, value in summary_data:
+                worksheet.write(row, 0, key, bold_format)
+            # Check if the value is a datetime object and apply date formatting
+                if isinstance(value, datetime):
+                    worksheet.write_datetime(row, 1, value, date_format)
+                else:
+                    #worksheet.write(row, 1, value)
+                    worksheet.write(row, 1, value, decimal_format)
+                row += 1
+
+            # Write table header
+            row += 1
+            worksheet.write(row, 0, "Attribution Summary (Grid)", bold_format)
+            row += 1
+            worksheet.write_row(row, 0, table_df.columns, header_format)
 
 
-        #     # Write table data
+            # Write table data
 
-        #   #  ############################### Original worksheet code
-        #     # for index, record in table_df.iterrows():
-        #     #     worksheet.write_row(row + 1 + index, 0, record.tolist(), cell_format)
+          #  ############################### Original worksheet code
+            # for index, record in table_df.iterrows():
+            #     worksheet.write_row(row + 1 + index, 0, record.tolist(), cell_format)
 
-        #     ################### Added worksheet code
-        #     for index, record in table_df.iterrows():
-        #         for col_num, value in enumerate(record):
-        #             if isinstance(value, (int, float)):
-        #                 worksheet.write(row + 1 + index, col_num, value, decimal_format)  # Apply decimal format
-        #             else:
-        #                 worksheet.write(row + 1 + index, col_num, value, cell_format)
+            ################### Added worksheet code
+            for index, record in table_df.iterrows():
+                for col_num, value in enumerate(record):
+                    if isinstance(value, (int, float)):
+                        worksheet.write(row + 1 + index, col_num, value, decimal_format)  # Apply decimal format
+                    else:
+                        worksheet.write(row + 1 + index, col_num, value, cell_format)
 
 ### Worksheet (Attribution Summary) code - end
 
