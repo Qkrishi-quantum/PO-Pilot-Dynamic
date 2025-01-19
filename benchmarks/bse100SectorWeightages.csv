@@ -1,12 +1,17 @@
 Sector,Weight(%)
-Basic Materials,8.125
-Communication Services,4.285
-Consumer Cyclical,10.223
-Consumer Defensive,9.215
-Energy,11.223
-Financial Services,22.087999999999997
+Agri & Chem,0.859
+Auto & Anc,5.296
+Banks,15.991
+Build Mate,3.8040000000000003
+Discretionary,5.308
 Healthcare,4.349
-Industrials,8.573
-Real Estate,0.853
-Technology,14.471
-Utilities,3.565
+IT,13.7
+Industrials,6.388999999999999
+Metals & min,3.967
+NBFC,5.6419999999999995
+Oil & gas,9.644
+Others,5.908
+Staples,8.304
+Tele & Media,3.844
+Transport,0.917
+Utilities,3.048
