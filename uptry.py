@@ -33,19 +33,62 @@ import ml_collections
 from statsmodels.tsa.filters.hp_filter import hpfilter
 optuna.logging.set_verbosity(optuna.logging.WARNING)
 #from alpha_vantage.timeseries import TimeSeries
-from datetime import datetime
+from datetime import datetime, date, timedelta
+
+
+##################### session-code
+if "show_rebalancing_button" not in st.session_state:
+    st.session_state["show_rebalancing_button"] = False
+
+if "show_reset_button" not in st.session_state:
+    st.session_state["show_reset_button"] = False
+
+
+
+
+
+
+
+
+########################## Code for dynamic date within a timeframe
+fixed_start_date = date(2023, 1, 9)
+fixed_end_date = date(2024, 9, 25)
+
+
+
+
+
+
+
 
 seed = 42
 cfg = ml_collections.ConfigDict()
 
 st.set_page_config(page_title="PilotProject", page_icon=":chart_with_upwards_trend:", layout="wide")
-st.title("Pilot Project on Portfolio Optimisation")
+st.title("Pilot Project on Portfolio Optimization")
 
 uploaded_files = st.file_uploader("Choose Excel files", type=["xlsx", "xls"], accept_multiple_files=True)
 file_names = [uploaded_file.name for uploaded_file in uploaded_files]
 selected_file = st.selectbox("Select a file", file_names)
 select_benchmark = st.selectbox("Select the benchmark", options=['NIFTY 50', 'NIFTY 100', 'NIFTY 500', 'BSE 100', 'BSE 500'])
-end_date = st.date_input("Select end date", value=datetime(2024, 9, 25))
+#end_date = st.date_input("Select end date", value=datetime(2024, 9, 25))
+start_date = st.date_input("Select start date:", value=fixed_start_date, min_value=fixed_start_date, max_value=fixed_end_date)
+
+end_date = st.date_input("Select an end date:", value=fixed_end_date, min_value=fixed_start_date, max_value=fixed_end_date)
+
+
+
+
+
+
+
+#start_date = max(start_date, fixed_start_date)
+
+## Dynamic end date
+end_date = min(end_date, fixed_end_date)
+
+
+
 total_budget = 1
 
 def cleanName(name):
@@ -123,13 +166,17 @@ def fetch_prices(input_file, stock_column, start_date_column, start_date_jan, st
 
 
 
-if st.button('Next'):
+#if st.button('Next'):
+def next_button():
     if uploaded_files:
         for uploaded_file in uploaded_files:
             if uploaded_file.name == selected_file:
 
                 holdingDf = pd.read_excel(uploaded_file)
                 holdingDf["Company name"] = holdingDf["Company name"].apply(cleanName)
+
+                global end_date
+                global start_date
 
                 if select_benchmark == 'NIFTY 50':
 
@@ -141,7 +188,10 @@ if st.button('Next'):
 
                     tempHoldingFile.dropna(inplace=True)  # Remove rows with NaN values
                     tempHoldingFile['Date'] = pd.to_datetime(tempHoldingFile['Date'])
-                    start_date = tempHoldingFile['Date'].min()
+                    #start_date = tempHoldingFile['Date'].min()
+
+
+                    #global end_date
                     end_date = pd.to_datetime(end_date)
 
                     tempHoldingFile.to_excel("tempHoldingFile.xlsx", index = False)
@@ -152,8 +202,13 @@ if st.button('Next'):
                     input_file = "tempHoldingFile.xlsx"  # Path to the input Excel file
                     stock_column = "SECURITY_ID"       # Column name for stock tickers
                     start_date_column = "Date" # Column name for start dates
-                    start_date_jan = "2023-01-09"
-                    start_date_jan_ = "2023-01-10"
+                    # start_date_jan = "2023-01-09"
+                    # start_date_jan_ = "2023-01-10"
+
+                    #start_date_jan = start_date.date()
+                    start_date_jan = start_date
+                    start_date_jan_ = start_date_jan + timedelta(days=1)
+
                     end_date_present = "2024-12-31"
                     end_date_present_ = "2025-01-01"     # Column name for end dates
                     output_file = "tempHoldingFile.xlsx"  # Path for the output Excel file
@@ -182,7 +237,7 @@ if st.button('Next'):
 
                     tempHoldingFile.dropna(inplace=True)  # Remove rows with NaN values
                     tempHoldingFile['Date'] = pd.to_datetime(tempHoldingFile['Date'])
-                    start_date = tempHoldingFile['Date'].min()
+                    #start_date = tempHoldingFile['Date'].min()
                     end_date = pd.to_datetime(end_date)
 
                     tempHoldingFile.to_excel("tempHoldingFile.xlsx", index = False)
@@ -193,8 +248,14 @@ if st.button('Next'):
                     input_file = "tempHoldingFile.xlsx"  # Path to the input Excel file
                     stock_column = "SECURITY_ID"       # Column name for stock tickers
                     start_date_column = "Date" # Column name for start dates
-                    start_date_jan = "2023-01-09"
-                    start_date_jan_ = "2023-01-10"
+                    # start_date_jan = "2023-01-09"
+                    # start_date_jan_ = "2023-01-10"
+
+                    #start_date_jan = start_date.date()
+                    start_date_jan = start_date
+                    start_date_jan_ = start_date_jan + timedelta(days=1)
+
+
                     end_date_present = "2024-12-31"
                     end_date_present_ = "2025-01-01"     # Column name for end dates
                     output_file = "tempHoldingFile.xlsx"  # Path for the output Excel file
@@ -213,7 +274,7 @@ if st.button('Next'):
 
                     tempHoldingFile.dropna(inplace=True)  # Remove rows with NaN values
                     tempHoldingFile['Date'] = pd.to_datetime(tempHoldingFile['Date'])
-                    start_date = tempHoldingFile['Date'].min()
+                    #start_date = tempHoldingFile['Date'].min()
                     end_date = pd.to_datetime(end_date)
 
                     tempHoldingFile.to_excel("tempHoldingFile.xlsx", index = False)
@@ -224,8 +285,16 @@ if st.button('Next'):
                     input_file = "tempHoldingFile.xlsx"  # Path to the input Excel file
                     stock_column = "SECURITY_ID"       # Column name for stock tickers
                     start_date_column = "Date" # Column name for start dates
-                    start_date_jan = "2023-01-09"
-                    start_date_jan_ = "2023-01-10"
+                    # start_date_jan = "2023-01-09"
+                    # start_date_jan_ = "2023-01-10"
+
+                    #start_date_jan = start_date.date()
+                    start_date_jan = start_date
+                    start_date_jan_ = start_date_jan + timedelta(days=1)
+
+
+
+
                     end_date_present = "2024-12-31"
                     end_date_present_ = "2025-01-01"     # Column name for end dates
                     output_file = "tempHoldingFile.xlsx"  # Path for the output Excel file
@@ -244,7 +313,7 @@ if st.button('Next'):
 
                     tempHoldingFile.dropna(inplace=True)  # Remove rows with NaN values
                     tempHoldingFile['Date'] = pd.to_datetime(tempHoldingFile['Date'])
-                    start_date = tempHoldingFile['Date'].min()
+                    #start_date = tempHoldingFile['Date'].min()
                     end_date = pd.to_datetime(end_date)
 
                     tempHoldingFile.to_excel("tempHoldingFile.xlsx", index = False)
@@ -255,8 +324,14 @@ if st.button('Next'):
                     input_file = "tempHoldingFile.xlsx"  # Path to the input Excel file
                     stock_column = "SECURITY_ID"       # Column name for stock tickers
                     start_date_column = "Date" # Column name for start dates
-                    start_date_jan = "2023-01-09"
-                    start_date_jan_ = "2023-01-10"
+                    # start_date_jan = "2023-01-09"
+                    # start_date_jan_ = "2023-01-10"
+
+                    #start_date_jan = start_date.date()
+                    start_date_jan = start_date
+                    start_date_jan_ = start_date_jan + timedelta(days=1)
+
+
                     end_date_present = "2024-12-31"
                     end_date_present_ = "2025-01-01"     # Column name for end dates
                     output_file = "tempHoldingFile.xlsx"  # Path for the output Excel file
@@ -275,7 +350,7 @@ if st.button('Next'):
 
                     tempHoldingFile.dropna(inplace=True)  # Remove rows with NaN values
                     tempHoldingFile['Date'] = pd.to_datetime(tempHoldingFile['Date'])
-                    start_date = tempHoldingFile['Date'].min()
+                    #start_date = tempHoldingFile['Date'].min()
                     end_date = pd.to_datetime(end_date)
 
                     tempHoldingFile.to_excel("tempHoldingFile.xlsx", index = False)
@@ -286,8 +361,14 @@ if st.button('Next'):
                     input_file = "tempHoldingFile.xlsx"  # Path to the input Excel file
                     stock_column = "SECURITY_ID"       # Column name for stock tickers
                     start_date_column = "Date" # Column name for start dates
-                    start_date_jan = "2023-01-09"
-                    start_date_jan_ = "2023-01-10"
+                    # start_date_jan = "2023-01-09"
+                    # start_date_jan_ = "2023-01-10"
+
+                    #start_date_jan = start_date.date()
+                    start_date_jan = start_date
+                    start_date_jan_ = start_date_jan + timedelta(days=1)
+
+
                     end_date_present = "2024-12-31"
                     end_date_present_ = "2025-01-01"     # Column name for end dates
                     output_file = "tempHoldingFile.xlsx"  # Path for the output Excel file
@@ -307,7 +388,7 @@ if st.button('Next'):
 
                     tempHoldingFile.dropna(inplace=True)  # Remove rows with NaN values
                     tempHoldingFile['Date'] = pd.to_datetime(tempHoldingFile['Date'])
-                    start_date = tempHoldingFile['Date'].min()
+                    #start_date = tempHoldingFile['Date'].min()
                     end_date = pd.to_datetime(end_date)
 
                     tempHoldingFile.to_excel("tempHoldingFile.xlsx", index = False)
@@ -318,8 +399,13 @@ if st.button('Next'):
                     input_file = "tempHoldingFile.xlsx"  # Path to the input Excel file
                     stock_column = "SECURITY_ID"       # Column name for stock tickers
                     start_date_column = "Date" # Column name for start dates
-                    start_date_jan = "2023-01-09"
-                    start_date_jan_ = "2023-01-10"
+                    # start_date_jan = "2023-01-09"
+                    # start_date_jan_ = "2023-01-10"
+
+                    #start_date_jan = start_date.date()
+                    start_date_jan = start_date
+                    start_date_jan_ = start_date_jan + timedelta(days=1)
+
                     end_date_present = "2024-12-31"
                     end_date_present_ = "2025-01-01"     # Column name for end dates
                     output_file = "tempHoldingFile.xlsx"  # Path for the output Excel file
@@ -345,7 +431,25 @@ if st.button('Next'):
                 #df = pd.read_excel(uploaded_file, usecols=['SECURITY_ID', 'QUANTITY','Date', 'Company name', '16 Sectors', 'SEBI Mcap Class', 'PE', 'PB', 'Price', 'Div Yield(%)', 'DivPayOut', 'CurrentMC', 'CurrentSP', 'EPSM22', 'EPSJ22', 'EPSS22', 'EPSD22', 'Market Cap(cr)'])
                 df.dropna(inplace=True)  # Remove rows with NaN values
                 df['Date'] = pd.to_datetime(df['Date'])
-                start_date = df['Date'].min()
+                #start_date = df['Date'].min()
+
+
+                ## Dynamic Start date
+                #start_date = start_date.date()
+                start_date = pd.to_datetime(start_date)
+                start_date = start_date.date()
+                start_date = max(start_date, fixed_start_date)
+
+                end_date = end_date.date()
+                if start_date > end_date:
+                    st.error("Given start_date is greater than given end_date")
+
+                # else:
+                #     st.write("Start date and end date are within the timeframe")
+
+
+
+
                 end_date = pd.to_datetime(end_date)
 
 
@@ -435,7 +539,7 @@ if st.button('Next'):
             dfForStartDate = pd.read_excel("tempHoldingFile.xlsx")
             dfForStartDate.dropna(inplace=True)  # Remove rows with NaN values
             dfForStartDate['Date'] = pd.to_datetime(dfForStartDate['Date'])
-            start_date = dfForStartDate['Date'].min()
+            #start_date = dfForStartDate['Date'].min()
             end_date = pd.to_datetime(end_date)
 
             # if select_benchmark == 'NIFTY 50':
@@ -1129,7 +1233,7 @@ if st.button('Next'):
             allocation_data = pd.read_csv(csv_file)
             #st.write(allocation_data)
             sector_groups = allocation_data.groupby("sector")
- 
+
             benchmark_sector_dict = {}
             for sector, group in sector_groups:
                 benchmark_sector_dict[sector] = group["Weightage(%)"].sum()
@@ -1469,6 +1573,8 @@ if st.button('Next'):
 
             print("df_result")
             print(df_result)
+
+            start_date = pd.to_datetime(start_date)
             
             summary_data = [
             ["Benchmark", name],
@@ -1514,43 +1620,61 @@ if st.button('Next'):
             # Create the Excel file in memory
             output = io.BytesIO()
             workbook = xlsxwriter.Workbook(output, {'in_memory': True})
-            worksheet = workbook.add_worksheet('Attribution Summary')
+## Worksheet (Attribution Summary) code - Begin
+            # worksheet = workbook.add_worksheet('Attribution Summary')
 
-            # Formatting objects
+            # # Formatting objects
             bold_format = workbook.add_format({'bold': True, 'bg_color': '#D9EAD3'})
             header_format = workbook.add_format({'bold': True, 'align': 'center', 'bg_color': '#A6A6A6'})
             cell_format = workbook.add_format({'align': 'center'})
             date_format = workbook.add_format({'num_format': 'mm/dd/yyyy'})  # Date format
             left_align_bold_format = workbook.add_format({'bold': True, 'align': 'left'})  # Left-aligned bold for sectors
 
-            # Write Summary section
+            ## Added decimal format of 2 decimal places
+            decimal_format = workbook.add_format({'num_format': '0.00'})
+
+            # # Write Summary section
+            # # worksheet.write(0, 0, "Summary", bold_format)
+            # # row = 1
+            # # for key, value in summary_data:
+            # #     worksheet.write(row, 0, key, bold_format)
+            # #     worksheet.write(row, 1, value)
+            # #     row += 1
+
             # worksheet.write(0, 0, "Summary", bold_format)
             # row = 1
             # for key, value in summary_data:
             #     worksheet.write(row, 0, key, bold_format)
-            #     worksheet.write(row, 1, value)
+            # # Check if the value is a datetime object and apply date formatting
+            #     if isinstance(value, datetime):
+            #         worksheet.write_datetime(row, 1, value, date_format)
+            #     else:
+            #         #worksheet.write(row, 1, value)
+            #         worksheet.write(row, 1, value, decimal_format)
             #     row += 1
 
-            worksheet.write(0, 0, "Summary", bold_format)
-            row = 1
-            for key, value in summary_data:
-                worksheet.write(row, 0, key, bold_format)
-            # Check if the value is a datetime object and apply date formatting
-                if isinstance(value, datetime):
-                    worksheet.write_datetime(row, 1, value, date_format)
-                else:
-                    worksheet.write(row, 1, value)
-                row += 1
+            # # Write table header
+            # row += 1
+            # worksheet.write(row, 0, "Attribution Summary (Grid)", bold_format)
+            # row += 1
+            # worksheet.write_row(row, 0, table_df.columns, header_format)
 
-            # Write table header
-            row += 1
-            worksheet.write(row, 0, "Attribution Summary (Grid)", bold_format)
-            row += 1
-            worksheet.write_row(row, 0, table_df.columns, header_format)
 
-            # Write table data
-            for index, record in table_df.iterrows():
-                worksheet.write_row(row + 1 + index, 0, record.tolist(), cell_format)
+        #     # Write table data
+
+        #   #  ############################### Original worksheet code
+        #     # for index, record in table_df.iterrows():
+        #     #     worksheet.write_row(row + 1 + index, 0, record.tolist(), cell_format)
+
+        #     ################### Added worksheet code
+        #     for index, record in table_df.iterrows():
+        #         for col_num, value in enumerate(record):
+        #             if isinstance(value, (int, float)):
+        #                 worksheet.write(row + 1 + index, col_num, value, decimal_format)  # Apply decimal format
+        #             else:
+        #                 worksheet.write(row + 1 + index, col_num, value, cell_format)
+
+### Worksheet (Attribution Summary) code - end
 
             #Worksheet 2: Attribution to detail (New sheet)
             #worksheet1 = workbook.add_worksheet('Attribution Detail')
@@ -1816,6 +1940,10 @@ if st.button('Next'):
             center_format = workbook.add_format({'align': 'center'})
             bold_summary_format = workbook.add_format({'bold': True, 'bg_color': '#D9EAD3', 'align': 'left'})
 
+
+            ## Added decimal format of 2 decimal places
+            decimal_format = workbook.add_format({'num_format': '0.00'})
+
             worksheet1.write(0, 0, "Summary", bold_summary_format)
             row = 1
             # for key, value in summary_data:
@@ -1846,10 +1974,14 @@ if st.button('Next'):
                 if sector_or_stock in sector_returns_dict:
                     worksheet1.write(row + index, 0, sector_or_stock, bold_left_format)
                     for col_num, value in enumerate(record[1:]):
-                        worksheet1.write(row + index, col_num + 1, value, center_format)
+                        #worksheet1.write(row + index, col_num + 1, value, center_format)
+                        #worksheet1.write(row + index, col_num + 1, value, center_format, decimal_format)
+                        worksheet1.write(row + index, col_num + 1, value, decimal_format)
                 else:
                     for col_num, value in enumerate(record):
-                        worksheet1.write(row + index, col_num, value, center_format)
+                        #worksheet1.write(row + index, col_num, value, center_format)
+                        #worksheet1.write(row + index, col_num, value, center_format, decimal_format)
+                        worksheet1.write(row + index, col_num, value, decimal_format)
 
             #worksheet1.set_column('A:A', 30)  # Sector/Stock
             #worksheet1.set_column('B:H', 15)  # Other numeric columns
@@ -1864,6 +1996,13 @@ if st.button('Next'):
                 data=output,
                 file_name="Attribution_Report.xlsx",
                 mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
+            
+
+
+
+            ###################### session-code
+
+            st.session_state["show_rebalancing_button"] = True
 
 
             
@@ -1874,7 +2013,8 @@ if st.button('Next'):
 
 
 import math
-if st.button('Rebalancing'):
+#if st.button('Rebalancing'):
+def rebalancing_button():
     #st.write('Yes, I am Working')
     if uploaded_files:
         for uploaded_file in uploaded_files:
@@ -1890,14 +2030,25 @@ if st.button('Rebalancing'):
 
                 df = pd.read_excel("tempHoldingFile.xlsx")
 
-
+                global end_date
+                global start_date
 
 
                 #df = pd.read_excel(uploaded_file, usecols=['SECURITY_ID', 'QUANTITY','Date', 'Company name', '16 Sectors', 'SEBI Mcap Class'])
                 df.dropna(inplace=True)  # Remove rows with NaN values
                 df['Date'] = pd.to_datetime(df['Date'])
-                start_date = df['Date'].min()
+                #start_date = df['Date'].min()
+
+                ## Dynamic start date
+                start_date = start_date
+                start_date = max(start_date, fixed_start_date)
+
+
+
+
+                #global end_date
                 end_date = pd.to_datetime(end_date)
+                start_date = pd.to_datetime(start_date)
                 stock_symbols = df['SECURITY_ID'].tolist()
                 stock_names = []
                 for symbol in stock_symbols:
@@ -2034,7 +2185,7 @@ if st.button('Rebalancing'):
                 #total_budget = (first_row_adj_close * df['QUANTITY'].values).sum()
                 #st.write(total_budget)
 
-                def process_portfolio(init_holdings):
+                def process_portfolio(init_holdings, total_budget):
                     cfg.hpfilter_lamb = 6.25
                     cfg.q = 1.0  # risk-aversion factor
                     # classical
@@ -2051,7 +2202,7 @@ if st.button('Rebalancing'):
                     month_end_dates = monthly_df.index
                     available_sectors, counts = np.unique(np.array(sector_map.sector.tolist()), return_counts=True)
                     #total_budget = 537787.2409820557 #Make the budget dynamic
-                    global total_budget
+                    #global total_budget
                     total_budget = total_budget
                     print(total_budget)
                     num_months = len(month_end_dates)
@@ -2108,7 +2259,7 @@ if st.button('Rebalancing'):
                         tickers_new = sector_map.loc[sector_map['sector'].isin(sectors)]['SECURITY_ID'].tolist()
                         tickers_new = np.intersect1d(np.array(tickers_new), np.array(tickers))
                         tickers_new = np.setdiff1d(np.array(tickers_new), np.array(sell_tickers))
-          
+        
                         keep_indices = np.in1d(np.array(tickers), tickers_new)
                         mu_new = mu[keep_indices]
                         sigma_new = sigma[keep_indices][:, keep_indices]
@@ -2169,7 +2320,7 @@ if st.button('Rebalancing'):
                 
                 #st.write(optimal_stocks_to_buy)
                 #optimal_stocks_to_buy = {'BHARTIARTL.NS': 109.0, 'HDFCBANK.NS': 92.0, 'HINDUNILVR.NS': 92.0, 'ICICIBANK.NS': 104.0, 'INFY.NS': 86.0, 'ITC.NS': 112.0, 'LT.NS': 118.0, 'RELIANCE.NS': 107.0, 'SBIN.NS': 104.0, 'TCS.NS': 95.0, 'BAJFINANCE.NS':100.0, 'MARUTI.NS': 87.0, 'TITAN.NS':60.0}
-                process_portfolio_amar = process_portfolio(optimal_stocks_to_buy)
+                process_portfolio_amar = process_portfolio(optimal_stocks_to_buy, total_budget)
                 process_portfolio_amar_df = process_portfolio_amar.to_csv('rebalancing_test.csv')
                 dataf = pd.read_csv('rebalancing_test.csv')
                 #st.write(dataf)
@@ -2290,7 +2441,7 @@ if st.button('Rebalancing'):
                 abs_value = 10 ** (count_integer_digits(minimum_value)-1)
                 y_range = math.ceil(maximum_value / abs_value)
 
-                st.write(abs_value)
+                #st.write(abs_value)
 
                 # Plotting
                 fig_rebalancing = go.Figure()
@@ -2319,7 +2470,8 @@ if st.button('Rebalancing'):
                 fig_rebalancing.update_layout(
                     title="Rebalanced Portfolio Values Over Time",
                     xaxis_title='Date', 
-                    yaxis_title=f"Portfolio Values scaled with Minimum portfolio value {round(minimum_value,2)}",
+                    #yaxis_title=f"Portfolio Values scaled with Minimum portfolio value {round(minimum_value,2)}",
+                    yaxis_title = "Portfolio Value",
                     autosize=False, 
                     width=1000, 
                     height=600,
@@ -2335,10 +2487,36 @@ if st.button('Rebalancing'):
 
                 #st.write(adj_close_df)
 
+                st.session_state["show_reset_button"] = True
+
 
                     
     else: 
         st.write("Please upload the Excel files to proceed.")
     
-    
-        
+def handle_reset():
+    st.session_state["show_rebalancing_button"] = False
+    st.session_state["show_reset_button"] = False
+
+
+
+
+##################### session-code
+
+if st.button("Next"):
+    next_button()
+
+# UI for "Rebalancing" button
+if st.session_state["show_rebalancing_button"]:
+    if st.button("Rebalancing"):
+        rebalancing_button()
+
+
+###################### session-code
+
+# if st.button("Reset Workflow"):
+#     st.session_state["show_rebalancing_button"] = False
+
+if st.session_state["show_reset_button"]:
+    if st.button("Reset Workflow"):
+        handle_reset()
