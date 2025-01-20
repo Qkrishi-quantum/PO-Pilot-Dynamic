@@ -989,13 +989,15 @@ def next_button():
             fig_compare.add_trace(go.Scatter(x= adj_close_df.index, 
                     y=  adj_close_df['Return'],
                     mode='lines+markers', 
-                    name='Return Portfolio', 
+                    #name='Return Portfolio',
+                    name='Return Benchmark', 
                     line=dict(color='red')))
             
             fig_compare.add_trace(go.Scatter(x=benchdata.index, 
                     y=benchdata['Return'], 
                     mode='lines+markers', 
-                    name='Return Benchmark', 
+                    #name='Return Benchmark',
+                    name='Return Portfolio', 
                     line=dict(color='blue')))
             
             fig_compare.update_layout(title='Return Over Time',
