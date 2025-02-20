@@ -123,5 +123,5 @@ Werkzeug==3.0.2
 xlrd==2.0.1
 XlsxWriter==3.2.0
 yarl==1.11.1
-yfinance==0.2.37
+yfinance==0.2.54
 zipp==3.18.1
