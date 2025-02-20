@@ -117,7 +117,10 @@ def get_price(ticker, date, date_):
     Fetches the stock price for a specific ticker on a given date.
     """
     try:
-        stock_data = yf.download(ticker, start=date, end=date_)["Adj Close"]
+        stock_data = yf.download(ticker, start=date, end=date_, multi_level_index=False)['Close']
+        #stock_data = stock_data['Close'].squeeze()
+        # st.write(type(stock_data))
+        # st.write(stock_data)
         if not stock_data.empty:
             return stock_data.iloc[0]
         else:
@@ -481,7 +484,9 @@ def next_button():
                 #st.write(num_stocks)
                 historical_data = {}
                 for symbol in stock_symbols:
-                    historical_data[symbol] = yf.download(symbol, start=start_date, end=end_date)['Adj Close']
+                    #stock_data = yf.download(symbol, start=start_date, end=end_date)[['Close']]
+                    historical_data[symbol] = yf.download(symbol, start=start_date, end=end_date, multi_level_index = False)['Close']
+                    #historical_data[symbol] = stock_data['Close'].squeeze()
             
                 adj_close_df = pd.DataFrame(historical_data)
                 adj_close_df.to_csv('adj_close_df.csv')
@@ -493,42 +498,44 @@ def next_button():
                 excel_file_nifty50 = pd.read_excel("./benchmarks/nifty50Benchmark.xlsx")
                 excel_file_nifty50.to_csv("./benchmarks/nifty50Benchmark.csv", index = False)
                 csv_file = "./benchmarks/nifty50Benchmark.csv"
-                benchdata = yf.download("^NSEI", start = start_date, end = end_date)['Adj Close']
+                benchdata = yf.download("^NSEI", start = start_date, end = end_date, multi_level_index = False)['Close']
+                
+                #benchdata = benchdata['Close']['^NSEI']
                 sectorbenchmark = pd.read_csv('./benchmarks/nifty50SectorWeightages.csv')
                 name = 'NIFTY 50'
 
             if select_benchmark == 'NIFTY 100':
                 
                 csv_file = "./benchmarks/nifty100Benchmark.csv"
-                benchdata = yf.download("^CNX100", start = start_date, end = end_date)['Adj Close']
+                benchdata = yf.download("^CNX100", start = start_date, end = end_date, multi_level_index = False)['Close']
                 sectorbenchmark = pd.read_csv('./benchmarks/nifty100SectorWeightages.csv')
                 name = 'NIFTY 100'
             
             if select_benchmark == 'NIFTY 500':
                 
                 csv_file = "./benchmarks/nifty500Benchmark.csv"
-                benchdata = yf.download("^CRSLDX", start = start_date, end = end_date)['Adj Close']
+                benchdata = yf.download("^CRSLDX", start = start_date, end = end_date, multi_level_index=False)['Close']
                 sectorbenchmark = pd.read_csv('./benchmarks/nifty500SectorWeightages.csv')
                 name = 'NIFTY 500'
 
             if select_benchmark == 'SENSEX 50':
                 
                 csv_file = "./benchmarks/sensex50Benchmark.csv"
-                benchdata = yf.download("SNSX50.BO", start = start_date, end = end_date)['Adj Close']
+                benchdata = yf.download("SNSX50.BO", start = start_date, end = end_date, multi_level_index=False)['Close']
                 sectorbenchmark = pd.read_csv('./benchmarks/sensex50SectorWeightages.csv')
                 name = 'SENSEX 50'
 
             if select_benchmark == 'BSE 100':
                 
                 csv_file = "./benchmarks/bse100Benchmark.csv"
-                benchdata = yf.download("BSE-100.BO", start = start_date, end = end_date)['Adj Close']
+                benchdata = yf.download("BSE-100.BO", start = start_date, end = end_date, multi_level_index=False)['Close']
                 sectorbenchmark = pd.read_csv('./benchmarks/bse100SectorWeightages.csv')
                 name = 'BSE 100'
 
             if select_benchmark == 'BSE 500':
                 
                 csv_file = "./benchmarks/bse500Benchmark.csv"
-                benchdata = yf.download("BSE-500.BO", start = start_date, end = end_date)['Adj Close']
+                benchdata = yf.download("BSE-500.BO", start = start_date, end = end_date, multi_level_index=False)['Close']
                 sectorbenchmark = pd.read_csv('./benchmarks/bse500SectorWeightages.csv')
                 name = 'BSE 500'
 
@@ -602,12 +609,12 @@ def next_button():
             #a = pd.read_csv(csv_file)['Symbol'].to_list()
             a = pd.read_csv(csv_file)['SECURITY_ID'].dropna().to_list()
             print(a)
-            b = yf.download(a, start = start_date, end = end_date)['Adj Close']
+            b = yf.download(a, start = start_date, end = end_date, multi_level_index=False)['Close']
 
             ## Filling empty cells with '0'
             #b.fillna(0, inplace = True)
 
-            b.to_csv('BenchmarkStockData.csv')
+            b.to_csv('BenchmarkStockData.csv') #renamed in modular code to adj_close_df_benchmark.csv
 
 
 
@@ -665,6 +672,9 @@ def next_button():
             tickers_1 = b.columns
 
             cfg.num_stocks_1 = len(tickers_1)
+            st.write("cfg")
+            st.write(cfg.num_stocks)
+            st.write(cfg.num_stocks_1)
             mu_1 = log_returns_1.mean().to_numpy() * 252
             sigma_1 = log_returns_1.cov().to_numpy() * 252
             cfg.kappa = cfg.num_stocks_1
@@ -958,46 +968,116 @@ def next_button():
             st.markdown("**Pie Chart of Sector Weights Benchmark:**")
             st.plotly_chart(fig_sector)
 
+            ## Code for bar graph
+            def compare_return_risk(metrics_1, metrics_2, title):
+                metric_labels = ["returns", "risk"]
+
+                # Values from metrics_1
+                values_1 = [round(metrics_1['returns'], 2), round(metrics_1['risk'], 2)]
+
+                # Values from metrics_2
+                values_2 = [round(metrics_2['returns']*100,2), round(metrics_2['risk']*100,2)]
+
+                # Create Bar Traces
+                trace1 = go.Bar(x=metric_labels, y=values_1, name="Benchmark", text = values_1, textposition='auto', marker_color="green")
+                trace2 = go.Bar(x=metric_labels, y=values_2, name="Portfolio", text = values_2, textposition='auto', marker_color="red")
+
+                # Create Layout
+                layout = go.Layout(
+                    title=title,
+                    xaxis=dict(title="Metrics"),
+                    yaxis=dict(title="Values in %"),
+                    barmode="group"  # Side-by-side bars
+                )
+
+                # Create Figure
+                fig = go.Figure(data=[trace1, trace2], layout=layout)
+
+                st.plotly_chart(fig)
+
+
+                return
+            
+            def compare_Sharpe_ratio_and_diversification_ratio(metrics_1, metrics_2, title):
+                metric_labels = ["sharpe_ratio", "diversification_ratio"]
+
+                # Values from metrics_1
+                values_1 = [round(metrics_1['sharpe_ratio'],2), round(metrics_1['diversification_ratio'],2)]
+
+                # Values from metrics_2
+                values_2 = [round(metrics_2['sharpe_ratio'],2), round(metrics_2['diversification_ratio'],2)]
+
+                # Create Bar Traces
+                trace1 = go.Bar(x=metric_labels, y=values_1, name="Benchmark", text = values_1, textposition='auto', marker_color="green")
+                trace2 = go.Bar(x=metric_labels, y=values_2, name="Portfolio", text = values_2, textposition='auto', marker_color="red")
+
+                # Create Layout
+                layout = go.Layout(
+                    title=title,
+                    xaxis=dict(title="Metrics"),
+                    yaxis=dict(title="Values"),
+                    barmode="group" , # Side-by-side bars
+                )
+
+                # Create Figure
+                fig = go.Figure(data=[trace1, trace2], layout=layout)
+
+                st.plotly_chart(fig)
+
+
+                return
+            
+            # Comparison of return-risk 
+            compare_return_risk(mvo_miqp_bench_1, mvo_miqp_bench, "Return, Risk : Benchmark vs Portfolio")
+            # comparison of sharpe ratio and diversification ratio
+            compare_Sharpe_ratio_and_diversification_ratio(mvo_miqp_bench_1, mvo_miqp_bench, "Sharpe ratio, Diversification ratio : Benchmark vs Portfolio")
+
+
+
             st.markdown('<p style="font-size:20px;"><b>Line chart of Portfolio against the Benchmark (Rebased to 100 for initial date)</b></p>', unsafe_allow_html=True)
             quantity_dict = pd.Series(df.QUANTITY.values, index=df.SECURITY_ID).to_dict()
             for symbol in adj_close_df.columns[1:]:  # Skip the 'Date' column (index 0)
                 if symbol in quantity_dict:
-                    adj_close_df[symbol] = adj_close_df[symbol] * quantity_dict[symbol]
+                    adj_close_df[symbol] = adj_close_df[symbol] #* quantity_dict[symbol]
             adj_close_df['Portfolio Value'] = adj_close_df.iloc[:, 1:].sum(axis=1)
-            #st.write('portfolio value:')
-            #st.write(adj_close_df['Portfolio Value'])
+
+            
+      ##      ########### Original code of the portfolio return calculation - 
             adj_close_df['Return'] = (adj_close_df['Portfolio Value'] / adj_close_df['Portfolio Value'][0]) * 100
-            #benchdata = pd.DataFrame(benchdata)
-            #benchdata.columns = benchdata.columns.str.strip()
-            #st.write(benchdata)
+            #st.write(adj_close_df['Return'])
+
+     ##     Added code
+            #adj_close_df['Return'] = np.log(adj_close_df['Portfolio Value'] / adj_close_df['Portfolio Value'].shift(1))
+
+            #adj_close_df['Return'] = adj_close_df['Portfolio Value']
+      ##      
             benchdata.to_csv("TotalBenchmarkValue.csv")
             benchdata = pd.read_csv("TotalBenchmarkValue.csv")
             benchdata = benchdata.set_index(('Date'))
-            #st.write(benchdata)
-            #st.write('Benchmark value')
-            #st.write(benchdata['Adj Close'])
-            #st.write("benchdata")
-            #st.dataframe(benchdata)
-            benchdata['Return'] = (benchdata['Adj Close']/benchdata['Adj Close'].iloc[0]) * 100
-            #st.write(benchdata)
-            #st.write(benchdata.index)
-            #st.write(adj_close_df.index)
-            #adj_close_df['Scaled Return'] = adj_close_df['Return'] - adj_close_df['Return'].min()
-            #benchdata['Scaled Return'] = benchdata['Return'] - benchdata['Return'].min()
+            
+      ##    Original code of Benchmark return calculation      
+            benchdata['Return'] = (benchdata['Close']/benchdata['Close'].iloc[0]) * 100
+            #st.write(benchdata['Return'])
+
+     ##     Added code
+            #benchdata['Return'] = np.log(benchdata['Adj Close']/ benchdata['Adj Close'].shift(1))
+            #benchdata['Return'] = benchdata['Adj Close']
+
+     ##      
 
             fig_compare = go.Figure()
             fig_compare.add_trace(go.Scatter(x= adj_close_df.index, 
                     y=  adj_close_df['Return'],
                     mode='lines+markers', 
-                    #name='Return Portfolio',
-                    name='Return Benchmark', 
+                    name='Return Portfolio', 
+                    #name = 'Return Benchmark',
                     line=dict(color='red')))
             
             fig_compare.add_trace(go.Scatter(x=benchdata.index, 
                     y=benchdata['Return'], 
                     mode='lines+markers', 
-                    #name='Return Benchmark',
-                    name='Return Portfolio', 
+                    name='Return Benchmark',
+                    #name = 'Return Portfolio', 
                     line=dict(color='blue')))
             
             fig_compare.update_layout(title='Return Over Time',
@@ -1184,7 +1264,7 @@ def next_button():
 
             def calculate_top_contributors(tickers_weights, start_date, end_date):
                 # Download stock data for the given date range
-                stock_data = yf.download(list(tickers_weights.keys()), start=start_date, end=end_date)['Adj Close']
+                stock_data = yf.download(list(tickers_weights.keys()), start=start_date, end=end_date, multi_level_index=False)['Close']
     
                 # Calculate daily log returns for each stock
                 log_returns = np.log(stock_data) - np.log(stock_data.shift(1))
@@ -1291,7 +1371,8 @@ def next_button():
             start_date_beta = datetime(end_date.year - 2, end_date.month, end_date.day)
             historical_data_beta = {}
             for symbol in stock_symbols:
-                historical_data_beta[symbol] = yf.download(symbol, start=start_date_beta, end=end_date)['Adj Close']
+                stock_data_beta = yf.download(symbol, start=start_date_beta, end=end_date, multi_level_index=False)['Close']
+                historical_data_beta[symbol] = stock_data_beta
 
             adj_close_df_beta = pd.DataFrame(historical_data_beta)
             adj_close_df_beta.to_csv('adj_close_df_beta.csv')
@@ -1307,7 +1388,8 @@ def next_button():
 
             historical_data_beta_bench = {}
             for symbol in cr_dict:
-                historical_data_beta_bench[symbol] = yf.download(symbol, start=start_date_beta, end=end_date)['Adj Close']
+                stock_data_beta_bench = yf.download(symbol, start=start_date_beta, end=end_date, multi_level_index=False)['Close']
+                historical_data_beta_bench[symbol] = stock_data_beta_bench
             adj_close_df_beta_bench = pd.DataFrame(historical_data_beta_bench)
             #adj_close_df_beta_bench = adj_close_df_beta_bench.dropna(axis=1, how='any') #removes nan columns
             adj_close_df_beta_bench = adj_close_df_beta_bench.fillna(0)
@@ -1623,9 +1705,9 @@ def next_button():
             output = io.BytesIO()
             workbook = xlsxwriter.Workbook(output, {'in_memory': True})
 ## Worksheet (Attribution Summary) code - Begin
-            worksheet = workbook.add_worksheet('Attribution Summary')
+        #     # worksheet = workbook.add_worksheet('Attribution Summary')
 
-            # # Formatting objects
+        #     # # Formatting objects
             bold_format = workbook.add_format({'bold': True, 'bg_color': '#D9EAD3'})
             header_format = workbook.add_format({'bold': True, 'align': 'center', 'bg_color': '#A6A6A6'})
             cell_format = workbook.add_format({'align': 'center'})
@@ -1635,46 +1717,46 @@ def next_button():
             ## Added decimal format of 2 decimal places
             decimal_format = workbook.add_format({'num_format': '0.00'})
 
-            # Write Summary section
-            # worksheet.write(0, 0, "Summary", bold_format)
-            # row = 1
-            # for key, value in summary_data:
-            #     worksheet.write(row, 0, key, bold_format)
-            #     worksheet.write(row, 1, value)
-            #     row += 1
+        #     # # Write Summary section
+        #     # # worksheet.write(0, 0, "Summary", bold_format)
+        #     # # row = 1
+        #     # # for key, value in summary_data:
+        #     # #     worksheet.write(row, 0, key, bold_format)
+        #     # #     worksheet.write(row, 1, value)
+        #     # #     row += 1
 
-            worksheet.write(0, 0, "Summary", bold_format)
-            row = 1
-            for key, value in summary_data:
-                worksheet.write(row, 0, key, bold_format)
-            # Check if the value is a datetime object and apply date formatting
-                if isinstance(value, datetime):
-                    worksheet.write_datetime(row, 1, value, date_format)
-                else:
-                    #worksheet.write(row, 1, value)
-                    worksheet.write(row, 1, value, decimal_format)
-                row += 1
+        #     # worksheet.write(0, 0, "Summary", bold_format)
+        #     # row = 1
+        #     # for key, value in summary_data:
+        #     #     worksheet.write(row, 0, key, bold_format)
+        #     # # Check if the value is a datetime object and apply date formatting
+        #     #     if isinstance(value, datetime):
+        #     #         worksheet.write_datetime(row, 1, value, date_format)
+        #     #     else:
+        #     #         #worksheet.write(row, 1, value)
+        #     #         worksheet.write(row, 1, value, decimal_format)
+        #     #     row += 1
 
-            # Write table header
-            row += 1
-            worksheet.write(row, 0, "Attribution Summary (Grid)", bold_format)
-            row += 1
-            worksheet.write_row(row, 0, table_df.columns, header_format)
+        #     # # Write table header
+        #     # row += 1
+        #     # worksheet.write(row, 0, "Attribution Summary (Grid)", bold_format)
+        #     # row += 1
+        #     # worksheet.write_row(row, 0, table_df.columns, header_format)
 
 
-            # Write table data
+        # #     # Write table data
 
-          #  ############################### Original worksheet code
-            # for index, record in table_df.iterrows():
-            #     worksheet.write_row(row + 1 + index, 0, record.tolist(), cell_format)
+        # #   #  ############################### Original worksheet code
+        # #     # for index, record in table_df.iterrows():
+        # #     #     worksheet.write_row(row + 1 + index, 0, record.tolist(), cell_format)
 
-            ################### Added worksheet code
-            for index, record in table_df.iterrows():
-                for col_num, value in enumerate(record):
-                    if isinstance(value, (int, float)):
-                        worksheet.write(row + 1 + index, col_num, value, decimal_format)  # Apply decimal format
-                    else:
-                        worksheet.write(row + 1 + index, col_num, value, cell_format)
+        # #     ################### Added worksheet code
+        # #     for index, record in table_df.iterrows():
+        # #         for col_num, value in enumerate(record):
+        # #             if isinstance(value, (int, float)):
+        # #                 worksheet.write(row + 1 + index, col_num, value, decimal_format)  # Apply decimal format
+        # #             else:
+        # #                 worksheet.write(row + 1 + index, col_num, value, cell_format)
 
 ### Worksheet (Attribution Summary) code - end
 
@@ -2062,9 +2144,11 @@ def rebalancing_button():
                 #st.write(num_stocks.reset_index(drop=True))
                 #st.write(num_stocks)
                 optimal_stocks_to_buy = dict(zip(df['SECURITY_ID'], df['QUANTITY']))
+                #st.write(optimal_stocks_to_buy)
                 historical_data = {}
                 for symbol in stock_symbols:
-                    historical_data[symbol] = yf.download(symbol, start=start_date, end=end_date)['Adj Close']
+                    stock_data = yf.download(symbol, start=start_date, end=end_date, multi_level_index=False)['Close']
+                    historical_data[symbol] = stock_data
             
                 adj_close_df = pd.DataFrame(historical_data)
                 adj_close_df.to_csv('adj_close_df.csv')
@@ -2076,19 +2160,19 @@ def rebalancing_button():
 
                 if select_benchmark == 'NIFTY 50':
                     csv_file = "./benchmarks/nifty50Benchmark.csv"
-                    benchdata = yf.download("^NSEI", start = start_date, end = end_date)['Adj Close']
+                    benchdata = yf.download("^NSEI", start = start_date, end = end_date, multi_level_index=False)['Close']
                     sectorbenchmark = pd.read_csv('./benchmarks/nifty50SectorWeightages.csv')
 
                 if select_benchmark == 'NIFTY 500':
                     csv_file = "./benchmarks/nifty500Benchmark.csv"
-                    benchdata = yf.download("^CRSLDX", start = start_date, end = end_date)['Adj Close']
+                    benchdata = yf.download("^CRSLDX", start = start_date, end = end_date, multi_level_index=False)['Close']
                     sectorbenchmark = pd.read_csv('./benchmarks/nifty500SectorWeightages.csv')
 
 
                 if select_benchmark == 'NIFTY 100':
                 
                     csv_file = "./benchmarks/nifty100Benchmark.csv"
-                    benchdata = yf.download("^CNX100", start = start_date, end = end_date)['Adj Close']
+                    benchdata = yf.download("^CNX100", start = start_date, end = end_date, multi_level_index=False)['Close']
                     sectorbenchmark = pd.read_csv('./benchmarks/nifty100SectorWeightages.csv')
                     #name = 'NIFTY 100'
 
@@ -2103,14 +2187,14 @@ def rebalancing_button():
                 if select_benchmark == 'BSE 100':
                 
                     csv_file = "./benchmarks/bse100Benchmark.csv"
-                    benchdata = yf.download("BSE-100.BO", start = start_date, end = end_date)['Adj Close']
+                    benchdata = yf.download("BSE-100.BO", start = start_date, end = end_date, multi_level_index=False)['Close']
                     sectorbenchmark = pd.read_csv('./benchmarks/bse100SectorWeightages.csv')
                     #name = 'BSE 100'
 
                 if select_benchmark == 'BSE 500':
                 
                     csv_file = "./benchmarks/bse500Benchmark.csv"
-                    benchdata = yf.download("BSE-500.BO", start = start_date, end = end_date)['Adj Close']
+                    benchdata = yf.download("BSE-500.BO", start = start_date, end = end_date, multi_level_index=False)['Close']
                     sectorbenchmark = pd.read_csv('./benchmarks/bse500SectorWeightages.csv')
                     #name = 'BSE 500'
                 # if select_benchmark == 'BSE 100':
@@ -2154,7 +2238,7 @@ def rebalancing_button():
 
 
 
-                def build_bqm(alpha, _mu, _sigma, cardinality):
+                def build_bqm(alpha, _mu, _sigma, cardinality):  ############ Error in providing the threshold and cardinality. Go to function calling
                     n = len(_mu)
                     mdl = Model(name="stock_selection")
                     x = mdl.binary_var_list(range(n), name="x")
@@ -2179,8 +2263,8 @@ def rebalancing_button():
                         #start_date = start_date
                         adj_close_df_1 = pd.DataFrame()
                         for ticker in tickers:
-                            data = yf.download(ticker, start=start_date, end=end_date)
-                            adj_close_df_1[ticker] = data['Adj Close']
+                            data = yf.download(ticker, start=start_date, end=end_date, multi_level_index=False)['Close']
+                            adj_close_df_1[ticker] = data
                         adj_close_df_1.to_csv('benchmark.csv')
                 
                 #first_row_adj_close = adj_close_df.iloc[0]
@@ -2188,6 +2272,9 @@ def rebalancing_button():
                 #st.write(total_budget)
 
                 def process_portfolio(init_holdings, total_budget):
+                    st.write("init_holdings at the start of the function")
+                    st.write(init_holdings)
+
                     cfg.hpfilter_lamb = 6.25
                     cfg.q = 1.0  # risk-aversion factor
                     # classical
@@ -2196,15 +2283,23 @@ def rebalancing_button():
         
                     constituents = pd.read_csv(csv_file)
                     tickers = constituents['SECURITY_ID'].to_list()
+                    st.write("tickers")
+                    st.write(tickers)
+
                     data = pd.read_csv('benchmark.csv', parse_dates=['Date'])
                     sector_map = constituents.loc[constituents['SECURITY_ID'].isin(tickers)]
+                    st.write("sector_map")
+                    st.write(sector_map)
                     #st.write(sector_map)
                     dates = data["Date"].to_numpy()
                     monthly_df = data.resample('3M', on='Date').last() # resample to every 3 months
                     month_end_dates = monthly_df.index
+                    st.write("month_end_dates")
+                    st.write(month_end_dates)
                     available_sectors, counts = np.unique(np.array(sector_map.sector.tolist()), return_counts=True)
                     #total_budget = 537787.2409820557 #Make the budget dynamic
                     #global total_budget
+                    
                     total_budget = total_budget
                     print(total_budget)
                     num_months = len(month_end_dates)
@@ -2221,6 +2316,9 @@ def rebalancing_button():
 
                     for i, end_date in enumerate(month_end_dates[start_month:]):
                         df = data[dates <= end_date].copy()
+                        st.write("df")
+                        st.write(df)
+
                         df.set_index('Date', inplace=True)
                         months.append(df.last_valid_index().date())
                         if first_purchase:
@@ -2242,6 +2340,9 @@ def rebalancing_button():
                         log_returns = log_returns.drop(columns=drop_stocks)
                         log_returns = log_returns.dropna()
                         tickers = log_returns.columns
+                        st.write("tickers")
+                        st.write(tickers)
+
                         mu = log_returns.mean().to_numpy() * working_days
                         sigma = log_returns.cov().to_numpy() * working_days
                         price = df.iloc[-1] # last day price
@@ -2249,13 +2350,21 @@ def rebalancing_button():
                         #Sell Idea
                         threshold = 4 # Sell all stocks for `threshold` companies
                         tickers_holding = np.array(list(init_holdings.keys())) # Names of the companies in initial holdings
-                        indices = np.in1d(tickers, tickers_holding) # Indices of `tickers_holding` in the list of all companies `tickers`
+                        indices = np.isin(tickers, tickers_holding) # Indices of `tickers_holding` in the list of all companies `tickers`
                         argsort_indices = np.argsort(mu[indices]) # Obtain `mu` values at `indices`. Sort it.
+                        st.write("argsort_indices")
+                        st.write(argsort_indices)
 
                         sell_indices =  argsort_indices < threshold # indices of the least `threshold` companies (least in terms of mu value)
+
+                        st.write("sell_indices")
+                        st.write(sell_indices)
                         sell_tickers = tickers_holding[argsort_indices][sell_indices] # names of those companies
+                        st.write("sell_tickers")
+                        st.write(sell_tickers)
 
                         sectors = sector_map.loc[sector_map['SECURITY_ID'].isin(sell_tickers)]['sector'].tolist()
+
                         sectors = set(sectors) # remove duplicates
 
                         tickers_new = sector_map.loc[sector_map['sector'].isin(sectors)]['SECURITY_ID'].tolist()
@@ -2270,16 +2379,26 @@ def rebalancing_button():
                         for tick in sell_tickers:
                             sales_revenue += init_holdings[tick] * price[tick]
                             init_holdings.pop(tick, None) # remove that company from holdings
-                        bqm = build_bqm(cfg.q, mu_new, sigma_new, threshold)
+                        bqm = build_bqm(cfg.q, mu_new, sigma_new, threshold) ################ Fix the cardinality and threshold here
+                        st.write(bqm)
                         sampler_sa = SimulatedAnnealingSampler()
                         result_sa = sampler_sa.sample(bqm, num_reads=5000)
                         selection = list(result_sa.first.sample.values())
                         selection = np.array(selection, dtype=bool)
 
                         tickers_selected = tickers_new[selection]
+                        st.write("tickers_selected")
+                        st.write(tickers_selected)
+
                         keep_indices = np.in1d(tickers_new, tickers_selected)
+                        st.write("keep_indices")
+                        st.write(keep_indices)
+
                         mu_selected = mu_new[keep_indices]
                         sigma_selected = sigma_new[keep_indices][:, keep_indices]
+
+                        # st.write(init_holdings)
+                        # st.write(tickers_selected)
 
                         qpo = SinglePeriod(cfg.q,
                                             mu_selected,
