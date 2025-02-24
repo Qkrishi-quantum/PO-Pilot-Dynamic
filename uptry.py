@@ -672,9 +672,9 @@ def next_button():
             tickers_1 = b.columns
 
             cfg.num_stocks_1 = len(tickers_1)
-            st.write("cfg")
-            st.write(cfg.num_stocks)
-            st.write(cfg.num_stocks_1)
+            # st.write("cfg")
+            # st.write(cfg.num_stocks)
+            # st.write(cfg.num_stocks_1)
             mu_1 = log_returns_1.mean().to_numpy() * 252
             sigma_1 = log_returns_1.cov().to_numpy() * 252
             cfg.kappa = cfg.num_stocks_1
@@ -1028,17 +1028,17 @@ def next_button():
                 return
             
             # Comparison of return-risk 
-            compare_return_risk(mvo_miqp_bench_1, mvo_miqp_bench, "Return, Risk : Benchmark vs Portfolio")
+            compare_return_risk(mvo_miqp_bench_1, mvo_miqp_bench, "Return(Mean log returns), Risk : Benchmark vs Portfolio")
             # comparison of sharpe ratio and diversification ratio
             compare_Sharpe_ratio_and_diversification_ratio(mvo_miqp_bench_1, mvo_miqp_bench, "Sharpe ratio, Diversification ratio : Benchmark vs Portfolio")
 
 
 
-            st.markdown('<p style="font-size:20px;"><b>Line chart of Portfolio against the Benchmark (Rebased to 100 for initial date)</b></p>', unsafe_allow_html=True)
+            st.markdown('<p style="font-size:20px;"><b>Line chart of Portfolio value against the Benchmark value(Rebased to 100 for initial date)</b></p>', unsafe_allow_html=True)
             quantity_dict = pd.Series(df.QUANTITY.values, index=df.SECURITY_ID).to_dict()
             for symbol in adj_close_df.columns[1:]:  # Skip the 'Date' column (index 0)
                 if symbol in quantity_dict:
-                    adj_close_df[symbol] = adj_close_df[symbol] #* quantity_dict[symbol]
+                    adj_close_df[symbol] = adj_close_df[symbol] * quantity_dict[symbol]
             adj_close_df['Portfolio Value'] = adj_close_df.iloc[:, 1:].sum(axis=1)
 
             
@@ -1069,20 +1069,20 @@ def next_button():
             fig_compare.add_trace(go.Scatter(x= adj_close_df.index, 
                     y=  adj_close_df['Return'],
                     mode='lines+markers', 
-                    name='Return Portfolio', 
+                    name='Portfolio', 
                     #name = 'Return Benchmark',
                     line=dict(color='red')))
             
             fig_compare.add_trace(go.Scatter(x=benchdata.index, 
                     y=benchdata['Return'], 
                     mode='lines+markers', 
-                    name='Return Benchmark',
+                    name='Benchmark',
                     #name = 'Return Portfolio', 
                     line=dict(color='blue')))
             
-            fig_compare.update_layout(title='Return Over Time',
+            fig_compare.update_layout(title='',
                     xaxis_title='Date', 
-                    yaxis_title='Return',
+                    yaxis_title='Value',
                     autosize=False, 
                     width=1000, 
                     height=600,
